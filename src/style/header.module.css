@@ -1,0 +1,23 @@
+.Headerdivstyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.spanheader {
+    color: #ffffff;
+    font-size: 12pt;
+    font-family: sans-serif
+}
+
+.hotline {
+    font-size: 12pt;
+    color: #c70a0a
+}
+
+.divorder {
+    background-image: url('../asset/Logo/bg-special.png');
+    height: 100px;
+    object-fit: cover;
+}

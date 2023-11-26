@@ -1,0 +1,34 @@
+.divmain {
+    background-color: #F2F2F2;
+}
+
+.div134 {
+    display: flex;
+    flex-direction: row;
+}
+
+.div134 a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 10pt;
+}
+
+.divDescription {
+    font-size: 18px;
+    font-weight: bolder;
+    color: #BD2026;
+}
+
+.divDescription p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.divDescription1 {
+    font-size: 16pt;
+    color: #bd2026;
+    font-weight: bolder;
+}
