@@ -220,8 +220,8 @@ export default function Home() {
                                 </li>
                             ))}
                         </ul>
-                        <div style={{ margin: '15px' }}>
-                            <a href='' style={{ padding: '8px 30px', color: '#fff', background: '#008CBA', display: 'inline-block', borderRadius: '10px', textDecoration: 'none', marginLeft: 'auto' }}>
+                        <div style={{ margin: '15px', display: 'flex', justifyContent: 'center' }}>
+                            <a href='' style={{ padding: '8px 30px', color: '#fff', background: '#008CBA', borderRadius: '10px', textDecoration: 'none' }}>
                                 Xem thêm nhiều mẫu hơn
                             </a>
                         </div>
