@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 const WebHeader = () => {
     return (
         <>
-            <div style={{ backgroundColor: '#464646' }}>
+            <div style={{ backgroundColor: '#93D250' }}>
                 <Container>
                     <div className={styles.Headerdivstyle}>
                         <div>
@@ -26,7 +26,7 @@ const WebHeader = () => {
                         </div>
                         <div>
                             <p>
-                                <span className={styles.hotline}>HOTLINE: 19003189</span>
+                                <span className={styles.hotline}>HOTLINE: 0979336771</span>
                             </p>
                         </div>
                     </div >
