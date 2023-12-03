@@ -35,14 +35,16 @@ const WebHeader = () => {
                     <Container>
                         <div>
                             <div>
-                                <span style={{
-                                    justifyContent: 'space-between'
-                                }}>
+                                <span style={{ justifyContent: 'space-between' }}>
                                     <a href="/">
-                                        <img src={logo}>
-                                        </img>
+                                        <img src={logo} alt="Logo" />
                                     </a>
                                 </span>
+                            </div>
+                        </div>
+                        <div style={{ display: 'block' }}>
+                            <div style={{ display: 'inline-block', position: 'relative', height: '40px' }}>
+                                <input type="text" />
                             </div>
                         </div>
                     </Container>
