@@ -2,9 +2,9 @@
 import React, { useState } from 'react';
 import { Pagination } from 'antd';
 import Container from 'react-bootstrap/Container';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 import ItemDetail from './Detail';
-import lstBoHoa from '../Data/DataBohoa'
+import lstBoHoa from '../Data/DataBohoa';
 
 const Bohoa = () => {
     const itemsPerPage = 16;
@@ -12,7 +12,7 @@ const Bohoa = () => {
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = lstBoHoa.slice(indexOfFirstItem, indexOfLastItem);
-
+    const navigate = useNavigate();
     const totalItems = lstBoHoa.length;
     const pageNumbers = Math.ceil(totalItems / itemsPerPage);
 
@@ -58,7 +58,13 @@ const Bohoa = () => {
                                     )}
                                     <div style={{ margin: '10px', display: 'block', textAlign: 'center' }}>
                                         <label style={{ cursor: 'pointer' }}>
-                                            <span style={{ background: '#E35454', color: '#FFF', padding: '5px 25px', borderRadius: '20px' }}>Mua hàng</span>
+                                            {console.log('Item before passing:', item)}
+                                            <span
+                                                onClick={() => navigate(`/orders/${index + 1}`, { state: { item } })}
+                                                style={{ textDecoration: 'none', color: 'inherit' }}
+                                            >
+                                                <span style={{ background: '#E35454', color: '#FFF', padding: '5px 25px', borderRadius: '20px' }}>Mua hàng</span>
+                                            </span>
                                         </label>
                                     </div>
                                 </div>
