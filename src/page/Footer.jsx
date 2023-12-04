@@ -1,8 +1,10 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebookF, faGooglePlusG, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons';
-
+import { format, addMonths } from 'date-fns';
 const WebFooter = () => {
+    const currentDate = new Date();
+    const formattedDate = format(currentDate, 'MM-yyyy');
     return (
         <div>
             <div style={{ display: 'block', verticalAlign: 'top', background: '#155F8A' }}>
@@ -217,7 +219,15 @@ const WebFooter = () => {
                                 </div>
                             </div>
                         </div>
-                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div style={{ display: 'block', verticalAlign: 'top', position: 'relative', boxSizing: 'border-box' }}>
+                <div style={{ textAlign: 'center', display: 'block' }}>
+                    <div style={{ padding: '10px 0' }}>
+                        <p style={{ textAlign: 'center', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
+                            Bản quyền thuộc về Hoadeptoanquoc.com - Website được xây dựng từ 2023 - Cập nhật mới nhất {formattedDate}
+                        </p>
                     </div>
                 </div>
             </div>
