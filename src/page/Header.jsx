@@ -7,6 +7,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import banner from '../asset/banner/banner_hty-vn.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearchengin } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 const WebHeader = () => {
     return (
@@ -55,9 +57,45 @@ const WebHeader = () => {
                                 </span>
                             </div>
                         </div>
-                        <div style={{ display: 'block' }}>
-                            <div style={{ display: 'inline-block', position: 'relative', height: '40px' }}>
-                                <input type="text" />
+                        <div style={{ display: 'inline-block', width: '75%', verticalAlign: 'top', position: 'relative', boxSizing: 'border-box' }}>
+                            <div style={{ textAlign: 'right', margin: '0px auto' }}>
+                                <div style={{ display: 'block' }}>
+                                    <div>
+                                        <div style={{ display: 'inline-block', position: 'relative', height: '40px' }}>
+                                            <input style={{
+                                                boxSizing: 'border-box',
+                                                border: '1px solid #ccc',
+                                                color: 'fieldtext',
+                                                textRendering: 'auto',
+                                                letterSpacing: 'nomal',
+                                                wordSpacing: 'normal',
+                                                lineHeight: 'normal',
+                                                textTransform: 'none',
+                                                textIndent: '0px',
+                                                textShadow: 'none',
+                                                display: 'inline-block',
+                                                textAlign: 'start',
+                                                appearance: 'auto',
+                                                cursor: 'text',
+                                                backgroundColor: 'field',
+                                                margin: '0em',
+                                                padding: '1px 0px',
+                                                paddingBlock: '1px',
+                                                paddingInline: '2px'
+                                            }} type="text" placeholder='Tìm kiếm' />
+                                            <i style={{
+                                                position: 'absolute',
+                                                height: 'inherit',
+                                                right: '0',
+                                                display: 'inline-flex',
+                                                alignItems: 'center',
+                                                marginRight: '10px'
+                                            }}>
+                                                <FontAwesomeIcon icon={faSearchengin} color='white' />
+                                            </i>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </Container>
@@ -70,7 +108,7 @@ const WebHeader = () => {
                                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                     <Navbar.Collapse id="basic-navbar-nav">
                                         <Nav className="me-auto">
-                                            <Nav.Link href="/">Trang chủ</Nav.Link>
+                                            <Nav.Link as={Link} to="/">Trang chủ</Nav.Link>
                                             <NavDropdown title="Kiểu dáng" id="basic-nav-dropdown">
                                                 <NavDropdown.Item as={Link} to="/bohoa">
                                                     Bó hoa
