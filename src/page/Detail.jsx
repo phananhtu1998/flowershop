@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import LstDetailBoHoa from '../Data/DateDetailBoHoa'
+import LstDetailBoHoa from '../Data/DateDetailBoHoa';
+import LstSpLienQuan from '../Data/SanPhamLienQuan_Bohoa'
 
 const ItemDetail = () => {
     const { id } = useParams();
@@ -181,7 +182,123 @@ const ItemDetail = () => {
                             <span style={{ fontWeight: 'inherit' }}></span>
                         </div>
                         <div style={{ display: 'block', margin: '40px 0 0', verticalAlign: 'top' }}>
-                            <div style={{ textAlign: 'center' }}></div>
+                            <div style={{ textAlign: 'center' }}>
+                                <div style={{
+                                    textTransform: 'uppercase',
+                                    position: 'relative',
+                                    marginBottom: '30px',
+                                    padding: '0',
+                                    fontSize: '28px',
+                                    textAlign: 'center',
+                                    color: '#E35454'
+                                }}>
+                                    <div style={{
+                                        width: '27px',
+                                        height: '27px',
+                                        background: '#FFF',
+                                        position: 'absolute',
+                                        bottom: '-32px',
+                                        left: '0',
+                                        right: '0',
+                                        margin: '0 auto',
+                                        zIndex: '1',
+                                        backgroundImage: 'url(/interface.png)',
+                                        backgroundSize: '27px'
+                                    }}>
+                                    </div>
+                                    <span style={{
+                                        fontSize: '28px',
+                                        textAlign: 'center',
+                                        color: '#E35454'
+                                    }}>Sản phẩm liên quan</span>
+                                    <div style={{
+                                        width: "170px",
+                                        height: "1px",
+                                        background: "#CCC",
+                                        position: "absolute",
+                                        bottom: "-18px",
+                                        left: "0",
+                                        right: "0",
+                                        margin: "0 auto"
+                                    }}></div>
+                                </div>
+
+                                <div style={{
+                                    padding: '20px 0 0 ',
+                                    position: 'relative',
+                                    display: 'block',
+                                    textAlign: 'center'
+                                }}>
+                                    <div style={{
+                                        display: 'block',
+                                        textAlign: 'center'
+                                    }}>
+                                        <ul style={{ padding: '0', margin: '0', listStyle: 'none', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px', paddingInlineStart: '40px' }}>
+                                            {LstSpLienQuan.map((item, index) => (
+                                                < li style={{ width: '25%', display: 'inline-block', verticalAlign: 'top', clear: 'both', textAlign: 'center' }}>
+                                                    <div style={{ margin: '10px', position: 'relative', overflow: 'hidden', borderRadius: '5px', border: 'solid 1px #df2f5538' }}>
+                                                        <div style={{
+                                                            position: 'absolute',
+                                                            display: 'block',
+                                                            width: '290px',
+                                                            padding: '0',
+                                                            backgroundColor: '#3498db',
+                                                            boxShadow: '0 5px 10px rgba(0,0,0,.1)',
+                                                            color: '#fff',
+                                                            textShadow: '0 1px 1px rgba(0,0,0,.2)',
+                                                            textAlign: 'center',
+                                                            zIndex: '1',
+                                                            fontSize: '13px',
+                                                            transform: 'rotate(45deg)',
+                                                            right: '-115px',
+                                                            top: '23px'
+                                                        }}>
+                                                            <span>NEW</span>
+                                                        </div>
+                                                        <div style={{ margin: '10px', position: 'relative', paddingTop: '100%' }}>
+                                                            <a style={{ textDecoration: 'none', color: 'inherit' }}>
+                                                                <img style={{ objectFit: 'contain', position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }} src={item.Images} alt={item.Name}></img>
+                                                            </a>
+                                                            <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                                                <i></i>
+                                                                <span></span>
+                                                            </a>
+                                                        </div>
+                                                        <h2 style={{ margin: '10px 0 0' }}>
+                                                            <a style={{ color: 'inherit', fontSize: 'large', fontWeight: 'normal' }}>{item.Name}</a>
+                                                        </h2>
+                                                        <div style={{ fontSize: 'medium', fontWeight: 'normal', color: '#E13028' }}>
+                                                            <strong>{item.Price}</strong>
+                                                            <span> VNĐ</span>
+                                                        </div>
+                                                        <div style={{ margin: '10px 0', display: 'block', textAlign: 'center' }}>
+                                                            <label style={{ cursor: 'pointer' }}>
+                                                                <span style={{ background: '#E35454', color: '#FFF', padding: '5px 25px', borderRadius: '20px' }}>Mua hàng</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <div style={{
+                                        display: 'block',
+                                        textAlign: 'center'
+                                    }}>
+                                        <a href="" style={{
+                                            padding: '8px 30px',
+                                            color: '#fff',
+                                            background: '#008CBA',
+                                            display: 'inline-block',
+                                            marginTop: '15px',
+                                            textDecoration: 'none',
+                                            cursor: 'pointer',
+                                        }}>
+                                            Xem thêm nhiều mẫu hơn
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

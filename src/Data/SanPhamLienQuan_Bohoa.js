@@ -1,0 +1,23 @@
+const SPlienquanBoHoa = [
+    { Name: 'Hộp hoa 934', Price: '600.000', PriceOld: '', Images: '/SpLienQuanBoHoa/hop-hoa-934_300x300.jpg' },
+    { Name: 'Bó hoa 082', Price: '150.000', PriceOld: '', Images: '/SpLienQuanBoHoa/bo-hoa-082_300x300.jpg' },
+    { Name: 'Hộp hoa 933', Price: '1.500.000', PriceOld: '', Images: '/SpLienQuanBoHoa/hop-hoa-933_300x300.jpg' },
+    { Name: 'Bó hoa 081', Price: '400.000', PriceOld: '', Images: '/SpLienQuanBoHoa/bo-hoa-081_300x300.jpg' },
+    { Name: 'Bó hoa 080', Price: '400.000', PriceOld: '', Images: '/SpLienQuanBoHoa/bo-hoa-080_300x300.jpg' },
+    { Name: 'Hộp hoa 932', Price: '1.800.000', PriceOld: '', Images: '/SpLienQuanBoHoa/hop-hoa-932_300x300.jpg' },
+    { Name: 'Bó hoa 079', Price: '750.000', PriceOld: '', Images: '/SpLienQuanBoHoa/bo-hoa-079_300x300.jpg' },
+    { Name: 'Hộp hoa 078', Price: '220.000', PriceOld: '', Images: '/SpLienQuanBoHoa/bo-hoa-078_300x300.jpg' },
+    { Name: 'Bó hoa 077', Price: '400.000', PriceOld: '', Images: '/SpLienQuanBoHoa/bo-hoa-077_300x300.jpg' },
+    { Name: 'Bó hoa 076', Price: '290.000', PriceOld: '', Images: '/SpLienQuanBoHoa/bo-hoa-076_300x300.jpg' },
+    { Name: 'Hộp hoa 931', Price: '600.000', PriceOld: '', Images: '/SpLienQuanBoHoa/hop-hoa-931_300x300.jpg' },
+    { Name: 'Bó hoa 075', Price: '650.000', PriceOld: '', Images: '/SpLienQuanBoHoa/bo-hoa-075_300x300.jpg' },
+    { Name: 'Bó hoa 074', Price: '400.000', PriceOld: '', Images: '/SpLienQuanBoHoa/bo-hoa-074_300x300.jpg' },
+    { Name: 'Giỏ hoa 13', Price: '700.000', PriceOld: '', Images: '/SpLienQuanBoHoa/gio-hoa-13_300x300.jpg' },
+    { Name: 'Giỏ hoa 12', Price: '750.000', PriceOld: '', Images: '/SpLienQuanBoHoa/gio-hoa-12_300x300.jpg' },
+    { Name: 'Giỏ hoa 11', Price: '790.000', PriceOld: '', Images: '/SpLienQuanBoHoa/gio-hoa-11_300x300.jpg' },
+    { Name: 'Bó hoa 073', Price: '600.000', PriceOld: '', Images: '/SpLienQuanBoHoa/bo-hoa-073_300x300.jpg' },
+    { Name: 'Bó hoa 072', Price: '480.000', PriceOld: '', Images: '/SpLienQuanBoHoa/bo-hoa-072_300x300.jpg' },
+    { Name: 'Giỏ hoa 10', Price: '700.000', PriceOld: '', Images: '/SpLienQuanBoHoa/gio-hoa-10_300x300.jpg' },
+    { Name: 'Giỏ hoa 09', Price: '680.000', PriceOld: '', Images: '/SpLienQuanBoHoa/gio-hoa-09_300x300.jpg' },
+]
+export default SPlienquanBoHoa
