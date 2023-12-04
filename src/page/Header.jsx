@@ -12,25 +12,38 @@ const WebHeader = () => {
     return (
         <>
             <div style={{ backgroundColor: '#93D250' }}>
-                <Container>
-                    <div className={styles.Headerdivstyle}>
-                        <div>
-                            <p>
-                                <span className={styles.spanheader}>Thời gian làm việc 7:00 - 24:00</span>
-                            </p>
+                <div style={{ display: 'block', verticalAlign: 'top', position: 'relative', boxSizing: 'border-box' }}>
+                    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+                        <div style={{ color: '#FFFFFF' }}>
+                            <div>
+                                <div>
+                                    <div>
+                                        <div style={{ display: 'inline-block', color: '#0D0E0F', padding: '0 20px' }}>
+                                            <p style={{ display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
+                                                <span style={{ color: '#ffffff', fontSize: '12pt' }}>Thời gian làm việc 7:00 - 24:00</span>
+                                            </p>
+                                        </div>
+                                        <div style={{ display: 'inline-block', color: '#0D0E0F', padding: '0 20px' }}>
+                                            <p style={{ display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
+                                                <span style={{ color: '#ffffff', fontSize: '12pt' }}>Hệ thống shop: 3139 cửa hàng & đối tác ở tất cả các quận, huyện, thành phố trên 63 tỉnh thành</span>
+                                            </p>
+                                        </div>
+                                        <div style={{ display: 'inline-block', color: '#0D0E0F', padding: '0 20px' }}>
+                                            <p style={{ display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
+                                                <span style={{ color: '#c70a0a', fontSize: '12pt' }}>
+                                                    <strong style={{ fontWeight: 'bold' }}>
+                                                        HOTLINE:
+                                                        <a style={{ textDecoration: 'none', color: '#c70a0a' }} href='tel:1900 3189'> 1900 3189</a>
+                                                    </strong>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <p>
-                                <span className={styles.spanheader}>Hệ thống shop: 3139 cửa hàng & đối tác ở tất cả các quận, huyện, thành phố trên 63 tỉnh thành</span>
-                            </p>
-                        </div>
-                        <div>
-                            <p>
-                                <span className={styles.hotline}>HOTLINE: 0979336771</span>
-                            </p>
-                        </div>
-                    </div >
-                </Container>
+                    </div>
+                </div >
                 <div className={styles.divorder}>
                     <Container>
                         <div>
@@ -57,7 +70,7 @@ const WebHeader = () => {
                                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                     <Navbar.Collapse id="basic-navbar-nav">
                                         <Nav className="me-auto">
-                                            <Nav.Link href="#home">Trang chủ</Nav.Link>
+                                            <Nav.Link href="/">Trang chủ</Nav.Link>
                                             <NavDropdown title="Kiểu dáng" id="basic-nav-dropdown">
                                                 <NavDropdown.Item as={Link} to="/bohoa">
                                                     Bó hoa
