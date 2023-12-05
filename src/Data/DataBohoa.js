@@ -1,5 +1,5 @@
 const DataBohoa = [
-    { Name: 'Bó hoa đồng nghiệp 1 hoa hướng dương', Price: '99.000', PriceOld: '199.000', Images: '/BoHoa/bo-hoa-dong-nghiep-1-hoa-huong-duong_300x300.jpg' },
+    { Name: 'Bó hoa đồng nghiệp 1 hoa hướng dương', Price: '200.000', PriceOld: '199.000', Images: '/BoHoa/bo-hoa-dong-nghiep-1-hoa-huong-duong_300x300.jpg' },
     { Name: 'Bó hoa đồng nghiệp 1 hoa hướng dương', Price: '99.000', PriceOld: '199.000', Images: '/BoHoa/bo-hoa-dong-nghiep-1-hoa-huong-duong_300x300 (1).jpg' },
     { Name: 'Bó hoa hồng đỏ 1 bông', Price: '99.000', PriceOld: '199.000', Images: '/BoHoa/bo-hoa-hong-do-1-bong_300x300.jpg' },
     { Name: 'Bó hoa hồng đỏ 1 bông', Price: '99.000', PriceOld: '199.000', Images: '/BoHoa/bo-hoa-hong-do-1-bong_300x300 (1).jpg' },

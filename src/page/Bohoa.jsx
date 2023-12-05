@@ -9,9 +9,28 @@ import lstBoHoa from '../Data/DataBohoa';
 const Bohoa = () => {
     const itemsPerPage = 16;
     const [currentPage, setCurrentPage] = useState(1);
+    const [sortBy, setSortBy] = useState("1"); // Default sorting option
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentItems = lstBoHoa.slice(indexOfFirstItem, indexOfLastItem);
+
+    const sortData = () => {
+        let sortedData = [...lstBoHoa];
+        switch (sortBy) {
+            case "2": // Giá tăng dần
+                sortedData.sort((a, b) => parseFloat(a.Price) - parseFloat(b.Price));
+                break;
+            case "3": // Giá giảm dần
+                sortedData.sort((a, b) => parseFloat(b.Price) - parseFloat(a.Price));
+                break;
+            // Add more cases for other sorting options if needed
+            default:
+                // Default sorting (Mới nhất or other)
+                // No need to modify the order of the array
+                break;
+        }
+        return sortedData;
+    };
+    const currentItems = sortData().slice(indexOfFirstItem, indexOfLastItem);
     const navigate = useNavigate();
     const totalItems = lstBoHoa.length;
     const pageNumbers = Math.ceil(totalItems / itemsPerPage);
@@ -19,7 +38,6 @@ const Bohoa = () => {
     const paginate = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
-
     return (
         <div style={{ display: 'block', fontSize: 'small', lineHeight: '1.5' }}>
             <Container>
@@ -27,6 +45,15 @@ const Bohoa = () => {
                     <span style={{ textAlign: 'center' }}>Bó hoa</span>
                 </h1>
                 <div style={{ padding: '5px', margin: '10px', borderRadius: '5px' }}>
+                    <div style={{ display: 'block', textAlign: 'left', padding: '10px' }}>
+                        <span>Sắp xếp </span>
+                        <select value={sortBy}
+                            onChange={(e) => setSortBy(e.target.value)} style={{ maxWidth: '100%', textAlign: 'center', border: '2px solid #92D150', borderRadius: '5px' }}>
+                            <option value="1">Mới nhất</option>
+                            <option value="2">Giá tăng dần</option>
+                            <option value="3">Giá giảm dần</option>
+                        </select>
+                    </div>
                     <ul style={{ padding: '0', margin: '0', listStyle: 'none', display: 'flex', flexWrap: 'wrap' }}>
                         {currentItems.map((item, index) => (
                             <li key={index} style={{ flex: '0 0 25%', boxSizing: 'border-box', padding: '10px', textAlign: 'center' }}>

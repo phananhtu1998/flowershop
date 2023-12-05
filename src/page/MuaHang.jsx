@@ -8,10 +8,10 @@ const Orders = () => {
     const { state } = location;
     const { Images, Name, Price } = state.item;
     const [quantity, setQuantity] = useState(1);
-    const [name, setName] = useState('');  // Thêm dòng này
-    const [price, setPrice] = useState(0); // Thêm dòng này
-    const [images, setImages] = useState(null); // Thêm dòng này
-
+    const [name, setName] = useState('');
+    const [price, setPrice] = useState(0);
+    const [images, setImages] = useState(null);
+    const [extraFee, setExtraFee] = useState(0); // Thêm state cho phụ phí
     // Khởi tạo giá trị cho các biến state khi component được render
     useEffect(() => {
         setName(Name);
@@ -32,7 +32,7 @@ const Orders = () => {
     const handleDelete = () => {
         console.log("Deleting...");
         console.log("Previous values:", name, price, images);
-        setName('');  // Set giá trị cho biến name
+        setName('');
         setPrice(0);
         setImages(null);
         setQuantity(1);
@@ -45,6 +45,19 @@ const Orders = () => {
         useGrouping: true,
         groupingSeparator: '.',
     });
+
+    // Tính tổng cộng bao gồm phụ phí
+    const totalAmount = (price * quantity + extraFee / 1000).toLocaleString('vi-VN', {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0,
+        useGrouping: true,
+        groupingSeparator: '.',
+    });
+
+    const handleExtraFeeChange = (event) => {
+        const fee = parseFloat(event.target.value);
+        setExtraFee(isNaN(fee) ? 0 : fee);
+    };
 
     return (
         <div style={{ display: 'block', verticalAlign: 'top' }}>
@@ -120,11 +133,173 @@ const Orders = () => {
                                     </a>
                                 </div>
                             </div>
+                            {/* phụ phí khác */}
+                            <div style={{ fontSize: '18px', textAlign: 'right', display: 'block' }}>
+                                <span>Phụ phí khác</span>
+                                <span style={{ fontSize: '16px', width: '140px', display: 'inline-block' }}>
+                                    <input
+                                        style={{
+                                            width: '80px',
+                                            textAlign: 'right',
+                                            writingMode: 'horizontal-tb',
+                                            paddingBlock: '1px',
+                                            paddingInline: '2px'
+                                        }}
+                                        type="text"
+                                        value={extraFee}
+                                        onChange={handleExtraFeeChange}
+                                    />
+                                </span>
+                                <br />
+                                <span style={{ padding: '0px 0', display: 'inline-block' }}>
+                                    Tổng cộng:
+                                    <strong style={{ fontSize: '16px', width: '140px', display: 'inline-block', fontWeight: 'bold' }}>
+                                        {totalAmount}.000 VNĐ
+                                    </strong>
+                                </span>
+                            </div>
                         </div>
                     </div>
+                    {/* điền thông tin */}
+                    <div style={{ textAlign: 'left', display: 'block' }}>
+                        {/* H3 */}
+                        <div style={{ padding: '5px 0px', display: 'block' }}>
+                            <h3 style={{
+                                fontSize: '25px',
+                                margin: '0',
+                                marginBlockStart: '1em',
+                                marginBlockEnd: '1em',
+                                marginInlineStart: '0px',
+                                marginInlineEnd: '0px',
+                                fontWeight: 'bold'
+                            }}>
+                                Quý khách vui lòng điền thông tin để đặt hàng
+                            </h3>
+                        </div>
+                        {/* input */}
+                        <div style={{ padding: '5px 0px', display: 'block', boxSizing: 'border-box' }}>
+                            <span>
+                                <input style={{
+                                    verticalAlign: 'middle',
+                                    width: '600px',
+                                    height: '40px',
+                                    padding: '0 10px',
+                                    writingMode: 'horizontal-tb',
+                                    paddingBlock: '1px',
+                                    paddingInline: '2px',
+                                    lineHeight: '1.5',
+                                    fontSize: '14px'
+                                }} type="text" placeholder='Tên người đặt' />
+                            </span>
+                        </div>
+                        <div style={{ padding: '5px 0px', display: 'block', boxSizing: 'border-box' }}>
+                            <span>
+                                <input style={{
+                                    verticalAlign: 'middle',
+                                    width: '600px',
+                                    height: '40px',
+                                    padding: '0 10px',
+                                    writingMode: 'horizontal-tb',
+                                    paddingBlock: '1px',
+                                    paddingInline: '2px',
+                                    fontSize: '14px'
+                                }} type="text" placeholder='SĐT người đặt' />
+                            </span>
+                        </div>
+                        <div style={{ padding: '5px 0px', display: 'block', boxSizing: 'border-box' }}>
+                            <span>
+                                <input style={{
+                                    verticalAlign: 'middle',
+                                    width: '600px',
+                                    height: '40px',
+                                    padding: '0 10px',
+                                    writingMode: 'horizontal-tb',
+                                    paddingBlock: '1px',
+                                    paddingInline: '2px',
+                                    fontSize: '14px'
+                                }} type="text" placeholder='Bạn muốn nhận hoa khi nào? (Ví dụ: 15h ngày 15/01/2021)' />
+                            </span>
+                        </div>
+                        <div style={{ padding: '5px 0px', display: 'block', boxSizing: 'border-box' }}>
+                            <span>
+                                <textarea style={{
+                                    verticalAlign: 'top',
+                                    height: '88px',
+                                    width: '600px',
+                                    padding: '10px',
+                                    fontFamily: 'monospace',
+                                    textRendering: 'auto',
+                                    color: 'fieldtext',
+                                    letterSpacing: 'normal',
+                                    wordSpacing: 'normal',
+                                    lineHeight: 'normal',
+                                    textTransform: 'none',
+                                    textIndent: '0px',
+                                    textShadow: 'none',
+                                    display: 'inline-block',
+                                    textAlign: 'start',
+                                    appearance: 'auto',
+                                    cursor: 'text',
+                                    resize: 'auto',
+                                    margin: '0em',
+                                }} placeholder='Tên, SĐT và địa chỉ người nhận'>
+
+                                </textarea>
+                            </span>
+                        </div>
+                        <div style={{ padding: '5px 0px', display: 'block', boxSizing: 'border-box' }}>
+                            <span>
+                                <input style={{
+                                    verticalAlign: 'middle',
+                                    width: '600px',
+                                    height: '40px',
+                                    padding: '0 10px',
+                                    writingMode: 'horizontal-tb',
+                                    paddingBlock: '1px',
+                                    paddingInline: '2px',
+                                    fontSize: '14px'
+                                }} type="text" placeholder='Nội dung thông điệp BANNER hoặc THIỆP (Ví dụ: Banner: Công ty ABC chúc mừng khai trương)' />
+                            </span>
+                        </div>
+                    </div>
+                    {/* botton tiếp tục và quay lại */}
+                    <p style={{ display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
+                        <label style={{ verticalAlign: 'top', width: '25%', paddingRight: '10px', display: 'inline-block', textAlign: 'right' }}>
+                        </label>
+                        <button style={{
+                            marginLeft: '0',
+                            height: '40px',
+                            textTransform: 'uppercase',
+                            fontWeight: 'bold',
+                            width: '300px',
+                            float: 'left',
+                            background: '#4caf50',
+                            padding: '10px 20px',
+                            border: 'none',
+                            borderRadius: '3px',
+                            color: '#fff',
+                        }}> « Quay lại chọn hàng </button>
+                        <button style={{
+                            marginRight: '0',
+                            height: '40px',
+                            textTransform: 'uppercase',
+                            fontWeight: 'bold',
+                            width: '290px',
+                            margin: '0 10px',
+                            float: 'left',
+                            background: '#df2f55',
+                            padding: '10px 20px',
+                            border: 'none',
+                            borderRadius: '3px',
+                            color: '#fff'
+                        }}>
+                            Tiếp tục
+                        </button>
+                    </p>
                 </div>
+
             </div>
-        </div>
+        </div >
     );
 };
 
