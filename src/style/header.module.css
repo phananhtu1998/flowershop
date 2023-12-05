@@ -21,3 +21,7 @@
     height: 100px;
     object-fit: cover;
 }
+
+.searchItem:hover {
+    background-color: rgba(228, 224, 224, 0.438);
+}

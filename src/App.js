@@ -4,9 +4,9 @@ import WebHeader from './page/Header';
 import WebFooter from './page/Footer';
 import Home from './page/Home';
 import BoHoa from './page/Bohoa';
-import Detais from './page/Detail';
 import Orders from './page/MuaHang';
-
+import GioHoa from './page/Giohoa';
+import Detail from './page/Detail';
 function AppFlower() {
   return (
     <Router>
@@ -16,7 +16,8 @@ function AppFlower() {
           <Route path="/" element={<Home />} />
           <Route path="/bohoa" element={<BoHoa />} />
           <Route path="/orders/:id" element={<Orders />} />
-          <Route path="/bohoa/:id" element={<Detais />} />
+          <Route path="/giohoa" element={<GioHoa />} />
+          <Route path="/chitiet/:Name" element={<Detail />} />
         </Routes>
         <WebFooter />
       </div>

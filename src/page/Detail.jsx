@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import LstDetailBoHoa from '../Data/DateDetailBoHoa';
-import LstSpLienQuan from '../Data/SanPhamLienQuan_Bohoa'
-
-const ItemDetail = () => {
-    const { id } = useParams();
-    const itemId = parseInt(id - 1, 10);
-    const selectedItem = LstDetailBoHoa.find((item, index) => index === itemId);
-    const { Name, Price, Images } = selectedItem;
+import lstHoa from '../Data/data';
+const Detail = () => {
+    const { Name } = useParams();
+    const [item, setItem] = useState(null);
+    const [LstSpLienQuan, setLstSpLienQuan] = useState([]);
+    useEffect(() => {
+        let foundItem = lstHoa.find(item => item.Name === Name);
+        setLstSpLienQuan(lstHoa.filter(item => item.Category === foundItem.Category))
+        if (foundItem) {
+            setItem(foundItem);
+        }
+    }, [Name]);
+    if (!item) {
+        return <div style={{ textAlign: "center" }}>Không có sản phẩm !</div>; // You might want to add a loading state or handle not found case
+    }
     return (
         <div style={{ display: 'block', verticalAlign: 'top', position: 'relative', boxSizing: 'border-box' }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -18,22 +25,22 @@ const ItemDetail = () => {
                                 <p style={{ display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}></p>
                                 <div style={{ width: '50%', display: 'inline-block', verticalAlign: 'top' }}>
                                     <div style={{ margin: '0', position: 'relative', paddingTop: '100%' }}>
-                                        <a style={{ textDecoration: 'none', color: 'indianred' }} href="">
-                                            <img style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', objectFit: 'contain', zIndex: '1', maxWidth: '100%' }} src={Images} alt="" />
+                                        <a style={{ textDecoration: 'none', color: 'indianred' }}>
+                                            <img style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', objectFit: 'contain', zIndex: '1', maxWidth: '100%' }} src={item.Images} alt="" />
                                         </a>
                                     </div>
                                     <div style={{ margin: '10px 0', display: 'block' }}>
-                                        <img style={{ height: '50px', border: '1px solid #ccc', padding: '1px', cursor: 'pointer' }} src={Images} alt="" />
+                                        <img style={{ height: '50px', border: '1px solid #ccc', padding: '1px', cursor: 'pointer' }} src={item.Images} alt="" />
                                     </div>
                                 </div>
 
                                 <div style={{ width: '48%', display: 'inline-block', verticalAlign: 'top', marginLeft: '2%' }}>
                                     <h1 style={{ fontSize: '24px', margin: '10px 0 0', fontWeight: 'normal' }}>
-                                        <span>{Name}</span>
+                                        <span>{item.Name}</span>
                                     </h1>
                                     <p style={{ fontSize: '18px', marginBottom: '10px !important', fontWeight: 'bold', color: '#E13028' }}>
                                         <span>Giá: </span>
-                                        <span>{Price}</span>
+                                        <span>{item.Price}</span>
                                     </p>
                                     <div style={{ display: 'block', verticalAlign: 'top', fontSize: '14px', background: '#ECF7ED', position: 'relative', boxSizing: 'border-box', textAlign: 'left' }}>
                                         <div style={{ border: '1px solid #c4ddc8', borderRadius: '10px' }}>
@@ -234,8 +241,8 @@ const ItemDetail = () => {
                                         textAlign: 'center'
                                     }}>
                                         <ul style={{ padding: '0', margin: '0', listStyle: 'none', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px', paddingInlineStart: '40px' }}>
-                                            {LstSpLienQuan.map((item, index) => (
-                                                < li style={{ width: '25%', display: 'inline-block', verticalAlign: 'top', clear: 'both', textAlign: 'center' }}>
+                                            {LstSpLienQuan.length > 0 && LstSpLienQuan.slice(0, 20).map((item, index) => (
+                                                < li key={index} style={{ width: '25%', display: 'inline-block', verticalAlign: 'top', clear: 'both', textAlign: 'center' }}>
                                                     <div style={{ margin: '10px', position: 'relative', overflow: 'hidden', borderRadius: '5px', border: 'solid 1px #df2f5538' }}>
                                                         <div style={{
                                                             position: 'absolute',
@@ -307,4 +314,4 @@ const ItemDetail = () => {
     );
 };
 
-export default ItemDetail;
+export default Detail;

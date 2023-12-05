@@ -7,10 +7,28 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import banner from '../asset/banner/banner_hty-vn.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearchengin } from '@fortawesome/free-brands-svg-icons';
-import { Link } from 'react-router-dom';
+import { SearchOutlined } from '@ant-design/icons';
+import { useNavigate, Link } from 'react-router-dom';
+import lstData from '../Data/data';
+import { useState } from 'react';
+
 const WebHeader = () => {
+    const navigate = useNavigate();
+    const [datanew, setdatanew] = useState([]);
+    const HandleSearch = (e) => {
+        console.log(e)
+        let filterData = lstData.filter(item => {
+            const itemNameLowerCase = item.Name.toLowerCase();
+            // Check if the Unicode characters in the Name field include the search term
+            return itemNameLowerCase.includes(e.toLowerCase());
+        })
+        if (filterData.length > 0) {
+            setdatanew([...filterData])
+        }
+        if (e == "") {
+            setdatanew([])
+        }
+    }
     return (
         <>
             <div style={{ backgroundColor: '#93D250' }}>
@@ -48,7 +66,7 @@ const WebHeader = () => {
                 </div >
                 <div className={styles.divorder}>
                     <Container>
-                        <div>
+                        <div style={{ position: 'relative' }}>
                             <div>
                                 <span style={{ justifyContent: 'space-between' }}>
                                     <a href="/">
@@ -56,43 +74,80 @@ const WebHeader = () => {
                                     </a>
                                 </span>
                             </div>
-                        </div>
-                        <div style={{ display: 'inline-block', width: '75%', verticalAlign: 'top', position: 'relative', boxSizing: 'border-box' }}>
-                            <div style={{ textAlign: 'right', margin: '0px auto' }}>
-                                <div style={{ display: 'block' }}>
-                                    <div>
-                                        <div style={{ display: 'inline-block', position: 'relative', height: '40px' }}>
-                                            <input style={{
-                                                boxSizing: 'border-box',
-                                                border: '1px solid #ccc',
-                                                color: 'fieldtext',
-                                                textRendering: 'auto',
-                                                letterSpacing: 'nomal',
-                                                wordSpacing: 'normal',
-                                                lineHeight: 'normal',
-                                                textTransform: 'none',
-                                                textIndent: '0px',
-                                                textShadow: 'none',
-                                                display: 'inline-block',
-                                                textAlign: 'start',
-                                                appearance: 'auto',
-                                                cursor: 'text',
-                                                backgroundColor: 'field',
-                                                margin: '0em',
-                                                padding: '1px 0px',
-                                                paddingBlock: '1px',
-                                                paddingInline: '2px'
-                                            }} type="text" placeholder='Tìm kiếm' />
-                                            <i style={{
-                                                position: 'absolute',
-                                                height: 'inherit',
-                                                right: '0',
-                                                display: 'inline-flex',
-                                                alignItems: 'center',
-                                                marginRight: '10px'
-                                            }}>
-                                                <FontAwesomeIcon icon={faSearchengin} color='white' />
-                                            </i>
+                            <div style={{ display: 'inline-block', width: '75%', verticalAlign: 'top', position: 'absolute', top: '10%', right: '0', boxSizing: 'border-box' }}>
+                                <div style={{ textAlign: 'right', margin: '0px auto' }}>
+                                    <div style={{ display: 'block' }}>
+                                        <div>
+                                            <div style={{ display: 'inline-block', position: 'relative', height: '40px' }}>
+                                                <input style={{
+                                                    boxSizing: 'border-box',
+                                                    border: '1px solid #ccc',
+                                                    color: 'fieldtext',
+                                                    textRendering: 'auto',
+                                                    letterSpacing: 'nomal',
+                                                    wordSpacing: 'normal',
+                                                    lineHeight: 'normal',
+                                                    textTransform: 'none',
+                                                    textIndent: '0px',
+                                                    textShadow: 'none',
+                                                    display: 'inline-block',
+                                                    textAlign: 'start',
+                                                    appearance: 'auto',
+                                                    cursor: 'text',
+                                                    backgroundColor: 'field',
+                                                    margin: '0em',
+                                                    padding: '1px 0px',
+                                                    paddingBlock: '1px',
+                                                    paddingInline: '2px'
+                                                }}
+                                                    type="text"
+                                                    placeholder='Tìm kiếm'
+                                                    onChange={(e) => HandleSearch(e.target.value)}
+                                                />
+                                                <i style={{
+                                                    position: 'absolute',
+                                                    height: 'inherit',
+                                                    right: '0',
+                                                    top: '0',
+                                                    display: 'inline-flex',
+                                                    alignItems: 'center',
+                                                    marginRight: '10px',
+                                                    height: '25px'
+                                                }}>
+                                                    <SearchOutlined />
+                                                </i>
+                                                {datanew.length > 0 && (
+                                                    <div style={{
+                                                        position: 'absolute',
+                                                        padding: '8px',
+                                                        zIndex: '999999999999',
+                                                        color: '#333',
+                                                        textAlign: 'left',
+                                                        border: '1px dotted #333',
+                                                        background: '#fff',
+                                                        minWidth: '400px',
+                                                        maxHeight: '500px',
+                                                        overflowY: "scroll",
+                                                    }}>
+                                                        <div>
+                                                            <ul style={{ paddingLeft: 0, fontSize: '13px' }}>
+                                                                {datanew.map((item, index) => (
+                                                                    <li onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={styles.searchItem} style={{ listStyle: 'none', marginBottom: '5px', cursor: 'pointer' }} title={item.Name} key={index}>
+                                                                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                                                            <div style={{ display: 'flex' }}>
+                                                                                <img style={{ display: 'flex', width: "34px", height: "34px", maxWidth: '34px', maxHeight: '34px', objectFit: 'cover' }} src={item.Images} alt="" />
+                                                                                <span style={{ marginLeft: '5px' }}> {item.Name}</span>
+                                                                            </div>
+                                                                            <div>
+                                                                                <span style={{ color: 'red' }}>{item.Price}</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                ))}
+                                                            </ul>
+                                                        </div>
+                                                    </div>)}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -113,7 +168,7 @@ const WebHeader = () => {
                                                 <NavDropdown.Item as={Link} to="/bohoa">
                                                     Bó hoa
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item >
+                                                <NavDropdown.Item as={Link} to="/giohoa">
                                                     Giỏ hoa-hộp hoa
                                                 </NavDropdown.Item>
                                                 <NavDropdown.Item >

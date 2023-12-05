@@ -2,37 +2,32 @@
 import React, { useState } from 'react';
 import { Pagination } from 'antd';
 import Container from 'react-bootstrap/Container';
-import { Link, Route, Routes, useNavigate } from 'react-router-dom';
-import ItemDetail from './Detail';
-import lstBoHoa from '../Data/DataBohoa';
-
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import lstBoHoa from '../Data/data';
+import Detail from './Detail';
+let sortedData = lstBoHoa.filter(item => item.Category === "bohoa");
 const Bohoa = () => {
     const itemsPerPage = 16;
     const [currentPage, setCurrentPage] = useState(1);
     const [sortBy, setSortBy] = useState("1"); // Default sorting option
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-
     const sortData = () => {
-        let sortedData = [...lstBoHoa];
         switch (sortBy) {
-            case "2": // Giá tăng dần
+            case "2":
                 sortedData.sort((a, b) => parseFloat(a.Price) - parseFloat(b.Price));
                 break;
-            case "3": // Giá giảm dần
+            case "3":
                 sortedData.sort((a, b) => parseFloat(b.Price) - parseFloat(a.Price));
                 break;
-            // Add more cases for other sorting options if needed
             default:
-                // Default sorting (Mới nhất or other)
-                // No need to modify the order of the array
                 break;
         }
         return sortedData;
     };
     const currentItems = sortData().slice(indexOfFirstItem, indexOfLastItem);
     const navigate = useNavigate();
-    const totalItems = lstBoHoa.length;
+    const totalItems = sortedData.length;
     const pageNumbers = Math.ceil(totalItems / itemsPerPage);
 
     const paginate = (pageNumber) => {
@@ -48,7 +43,7 @@ const Bohoa = () => {
                     <div style={{ display: 'block', textAlign: 'left', padding: '10px' }}>
                         <span>Sắp xếp </span>
                         <select value={sortBy}
-                            onChange={(e) => setSortBy(e.target.value)} style={{ maxWidth: '100%', textAlign: 'center', border: '2px solid #92D150', borderRadius: '5px' }}>
+                            onChange={(e) => setSortBy(e.target.value)} style={{ maxWidth: '100%', textAlign: 'center', border: '2px solid #666', borderRadius: '5px' }}>
                             <option value="1">Mới nhất</option>
                             <option value="2">Giá tăng dần</option>
                             <option value="3">Giá giảm dần</option>
@@ -59,20 +54,12 @@ const Bohoa = () => {
                             <li key={index} style={{ flex: '0 0 25%', boxSizing: 'border-box', padding: '10px', textAlign: 'center' }}>
                                 <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '5px', border: 'solid 1px #df2f5538' }}>
                                     <div style={{ margin: '0', position: 'relative', paddingTop: '100%' }}>
-                                        {/* Truyền thông tin mục qua URL */}
-                                        <Link
-                                            to={{
-                                                pathname: `/bohoa/${index + 1}`,
-                                                state: { item },
-                                            }}
-                                            style={{ textDecoration: 'none', color: 'inherit' }}
-                                        >
-                                            <img style={{ padding: '10px', objectFit: 'contain', position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }} src={item.Images} alt={item.Name} />
-                                        </Link>
-
+                                        <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} style={{ padding: '10px', objectFit: 'contain', position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', cursor: 'pointer' }} src={item.Images} alt={item.Name} title={item.Name} />
                                     </div>
-                                    <h2 style={{ margin: '10px 0 0' }}>
-                                        <Link to={`/bohoa/${index + 1}`} style={{ color: 'inherit', fontSize: 'medium', fontWeight: 'normal', lineHeight: '1.1', textDecoration: 'none' }}>{item.Name}</Link>
+                                    <h2 style={{ margin: '10px 0 0', color: 'inherit', fontSize: 'medium', fontWeight: 'normal', lineHeight: '1.1', textDecoration: 'none' }}>
+                                        <p style={{ cursor: 'pointer' }} onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} title={item.Name}>
+                                            {item.Name}
+                                        </p>
                                     </h2>
                                     <div style={{ display: 'inline-block', fontSize: 'medium', fontWeight: 'bold', color: '#E13028' }}>
                                         <strong>{item.Price}</strong>
@@ -85,7 +72,6 @@ const Bohoa = () => {
                                     )}
                                     <div style={{ margin: '10px', display: 'block', textAlign: 'center' }}>
                                         <label style={{ cursor: 'pointer' }}>
-                                            {console.log('Item before passing:', item)}
                                             <span
                                                 onClick={() => navigate(`/orders/${index + 1}`, { state: { item } })}
                                                 style={{ textDecoration: 'none', color: 'inherit' }}
@@ -105,6 +91,7 @@ const Bohoa = () => {
                             <Pagination
                                 current={currentPage}
                                 total={totalItems}
+                                showSizeChanger={false}
                                 pageSize={itemsPerPage}
                                 onChange={paginate}
                             />
@@ -117,7 +104,7 @@ const Bohoa = () => {
                     <Route
                         key={index}
                         path={`/bohoa/${index + 1}`}
-                        element={<ItemDetail index={index} />}
+                        element={<Detail index={index} />}
                     />
                 ))}
             </Routes>
