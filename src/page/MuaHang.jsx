@@ -3,41 +3,109 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 
-const Orders = ({ cartItems }) => {
-    const [cartItemsData, setCartItemsData] = useState([]);
+const Orders = ({ cartItems, setCartItems }) => {
+    // console.log(cartItems);
+    // const [cartItemsData, setCartItemsData] = useState([]);
     const quantityMap = [];
     let totalCost = 0;
     let totalPrice = 0;
     let Number = 1;
+    var cartItemss = localStorage.getItem('cartItems')
     // Lặp qua giỏ hàng và cập nhật số lượng trong quantityMap
-    cartItems.forEach((item) => {
-        // console.log(item)
-        const key = `${item.Name}-${item.Price}-${item.Images}`;
-        if (quantityMap[key]) {
-            // Nếu sản phẩm đã tồn tại, tăng số lượng lên
-            quantityMap[key].quantity += 1;
-        } else {
-            // Nếu sản phẩm chưa tồn tại, đặt số lượng là 1
-            quantityMap[key] = { ...item, quantity: 1 };
-        }
-        let intValue = parseInt(item.Price);
-        totalCost += intValue;
-        totalPrice = parseInt(totalCost * 1000, 10);
-        totalPrice = totalPrice.toLocaleString('vi-VN');
-    });
+    useEffect(() => { handleChangeQuantity() }, [])
+
+    // console.log(updatedCartItems);
+    const handleChangeQuantity = () => {
+        // Get the current cart items from localStorage
+        const storedCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        // Clone the current cart items to avoid mutating the original array
+        const updatedCartItems = [...storedCartItems];
+        console.log(updatedCartItems);
+
+        // Iterate over each item in cartItems
+        updatedCartItems.forEach((cartItem) => {
+            // Find the corresponding item in the new items data
+            const correspondingItem = cartItems.find((item) => item.Name === cartItem.Name);
+
+            if (correspondingItem) {
+                // If the item exists, update the quantity
+                cartItem.quantity += 1;
+
+                let intValue = parseInt(correspondingItem.Price);
+                totalCost += intValue;
+                totalPrice = parseInt(totalCost * 1000, 10);
+                totalPrice = totalPrice.toLocaleString('vi-VN');
+            }
+        });
+
+        // Update localStorage with the modified array
+        localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+
+        // Update cartItems state with the modified array
+        setCartItems(updatedCartItems);
+    };
+
+
+    // cartItems.forEach((item) => {
+    //     const existingItemIndex = cartItems.findIndex((cartItem) => cartItem.Name === item.Name);
+    //     console.log(existingItemIndex);
+    //     if (existingItemIndex !== -1) {
+    //         // If the product already exists, increase the quantity
+    //         updatedCartItems[existingItemIndex].quantity += 1;
+    //     } else {
+    //         // If the product doesn't exist, add a new item with quantity 1
+    //         updatedCartItems.push({ ...item, quantity: 1 });
+    //     }
+
+    //     let intValue = parseInt(item.Price);
+    //     totalCost += intValue;
+    //     totalPrice = parseInt(totalCost * 1000, 10);
+    //     totalPrice = totalPrice.toLocaleString('vi-VN');
+    // });
+
+    // // Update cartItems state with the modified array
+    // setCartItems(updatedCartItems);
+
+    // Calculate total price and format it
+    totalPrice = parseInt(totalCost * 1000, 10).toLocaleString('vi-VN');
+
 
     const handleIncrease = (item) => {
-        const updatedCartItems = cartItemsData.map((cartItem) =>
+        const updatedCartItems = cartItems.map((cartItem) =>
             cartItem.key === item.key ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
         );
-        setCartItemsData(updatedCartItems);
+        setCartItems(updatedCartItems);
     };
 
     const handleDecrease = (item) => {
         const key = item.target.getAttribute("atr_item");
-        quantityMap[key].quantity -= 1
-        console.log(quantityMap[key].quantity)
+        quantityMap[key].quantity -= 1;
+
+        // Parse the JSON string from localStorage to get the array
+        const storedCartItems = JSON.parse(localStorage.getItem('cartItems'));
+        // Find the index of the item to be removed
+        const index = storedCartItems.findIndex((cartItem) => {
+            return (
+                cartItem.Name === quantityMap[key].Name &&
+                cartItem.Price === quantityMap[key].Price &&
+                cartItem.Images === quantityMap[key].Images
+            );
+        });
+
+        // Remove the item from the array
+        if (index !== -1) {
+            storedCartItems.splice(index, 1);
+
+            // Update localStorage with the modified array
+            localStorage.setItem('cartItems', JSON.stringify(storedCartItems));
+            setCartItems(storedCartItems);
+        }
+
+
     };
+
+
 
     return (
         <div style={{ display: 'block', verticalAlign: 'top' }}>
@@ -65,7 +133,7 @@ const Orders = ({ cartItems }) => {
                                     <div style={{ width: '10%', textAlign: 'right', display: 'inline-block' }}>Thành tiền</div>
                                 </div>
 
-                                {Object.values(quantityMap).map((item, index) => (
+                                {cartItems.map((item, index) => (
                                     <div key={index} style={{ fontSize: '16px', display: 'block', padding: '2px' }}>
                                         <div>
                                             <div style={{ display: 'inline-block', width: '20%', verticalAlign: 'top', textAlign: 'center' }}>
