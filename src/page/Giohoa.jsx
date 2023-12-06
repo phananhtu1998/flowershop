@@ -5,13 +5,17 @@ import Container from 'react-bootstrap/Container';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import Detail from './Detail';
 import lstGioHoa from '../Data/data';
+
 let sortedData = lstGioHoa.filter(item => item.Category === "giohoa");
-const GioHoa = () => {
+
+const GioHoa = ({ onAddToCart }) => {
+
     const itemsPerPage = 16;
     const [currentPage, setCurrentPage] = useState(1);
     const [sortBy, setSortBy] = useState("1"); // Default sorting option
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+
     const sortData = () => {
         switch (sortBy) {
             case "2":
@@ -25,6 +29,7 @@ const GioHoa = () => {
         }
         return sortedData;
     };
+
     const currentItems = sortData().slice(indexOfFirstItem, indexOfLastItem);
     const navigate = useNavigate();
     const totalItems = sortedData.length;
@@ -33,6 +38,12 @@ const GioHoa = () => {
     const paginate = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
+
+    const handleAddToCartAndNavigate = (item, orderIndex) => {
+        onAddToCart((prevCartItems) => [...prevCartItems, item]);
+        navigate(`/orders`);
+    };
+
     return (
         <div style={{ display: 'block', fontSize: 'small', lineHeight: '1.5' }}>
             <Container>
@@ -51,7 +62,7 @@ const GioHoa = () => {
                     </div>
                     <ul style={{ padding: '0', margin: '0', listStyle: 'none', display: 'flex', flexWrap: 'wrap' }}>
                         {currentItems.map((item, index) => (
-                            <li key={index} style={{ flex: '0 0 25%', boxSizing: 'border-box', padding: '10px', textAlign: 'center' }}>
+                            < li key={index} style={{ flex: '0 0 25%', boxSizing: 'border-box', padding: '10px', textAlign: 'center' }}>
                                 <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '5px', border: 'solid 1px #df2f5538' }}>
                                     <div style={{ margin: '0', position: 'relative', paddingTop: '100%' }}>
                                         <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} style={{ padding: '10px', objectFit: 'contain', position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', cursor: 'pointer' }} src={item.Images} alt={item.Name} title={item.Name} />
@@ -72,9 +83,8 @@ const GioHoa = () => {
                                     )}
                                     <div style={{ margin: '10px', display: 'block', textAlign: 'center' }}>
                                         <label style={{ cursor: 'pointer' }}>
-                                            {console.log('Item before passing:', item)}
                                             <span
-                                                onClick={() => navigate(`/orders/${index + 1}`, { state: { item } })}
+                                                onClick={() => handleAddToCartAndNavigate(item, index + 1)}
                                                 style={{ textDecoration: 'none', color: 'inherit' }}
                                             >
                                                 <span style={{ background: '#E35454', color: '#FFF', padding: '5px 25px', borderRadius: '20px' }}>Mua hàng</span>

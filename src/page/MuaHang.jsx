@@ -1,62 +1,42 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
-const Orders = () => {
-    const location = useLocation();
-    const { state } = location;
-    const { Images, Name, Price } = state.item;
-    const [quantity, setQuantity] = useState(1);
-    const [name, setName] = useState('');
-    const [price, setPrice] = useState(0);
-    const [images, setImages] = useState(null);
-    const [extraFee, setExtraFee] = useState(0); // Thêm state cho phụ phí
-    // Khởi tạo giá trị cho các biến state khi component được render
-    useEffect(() => {
-        setName(Name);
-        setPrice(Price);
-        setImages(Images);
-    }, [Name, Price, Images]);
 
-    const handleIncrease = () => {
-        setQuantity(quantity + 1);
-    };
-
-    const handleDecrease = () => {
-        if (quantity > 1) {
-            setQuantity(quantity - 1);
+const Orders = ({ cartItems }) => {
+    const [cartItemsData, setCartItemsData] = useState([]);
+    const quantityMap = [];
+    let totalCost = 0;
+    let totalPrice = 0;
+    let Number = 1;
+    // Lặp qua giỏ hàng và cập nhật số lượng trong quantityMap
+    cartItems.forEach((item) => {
+        // console.log(item)
+        const key = `${item.Name}-${item.Price}-${item.Images}`;
+        if (quantityMap[key]) {
+            // Nếu sản phẩm đã tồn tại, tăng số lượng lên
+            quantityMap[key].quantity += 1;
+        } else {
+            // Nếu sản phẩm chưa tồn tại, đặt số lượng là 1
+            quantityMap[key] = { ...item, quantity: 1 };
         }
-    };
-
-    const handleDelete = () => {
-        console.log("Deleting...");
-        console.log("Previous values:", name, price, images);
-        setName('');
-        setPrice(0);
-        setImages(null);
-        setQuantity(1);
-        console.log("After deletion:", name, price, images);
-    };
-
-    const totalPrice = (price * quantity).toLocaleString('vi-VN', {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0,
-        useGrouping: true,
-        groupingSeparator: '.',
+        let intValue = parseInt(item.Price);
+        totalCost += intValue;
+        totalPrice = parseInt(totalCost * 1000, 10);
+        totalPrice = totalPrice.toLocaleString('vi-VN');
     });
 
-    // Tính tổng cộng bao gồm phụ phí
-    const totalAmount = (price * quantity + extraFee / 1000).toLocaleString('vi-VN', {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0,
-        useGrouping: true,
-        groupingSeparator: '.',
-    });
+    const handleIncrease = (item) => {
+        const updatedCartItems = cartItemsData.map((cartItem) =>
+            cartItem.key === item.key ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
+        );
+        setCartItemsData(updatedCartItems);
+    };
 
-    const handleExtraFeeChange = (event) => {
-        const fee = parseFloat(event.target.value);
-        setExtraFee(isNaN(fee) ? 0 : fee);
+    const handleDecrease = (item) => {
+        const key = item.target.getAttribute("atr_item");
+        quantityMap[key].quantity -= 1
+        console.log(quantityMap[key].quantity)
     };
 
     return (
@@ -85,40 +65,42 @@ const Orders = () => {
                                     <div style={{ width: '10%', textAlign: 'right', display: 'inline-block' }}>Thành tiền</div>
                                 </div>
 
-                                <div style={{ fontSize: '16px', display: 'block' }}>
-                                    <div>
-                                        <div style={{ display: 'inline-block', width: '20%', verticalAlign: 'top', textAlign: 'center' }}>
-                                            <a style={{ textDecoration: 'none', color: 'inherit' }}>
-                                                <img style={{ width: '80px', maxWidth: '100%', height: 'auto' }} src={Images} alt="" width={200} />
-                                            </a>
-                                        </div>
-                                        <div style={{ display: 'inline-block', width: '30%', verticalAlign: 'top', fontSize: '16px' }}>
-                                            <a style={{ textDecoration: 'none', color: 'inherit' }}>1. {Name}</a>
-                                            <p style={{ display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                <span style={{ width: '20%' }}>Ghi chú</span>
-                                                <input style={{ width: '78%', marginLeft: '2%' }} type="text" />
-                                            </p>
-                                            <div style={{ display: 'block' }}></div>
-                                        </div>
-                                        <div style={{ display: 'inline-block', width: '20%', verticalAlign: 'top', textAlign: 'right', whiteSpace: 'nowrap' }}>
-                                            <strong style={{ fontWeight: 'bold', textAlign: 'right', whiteSpace: 'nowrap', fontSize: '16px' }}>
-                                                <span>{Price} VNĐ</span>
-                                            </strong>
-                                        </div>
-                                        {/* số lượng */}
-                                        <div style={{ display: 'inline-block', width: '20%', verticalAlign: 'top', textAlign: 'right' }}>
-                                            <div style={{ border: '1px solid #666', marginRight: '2px', display: 'inline-block' }}>
-                                                <label style={{ display: 'inline-block', borderRight: '1px solid #666', padding: '5px 10px', cursor: 'pointer' }} onClick={handleDecrease}>-</label>
-                                                <input style={{ width: '50px', textAlign: 'center', border: '0px', writingMode: 'horizontal-tb', paddingBlock: '1px', paddingInline: '2px', margin: '0' }} type="text" value={quantity} readOnly />
-                                                <label style={{ borderLeft: '1px solid #666', display: 'inline-block', padding: '5px 10px', cursor: 'pointer' }} onClick={handleIncrease}>+</label>
+                                {Object.values(quantityMap).map((item, index) => (
+                                    <div key={index} style={{ fontSize: '16px', display: 'block', padding: '2px' }}>
+                                        <div>
+                                            <div style={{ display: 'inline-block', width: '20%', verticalAlign: 'top', textAlign: 'center' }}>
+                                                <a style={{ textDecoration: 'none', color: 'inherit' }}>
+                                                    <img style={{ width: '80px', maxWidth: '100%', height: 'auto' }} src={item.Images} alt="" width={200} />
+                                                </a>
+                                            </div>
+                                            <div style={{ display: 'inline-block', width: '30%', verticalAlign: 'top', fontSize: '16px' }}>
+                                                <a style={{ textDecoration: 'none', color: 'inherit' }}>{Number++}. {item.Name} </a>
+                                                <p style={{ display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
+                                                    <span style={{ width: '20%' }}>Ghi chú</span>
+                                                    <input style={{ width: '78%', marginLeft: '2%' }} type="text" />
+                                                </p>
+                                                <div style={{ display: 'block' }}></div>
+                                            </div>
+                                            <div style={{ display: 'inline-block', width: '20%', verticalAlign: 'top', textAlign: 'right', whiteSpace: 'nowrap' }}>
+                                                <strong style={{ fontWeight: 'bold', textAlign: 'right', whiteSpace: 'nowrap', fontSize: '16px' }}>
+                                                    <span>{item.Price} VNĐ</span>
+                                                </strong>
+                                            </div>
+                                            {/* số lượng */}
+                                            <div style={{ display: 'inline-block', width: '20%', verticalAlign: 'top', textAlign: 'right' }}>
+                                                <div style={{ border: '1px solid #666', marginRight: '2px', display: 'inline-block' }}>
+                                                    <label style={{ display: 'inline-block', borderRight: '1px solid #666', padding: '5px 10px', cursor: 'pointer' }} atr_item={`${item.Name}-${item.Price}-${item.Images}`} onClick={(e) => handleDecrease(e)}>-</label>
+                                                    <input style={{ width: '50px', textAlign: 'center', border: '0px', writingMode: 'horizontal-tb', paddingBlock: '1px', paddingInline: '2px', margin: '0' }} type="text" value={item.quantity} readOnly />
+                                                    <label style={{ borderLeft: '1px solid #666', display: 'inline-block', padding: '5px 10px', cursor: 'pointer' }} onClick={handleIncrease}>+</label>
+                                                </div>
+                                            </div>
+                                            {/* Thành tiền */}
+                                            <div style={{ display: 'inline-block', fontWeight: 'bold', width: '10%', textAlign: 'right' }}>
+                                                {item.Price * item.quantity}.000 VNĐ
                                             </div>
                                         </div>
-                                        {/* Thành tiền */}
-                                        <div style={{ display: 'inline-block', fontWeight: 'bold', width: '10%', textAlign: 'right' }}>
-                                            {totalPrice}.000 VNĐ
-                                        </div>
                                     </div>
-                                </div>
+                                ))}
                                 {/* xóa bỏ */}
                                 <div style={{
                                     textAlign: 'right',
@@ -126,7 +108,7 @@ const Orders = () => {
                                     padding: '10px 0',
                                     marginBottom: '20px'
                                 }}>
-                                    <a style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }} onClick={handleDelete}>
+                                    <a style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }} >
                                         <i>
                                             <FontAwesomeIcon icon={faTrashAlt} /> Xóa
                                         </i>
@@ -146,15 +128,15 @@ const Orders = () => {
                                             paddingInline: '2px'
                                         }}
                                         type="text"
-                                        value={extraFee}
-                                        onChange={handleExtraFeeChange}
+                                        value="phí"
+                                        onChange="xử lý phí"
                                     />
                                 </span>
                                 <br />
                                 <span style={{ padding: '0px 0', display: 'inline-block' }}>
                                     Tổng cộng:
                                     <strong style={{ fontSize: '16px', width: '140px', display: 'inline-block', fontWeight: 'bold' }}>
-                                        {totalAmount}.000 VNĐ
+                                        {totalPrice} VNĐ
                                     </strong>
                                 </span>
                             </div>
