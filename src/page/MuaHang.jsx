@@ -13,7 +13,6 @@ const Orders = ({ cartItems, setCartItems }) => {
     var cartItemss = localStorage.getItem('cartItems')
     // Lặp qua giỏ hàng và cập nhật số lượng trong quantityMap
     useEffect(() => { handleChangeQuantity() }, [])
-
     // console.log(updatedCartItems);
     const handleChangeQuantity = () => {
         // Get the current cart items from localStorage
@@ -36,41 +35,12 @@ const Orders = ({ cartItems, setCartItems }) => {
                 totalCost += intValue;
                 totalPrice = parseInt(totalCost * 1000, 10);
                 totalPrice = totalPrice.toLocaleString('vi-VN');
+                totalPrice = parseInt(totalCost * 1000, 10).toLocaleString('vi-VN');
             }
         });
-
-        // Update localStorage with the modified array
         localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
-
-        // Update cartItems state with the modified array
         setCartItems(updatedCartItems);
     };
-
-
-    // cartItems.forEach((item) => {
-    //     const existingItemIndex = cartItems.findIndex((cartItem) => cartItem.Name === item.Name);
-    //     console.log(existingItemIndex);
-    //     if (existingItemIndex !== -1) {
-    //         // If the product already exists, increase the quantity
-    //         updatedCartItems[existingItemIndex].quantity += 1;
-    //     } else {
-    //         // If the product doesn't exist, add a new item with quantity 1
-    //         updatedCartItems.push({ ...item, quantity: 1 });
-    //     }
-
-    //     let intValue = parseInt(item.Price);
-    //     totalCost += intValue;
-    //     totalPrice = parseInt(totalCost * 1000, 10);
-    //     totalPrice = totalPrice.toLocaleString('vi-VN');
-    // });
-
-    // // Update cartItems state with the modified array
-    // setCartItems(updatedCartItems);
-
-    // Calculate total price and format it
-    totalPrice = parseInt(totalCost * 1000, 10).toLocaleString('vi-VN');
-
-
     const handleIncrease = (item) => {
         const updatedCartItems = cartItems.map((cartItem) =>
             cartItem.key === item.key ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
@@ -104,9 +74,6 @@ const Orders = ({ cartItems, setCartItems }) => {
 
 
     };
-
-
-
     return (
         <div style={{ display: 'block', verticalAlign: 'top' }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'block' }}>
