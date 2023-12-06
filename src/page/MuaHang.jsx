@@ -2,78 +2,69 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
-
 const Orders = ({ cartItems, setCartItems }) => {
-    // console.log(cartItems);
-    // const [cartItemsData, setCartItemsData] = useState([]);
-    const quantityMap = [];
-    let totalCost = 0;
-    let totalPrice = 0;
-    let Number = 1;
-    var cartItemss = localStorage.getItem('cartItems')
-    // Lặp qua giỏ hàng và cập nhật số lượng trong quantityMap
-    useEffect(() => { handleChangeQuantity() }, [])
-    // console.log(updatedCartItems);
-    const handleChangeQuantity = () => {
-        // Get the current cart items from localStorage
-        const storedCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-
-        // Clone the current cart items to avoid mutating the original array
-        const updatedCartItems = [...storedCartItems];
-        console.log(updatedCartItems);
-
-        // Iterate over each item in cartItems
-        updatedCartItems.forEach((cartItem) => {
-            // Find the corresponding item in the new items data
-            const correspondingItem = cartItems.find((item) => item.Name === cartItem.Name);
-
-            if (correspondingItem) {
-                // If the item exists, update the quantity
-                cartItem.quantity += 1;
-
-                let intValue = parseInt(correspondingItem.Price);
-                totalCost += intValue;
-                totalPrice = parseInt(totalCost * 1000, 10);
-                totalPrice = totalPrice.toLocaleString('vi-VN');
-                totalPrice = parseInt(totalCost * 1000, 10).toLocaleString('vi-VN');
-            }
-        });
-        localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
-        setCartItems(updatedCartItems);
-    };
+    const [quantityMap, setQuantityMap] = useState({});
+    useEffect(() => {
+        // Load stored quantityMap from localStorage
+        const storedQuantityMap = JSON.parse(localStorage.getItem('quantityMap')) || {};
+        setQuantityMap(storedQuantityMap);
+    }, []);
     const handleIncrease = (item) => {
-        const updatedCartItems = cartItems.map((cartItem) =>
-            cartItem.key === item.key ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
-        );
-        setCartItems(updatedCartItems);
+        const itemKey = `${item.Name}-${item.Price}`;
+        const updatedQuantityMap = {
+            ...quantityMap,
+            [itemKey]: (quantityMap[itemKey] || 0) + 1,
+        };
+        setQuantityMap(updatedQuantityMap);
+        updateLocalStorage(itemKey, updatedQuantityMap[itemKey]);
     };
 
     const handleDecrease = (item) => {
-        const key = item.target.getAttribute("atr_item");
-        quantityMap[key].quantity -= 1;
+        const itemKey = `${item.Name}-${item.Price}`;
+        const updatedQuantityMap = {
+            ...quantityMap,
+            [itemKey]: Math.max((quantityMap[itemKey] || 0) - 1, 0),
+        };
+        setQuantityMap(updatedQuantityMap);
+        updateLocalStorage(itemKey, updatedQuantityMap[itemKey]);
+    };
 
-        // Parse the JSON string from localStorage to get the array
-        const storedCartItems = JSON.parse(localStorage.getItem('cartItems'));
-        // Find the index of the item to be removed
-        const index = storedCartItems.findIndex((cartItem) => {
-            return (
-                cartItem.Name === quantityMap[key].Name &&
-                cartItem.Price === quantityMap[key].Price &&
-                cartItem.Images === quantityMap[key].Images
-            );
+
+    const updateLocalStorage = (itemKey, updatedQuantity) => {
+        // Update localStorage with the latest quantityMap
+        const updatedQuantityMap = {
+            ...quantityMap,
+            [itemKey]: updatedQuantity,
+        };
+        localStorage.setItem('quantityMap', JSON.stringify(updatedQuantityMap));
+
+        // Update cartItems based on the updated quantityMap
+        const updatedCartItems = cartItems.map((item) => {
+            const key = `${item.Name}-${item.Price}`;
+            return {
+                ...item,
+                quantity: updatedQuantityMap[key] || 0,
+            };
         });
 
-        // Remove the item from the array
-        if (index !== -1) {
-            storedCartItems.splice(index, 1);
-
-            // Update localStorage with the modified array
-            localStorage.setItem('cartItems', JSON.stringify(storedCartItems));
-            setCartItems(storedCartItems);
-        }
-
-
+        // Update localStorage with the modified array
+        localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+        setCartItems(updatedCartItems);
     };
+
+    const getTotalPrice = () => {
+        let totalCost = 0;
+
+        const updatedCartItems = cartItems.map((item) => {
+            const key = `${item.Name}-${item.Price}`;
+            const quantity = quantityMap[key] || 0;
+            totalCost += item.Price * quantity;
+            return { ...item, quantity };
+        });
+        updateLocalStorage(`${updatedCartItems[0].Name}-${updatedCartItems[0].Price}`, quantityMap[`${updatedCartItems[0].Name}-${updatedCartItems[0].Price}`]);
+        return totalCost.toLocaleString('vi-VN');
+    };
+
     return (
         <div style={{ display: 'block', verticalAlign: 'top' }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'block' }}>
@@ -109,7 +100,7 @@ const Orders = ({ cartItems, setCartItems }) => {
                                                 </a>
                                             </div>
                                             <div style={{ display: 'inline-block', width: '30%', verticalAlign: 'top', fontSize: '16px' }}>
-                                                <a style={{ textDecoration: 'none', color: 'inherit' }}>{Number++}. {item.Name} </a>
+                                                <a style={{ textDecoration: 'none', color: 'inherit' }}>{item.Name} </a>
                                                 <p style={{ display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
                                                     <span style={{ width: '20%' }}>Ghi chú</span>
                                                     <input style={{ width: '78%', marginLeft: '2%' }} type="text" />
@@ -122,11 +113,11 @@ const Orders = ({ cartItems, setCartItems }) => {
                                                 </strong>
                                             </div>
                                             {/* số lượng */}
-                                            <div style={{ display: 'inline-block', width: '20%', verticalAlign: 'top', textAlign: 'right' }}>
+                                            <div style={{ display: 'inline-block', width: '20%', verticalAlign: 'top', textAlign: 'right', whiteSpace: 'nowrap' }}>
                                                 <div style={{ border: '1px solid #666', marginRight: '2px', display: 'inline-block' }}>
-                                                    <label style={{ display: 'inline-block', borderRight: '1px solid #666', padding: '5px 10px', cursor: 'pointer' }} atr_item={`${item.Name}-${item.Price}-${item.Images}`} onClick={(e) => handleDecrease(e)}>-</label>
+                                                    <label style={{ display: 'inline-block', borderRight: '1px solid #666', padding: '5px 10px', cursor: 'pointer' }} onClick={() => handleDecrease(item)}>-</label>
                                                     <input style={{ width: '50px', textAlign: 'center', border: '0px', writingMode: 'horizontal-tb', paddingBlock: '1px', paddingInline: '2px', margin: '0' }} type="text" value={item.quantity} readOnly />
-                                                    <label style={{ borderLeft: '1px solid #666', display: 'inline-block', padding: '5px 10px', cursor: 'pointer' }} onClick={handleIncrease}>+</label>
+                                                    <label style={{ borderLeft: '1px solid #666', display: 'inline-block', padding: '5px 10px', cursor: 'pointer' }} onClick={() => handleIncrease(item)}>+</label>
                                                 </div>
                                             </div>
                                             {/* Thành tiền */}
@@ -171,7 +162,7 @@ const Orders = ({ cartItems, setCartItems }) => {
                                 <span style={{ padding: '0px 0', display: 'inline-block' }}>
                                     Tổng cộng:
                                     <strong style={{ fontSize: '16px', width: '140px', display: 'inline-block', fontWeight: 'bold' }}>
-                                        {totalPrice} VNĐ
+                                        VNĐ
                                     </strong>
                                 </span>
                             </div>
