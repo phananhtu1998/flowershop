@@ -3,45 +3,35 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Orders = ({ cartItems, setCartItems }) => {
+    let totalorder = 0;
+    let number = 0;
     const [quantityMap, setQuantityMap] = useState({});
     useEffect(() => {
         // Load stored quantityMap from localStorage
-        const storedQuantityMap = JSON.parse(localStorage.getItem('quantityMap')) || {};
-        setQuantityMap(storedQuantityMap);
+        const storedCartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
+        console.log(storedCartItems);
+        // Convert storedCartItems to quantityMap
+        const newQuantityMap = storedCartItems.reduce((map, item) => {
+            const key = `${item.Name}-${item.Price}`;
+            map[key] = item.quantity || 0;
+            return map;
+        }, {});
+        setQuantityMap(newQuantityMap);
     }, []);
     const handleIncrease = (item) => {
-        const itemKey = `${item.Name}-${item.Price}`;
+        const key = `${item.Name}-${item.Price}`;
         const updatedQuantityMap = {
             ...quantityMap,
-            [itemKey]: (quantityMap[itemKey] || 0) + 1,
+            [key]: (quantityMap[key] || 0) + 1,
         };
         setQuantityMap(updatedQuantityMap);
-        updateLocalStorage(itemKey, updatedQuantityMap[itemKey]);
-    };
-
-    const handleDecrease = (item) => {
-        const itemKey = `${item.Name}-${item.Price}`;
-        const updatedQuantityMap = {
-            ...quantityMap,
-            [itemKey]: (quantityMap[itemKey] || 0) - 1,
-        };
-        setQuantityMap(updatedQuantityMap);
-        updateLocalStorage(itemKey, updatedQuantityMap[itemKey]);
-    };
-    const updateLocalStorage = (itemKey, updatedQuantity) => {
-        // Update localStorage with the latest quantityMap
-        const updatedQuantityMap = {
-            ...quantityMap,
-            [itemKey]: updatedQuantity,
-        };
-        localStorage.setItem('quantityMap', JSON.stringify(updatedQuantityMap));
 
         // Update cartItems based on the updated quantityMap
-        const updatedCartItems = cartItems.map((item) => {
-            const key = `${item.Name}-${item.Price}`;
+        const updatedCartItems = cartItems.map((cartItem) => {
+            const cartItemKey = `${cartItem.Name}-${cartItem.Price}`;
             return {
-                ...item,
-                quantity: updatedQuantityMap[key] || 0,
+                ...cartItem,
+                quantity: updatedQuantityMap[cartItemKey] || 0,
             };
         });
 
@@ -50,6 +40,34 @@ const Orders = ({ cartItems, setCartItems }) => {
         setCartItems(updatedCartItems);
     };
 
+    const handleDecrease = (item) => {
+        const key = `${item.Name}-${item.Price}`;
+        const updatedQuantityMap = {
+            ...quantityMap,
+            [key]: (quantityMap[key] || 0) - 1,
+        };
+        setQuantityMap(updatedQuantityMap);
+
+        // Update cartItems based on the updated quantityMap
+        const updatedCartItems = cartItems.map((cartItem) => {
+            const cartItemKey = `${cartItem.Name}-${cartItem.Price}`;
+            return {
+                ...cartItem,
+                quantity: updatedQuantityMap[cartItemKey] || 0,
+            };
+        });
+        if (updatedQuantityMap[key] === 0) {
+            const filteredCartItems = updatedCartItems.filter((cartItem) => {
+                const cartItemKey = `${cartItem.Name}-${cartItem.Price}`
+                return cartItemKey !== key;
+            })
+            localStorage.setItem('cartItems', JSON.stringify(filteredCartItems));
+            setCartItems(filteredCartItems);
+        } else {
+            localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+            setCartItems(updatedCartItems);
+        }
+    };
     const getTotalPrice = () => {
         let totalCost = 0;
 
@@ -59,7 +77,6 @@ const Orders = ({ cartItems, setCartItems }) => {
             totalCost += item.Price * quantity;
             return { ...item, quantity };
         });
-        updateLocalStorage(`${updatedCartItems[0].Name}-${updatedCartItems[0].Price}`, quantityMap[`${updatedCartItems[0].Name}-${updatedCartItems[0].Price}`]);
         return totalCost.toLocaleString('vi-VN');
     };
 
@@ -90,7 +107,9 @@ const Orders = ({ cartItems, setCartItems }) => {
                                 </div>
 
                                 {cartItems.map((item, index) => (
-                                    <div key={index} style={{ fontSize: '16px', display: 'block', padding: '2px' }}>
+                                    totalorder += (item.Price * item.quantity),
+                                    number++,
+                                    < div key={index} style={{ fontSize: '16px', display: 'block', padding: '2px' }}>
                                         <div>
                                             <div style={{ display: 'inline-block', width: '20%', verticalAlign: 'top', textAlign: 'center' }}>
                                                 <a style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -98,7 +117,7 @@ const Orders = ({ cartItems, setCartItems }) => {
                                                 </a>
                                             </div>
                                             <div style={{ display: 'inline-block', width: '30%', verticalAlign: 'top', fontSize: '16px' }}>
-                                                <a style={{ textDecoration: 'none', color: 'inherit' }}>{item.Name} </a>
+                                                <a style={{ textDecoration: 'none', color: 'inherit' }}>{number}. {item.Name} </a>
                                                 <p style={{ display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
                                                     <span style={{ width: '20%' }}>Ghi chú</span>
                                                     <input style={{ width: '78%', marginLeft: '2%' }} type="text" />
@@ -107,7 +126,7 @@ const Orders = ({ cartItems, setCartItems }) => {
                                             </div>
                                             <div style={{ display: 'inline-block', width: '20%', verticalAlign: 'top', textAlign: 'right', whiteSpace: 'nowrap' }}>
                                                 <strong style={{ fontWeight: 'bold', textAlign: 'right', whiteSpace: 'nowrap', fontSize: '16px' }}>
-                                                    <span>{item.Price} VNĐ</span>
+                                                    <span>{(item.Price).toLocaleString('vi-VN')} VNĐ</span>
                                                 </strong>
                                             </div>
                                             {/* số lượng */}
@@ -120,47 +139,19 @@ const Orders = ({ cartItems, setCartItems }) => {
                                             </div>
                                             {/* Thành tiền */}
                                             <div style={{ display: 'inline-block', fontWeight: 'bold', width: '10%', textAlign: 'right' }}>
-                                                {item.Price * item.quantity}.000 VNĐ
+                                                {(item.Price * item.quantity).toLocaleString('vi-VN')}.000 VNĐ
                                             </div>
                                         </div>
                                     </div>
                                 ))}
-                                {/* xóa bỏ */}
-                                <div style={{
-                                    textAlign: 'right',
-                                    borderBottom: '1px dotted #ccc',
-                                    padding: '10px 0',
-                                    marginBottom: '20px'
-                                }}>
-                                    <a style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }} >
-                                        <i>
-                                            <FontAwesomeIcon icon={faTrashAlt} /> Xóa
-                                        </i>
-                                    </a>
-                                </div>
                             </div>
-                            {/* phụ phí khác */}
+                            <br />
+                            <div style={{ borderBottom: '1px dotted rgb(204, 204, 204' }}></div>
                             <div style={{ fontSize: '18px', textAlign: 'right', display: 'block' }}>
-                                <span>Phụ phí khác</span>
-                                <span style={{ fontSize: '16px', width: '140px', display: 'inline-block' }}>
-                                    <input
-                                        style={{
-                                            width: '80px',
-                                            textAlign: 'right',
-                                            writingMode: 'horizontal-tb',
-                                            paddingBlock: '1px',
-                                            paddingInline: '2px'
-                                        }}
-                                        type="text"
-                                        value="phí"
-                                        onChange="xử lý phí"
-                                    />
-                                </span>
-                                <br />
                                 <span style={{ padding: '0px 0', display: 'inline-block' }}>
                                     Tổng cộng:
                                     <strong style={{ fontSize: '16px', width: '140px', display: 'inline-block', fontWeight: 'bold' }}>
-                                        VNĐ
+                                        {totalorder.toLocaleString('vi-VN')}.000 VNĐ
                                     </strong>
                                 </span>
                             </div>
