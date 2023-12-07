@@ -8,7 +8,7 @@ import lstGioHoa from '../Data/data';
 
 let sortedData = lstGioHoa.filter(item => item.Category === "giohoa");
 
-const GioHoa = ({ onAddToCart, setCartItems }) => {
+const GioHoa = ({ setCartItems }) => {
 
     const itemsPerPage = 16;
     const [currentPage, setCurrentPage] = useState(1);
@@ -49,7 +49,6 @@ const GioHoa = ({ onAddToCart, setCartItems }) => {
         if (existingItem) {
             // Nếu mục đã tồn tại, tăng giá trị quantity lên 1
             existingItem.quantity = (existingItem.quantity || 0) + 1;
-            console.log("kkkkkkkkkk", existingItem.quantity);
         } else {
             // Nếu mục chưa tồn tại, thêm mục mới vào mảng cartItems với quantity là 1
             const newItem = {
