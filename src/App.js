@@ -25,7 +25,7 @@ function AppFlower() {
           <Route path="/" element={<Home />} />
           <Route path="/bohoa" element={<BoHoa />} />
           <Route path="/orders" element={<Orders cartItems={cartItems} setCartItems={setCartItems} />} />
-          <Route path="/giohoa" element={<GioHoa onAddToCart={setCartItems} />} />
+          <Route path="/giohoa" element={<GioHoa onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/chitiet/:Name" element={<Detail />} />
         </Routes>
         <WebFooter />

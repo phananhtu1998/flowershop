@@ -23,13 +23,11 @@ const Orders = ({ cartItems, setCartItems }) => {
         const itemKey = `${item.Name}-${item.Price}`;
         const updatedQuantityMap = {
             ...quantityMap,
-            [itemKey]: Math.max((quantityMap[itemKey] || 0) - 1, 0),
+            [itemKey]: (quantityMap[itemKey] || 0) - 1,
         };
         setQuantityMap(updatedQuantityMap);
         updateLocalStorage(itemKey, updatedQuantityMap[itemKey]);
     };
-
-
     const updateLocalStorage = (itemKey, updatedQuantity) => {
         // Update localStorage with the latest quantityMap
         const updatedQuantityMap = {

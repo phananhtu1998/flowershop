@@ -8,7 +8,7 @@ import lstGioHoa from '../Data/data';
 
 let sortedData = lstGioHoa.filter(item => item.Category === "giohoa");
 
-const GioHoa = ({ onAddToCart }) => {
+const GioHoa = ({ onAddToCart, setCartItems }) => {
 
     const itemsPerPage = 16;
     const [currentPage, setCurrentPage] = useState(1);
@@ -40,9 +40,33 @@ const GioHoa = ({ onAddToCart }) => {
     };
 
     const handleAddToCartAndNavigate = (item, orderIndex) => {
-        onAddToCart((prevCartItems) => [...prevCartItems, item]);
+        // Tìm kiếm xem mục đã tồn tại trong localStorage hay chưa
+        const storedCartItems = localStorage.getItem('cartItems');
+        const cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
+
+        const existingItem = cartItems.find((cartItem) => cartItem.Name === item.Name);
+
+        if (existingItem) {
+            // Nếu mục đã tồn tại, tăng giá trị quantity lên 1
+            existingItem.quantity = (existingItem.quantity || 0) + 1;
+            console.log("kkkkkkkkkk", existingItem.quantity);
+        } else {
+            // Nếu mục chưa tồn tại, thêm mục mới vào mảng cartItems với quantity là 1
+            const newItem = {
+                ...item,
+                quantity: 1,
+            };
+            cartItems.push(newItem);
+        }
+
+        // Lưu mảng cartItems mới vào localStorage
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        setCartItems(cartItems);
+        // Navigate to the "/orders" route
         navigate(`/orders`);
     };
+
+
 
     return (
         <div style={{ display: 'block', fontSize: 'small', lineHeight: '1.5' }}>
