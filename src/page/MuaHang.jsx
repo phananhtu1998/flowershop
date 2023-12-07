@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { DeleteOutlined } from '@ant-design/icons';
 
 const Orders = ({ cartItems, setCartItems }) => {
     let totalorder = 0;
@@ -68,18 +69,15 @@ const Orders = ({ cartItems, setCartItems }) => {
             setCartItems(updatedCartItems);
         }
     };
-    const getTotalPrice = () => {
-        let totalCost = 0;
-
-        const updatedCartItems = cartItems.map((item) => {
-            const key = `${item.Name}-${item.Price}`;
-            const quantity = quantityMap[key] || 0;
-            totalCost += item.Price * quantity;
-            return { ...item, quantity };
-        });
-        return totalCost.toLocaleString('vi-VN');
-    };
-
+    const DeleteItem = (item) => {
+        const key = `${item.Name}-${item.Price}`;
+        const filteredCartItems = cartItems.filter((cartItem) => {
+            const cartItemKey = `${cartItem.Name}-${cartItem.Price}`
+            return cartItemKey !== key;
+        })
+        localStorage.setItem('cartItems', JSON.stringify(filteredCartItems));
+        setCartItems(filteredCartItems);
+    }
     return (
         <div style={{ display: 'block', verticalAlign: 'top' }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'block' }}>
@@ -140,6 +138,32 @@ const Orders = ({ cartItems, setCartItems }) => {
                                             {/* Thành tiền */}
                                             <div style={{ display: 'inline-block', fontWeight: 'bold', width: '10%', textAlign: 'right' }}>
                                                 {(item.Price * item.quantity).toLocaleString('vi-VN')}.000 VNĐ
+                                            </div>
+                                            {/* xóa */}
+                                            <div style={{
+                                                textAlign: 'right',
+                                                borderBottom: '1px dotted #ccc',
+                                                padding: '10px 0',
+                                                marginBottom: '20px'
+                                            }}>
+                                                <a style={{ textDecoration: 'none', color: 'inherit' }} onClick={() => DeleteItem(item)} title='Xóa'>
+                                                    <i style={{
+                                                        display: 'inline-block',
+                                                        fontSize: '20px',
+                                                        fontStyle: 'normal',
+                                                        fontFamily: 'Font Awesome 5 Pro',
+                                                        fontVariant: 'normal',
+                                                        textRendering: 'auto',
+                                                        lineHeight: '1',
+                                                        cursor: 'pointer',
+                                                        textAlign: 'right',
+                                                        padding: '5px',
+                                                        color: 'inherit',
+                                                        fontWeight: '300'
+                                                    }}>
+                                                        <DeleteOutlined />
+                                                    </i>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>

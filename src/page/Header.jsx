@@ -162,23 +162,24 @@ const WebHeader = () => {
                                 <Container>
                                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                     <Navbar.Collapse id="basic-navbar-nav">
-                                        <Nav className="me-auto">
-                                            <Nav.Link as={Link} to="/">Trang chủ</Nav.Link>
-                                            <NavDropdown title="Kiểu dáng" id="basic-nav-dropdown">
+                                        <Nav style={{ fontWeight: 'bold', fontSize: '13.5px' }} className="me-auto">
+                                            <Nav.Link as={Link} to="/">TRANG CHỦ</Nav.Link>
+                                            <NavDropdown title="KIỂU DÁNG" id="basic-nav-dropdown">
                                                 <NavDropdown.Item as={Link} to="/bohoa">
                                                     Bó hoa
                                                 </NavDropdown.Item>
                                                 <NavDropdown.Item as={Link} to="/giohoa">
                                                     Giỏ hoa-hộp hoa
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item >
+                                                <NavDropdown.Item as={Link} to="/chauhoa">
                                                     Chậu hoa tươi
                                                 </NavDropdown.Item>
                                             </NavDropdown>
-                                            <Nav.Link href="#home">Hoa sáp</Nav.Link>
-                                            <Nav.Link href="#home">Hoa chúc mừng</Nav.Link>
-                                            <Nav.Link href="#home">Hoa chia buồn</Nav.Link>
-                                            <NavDropdown title="Trái cây" id="basic-nav-dropdown">
+                                            <Nav.Link as={Link} to="/hoasinhnhat">HOA SINH NHẬT</Nav.Link>
+                                            <Nav.Link as={Link} to="/hoasap">HOA SÁP</Nav.Link>
+                                            <Nav.Link href="#home">HOA CHÚC MỪNG</Nav.Link>
+                                            <Nav.Link href="#home">HOA CHIA BUỒN</Nav.Link>
+                                            <NavDropdown title="TRÁI CÂY" id="basic-nav-dropdown">
                                                 <NavDropdown.Item href="#action/3.1">
                                                     Trái cây khô
                                                 </NavDropdown.Item>
@@ -195,8 +196,8 @@ const WebHeader = () => {
                                                     trái cây bán sỉ
                                                 </NavDropdown.Item>
                                             </NavDropdown>
-                                            <Nav.Link href="#home">Lan hồ điệp</Nav.Link>
-                                            <NavDropdown title="Loại hoa" id="basic-nav-dropdown">
+                                            <Nav.Link href="#home">LAN HỒ ĐIỆP</Nav.Link>
+                                            <NavDropdown title="LOẠI HOA" id="basic-nav-dropdown">
                                                 <NavDropdown.Item href="#action/3.1">
                                                     Bó hoa bi
                                                 </NavDropdown.Item>
@@ -237,7 +238,7 @@ const WebHeader = () => {
                                                     Các loài hoa
                                                 </NavDropdown.Item>
                                             </NavDropdown>
-                                            <NavDropdown title="Cây xanh văn phòng" id="basic-nav-dropdown">
+                                            <NavDropdown title="CÂY VĂN PHÒNG" id="basic-nav-dropdown">
                                                 <NavDropdown.Item href="#action/3.1">
                                                     Cây để bàn
                                                 </NavDropdown.Item>
@@ -248,8 +249,8 @@ const WebHeader = () => {
                                                     Cây khai trương
                                                 </NavDropdown.Item>
                                             </NavDropdown>
-                                            <Nav.Link href="#home">Hoa cưới</Nav.Link>
-                                            <Nav.Link href="#home">Hoa để bàn</Nav.Link>
+                                            <Nav.Link href="#home">HOA CƯỚI</Nav.Link>
+                                            <Nav.Link href="#home">HOA ĐỂ BÀN</Nav.Link>
                                         </Nav>
                                     </Navbar.Collapse>
                                 </Container>

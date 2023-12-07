@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import lstHoa from '../Data/data';
 const Detail = () => {
     const { Name } = useParams();
     const [item, setItem] = useState(null);
     const [LstSpLienQuan, setLstSpLienQuan] = useState([]);
+    const navigate = useNavigate();
     useEffect(() => {
         let foundItem = lstHoa.find(item => item.Name === Name);
         setLstSpLienQuan(lstHoa.filter(item => item.Category === foundItem.Category))
@@ -263,7 +264,7 @@ const Detail = () => {
                                                             <span>NEW</span>
                                                         </div>
                                                         <div style={{ margin: '10px', position: 'relative', paddingTop: '100%' }}>
-                                                            <a style={{ textDecoration: 'none', color: 'inherit' }}>
+                                                            <a style={{ textDecoration: 'none', color: 'inherit' }} href={`/chitiet/${item.Name}`}>
                                                                 <img style={{ objectFit: 'contain', position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }} src={item.Images} alt={item.Name}></img>
                                                             </a>
                                                             <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>

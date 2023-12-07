@@ -6,7 +6,7 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import lstBoHoa from '../Data/data';
 import Detail from './Detail';
 let sortedData = lstBoHoa.filter(item => item.Category === "bohoa");
-const Bohoa = () => {
+const Bohoa = ({ setCartItems }) => {
     const itemsPerPage = 16;
     const [currentPage, setCurrentPage] = useState(1);
     const [sortBy, setSortBy] = useState("1"); // Default sorting option
@@ -32,6 +32,31 @@ const Bohoa = () => {
 
     const paginate = (pageNumber) => {
         setCurrentPage(pageNumber);
+    };
+    const handleAddToCartAndNavigate = (item, orderIndex) => {
+        // Tìm kiếm xem mục đã tồn tại trong localStorage hay chưa
+        const storedCartItems = localStorage.getItem('cartItems');
+        const cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
+
+        const existingItem = cartItems.find((cartItem) => cartItem.Name === item.Name);
+
+        if (existingItem) {
+            // Nếu mục đã tồn tại, tăng giá trị quantity lên 1
+            existingItem.quantity = (existingItem.quantity || 0) + 1;
+        } else {
+            // Nếu mục chưa tồn tại, thêm mục mới vào mảng cartItems với quantity là 1
+            const newItem = {
+                ...item,
+                quantity: 1,
+            };
+            cartItems.push(newItem);
+        }
+
+        // Lưu mảng cartItems mới vào localStorage
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        setCartItems(cartItems);
+        // Navigate to the "/orders" route
+        navigate(`/orders`);
     };
     return (
         <div style={{ display: 'block', fontSize: 'small', lineHeight: '1.5' }}>
@@ -73,7 +98,7 @@ const Bohoa = () => {
                                     <div style={{ margin: '10px', display: 'block', textAlign: 'center' }}>
                                         <label style={{ cursor: 'pointer' }}>
                                             <span
-                                                onClick={() => navigate(`/orders/${index + 1}`, { state: { item } })}
+                                                onClick={() => handleAddToCartAndNavigate(item, index + 1)}
                                                 style={{ textDecoration: 'none', color: 'inherit' }}
                                             >
                                                 <span style={{ background: '#E35454', color: '#FFF', padding: '5px 25px', borderRadius: '20px' }}>Mua hàng</span>
