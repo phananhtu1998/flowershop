@@ -31,7 +31,7 @@ function AppFlower() {
           <Route path="/bohoa" element={<BoHoa onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/orders" element={<Orders cartItems={cartItems} setCartItems={setCartItems} />} />
           <Route path="/giohoa" element={<GioHoa onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/chitiet/:Name" element={<Detail />} />
+          <Route path="/chitiet/:Name" element={<Detail onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/hoasap" element={<HoaSap onAddToCart={setCartItems} setCartItems={setCartItems} />} />
         </Routes>
         <WebFooter />

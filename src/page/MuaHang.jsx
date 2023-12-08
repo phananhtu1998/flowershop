@@ -124,7 +124,7 @@ const Orders = ({ cartItems, setCartItems }) => {
                                             </div>
                                             <div style={{ display: 'inline-block', width: '20%', verticalAlign: 'top', textAlign: 'right', whiteSpace: 'nowrap' }}>
                                                 <strong style={{ fontWeight: 'bold', textAlign: 'right', whiteSpace: 'nowrap', fontSize: '16px' }}>
-                                                    <span>{(item.Price).toLocaleString('vi-VN')} VNĐ</span>
+                                                    <span>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')} VNĐ</span>
                                                 </strong>
                                             </div>
                                             {/* số lượng */}
@@ -137,7 +137,7 @@ const Orders = ({ cartItems, setCartItems }) => {
                                             </div>
                                             {/* Thành tiền */}
                                             <div style={{ display: 'inline-block', fontWeight: 'bold', width: '10%', textAlign: 'right' }}>
-                                                {(item.Price * item.quantity).toLocaleString('vi-VN')}.000 VNĐ
+                                                {(item.Price * item.quantity).toLocaleString('vi-VN')} VNĐ
                                             </div>
                                             {/* xóa */}
                                             <div style={{
@@ -175,7 +175,7 @@ const Orders = ({ cartItems, setCartItems }) => {
                                 <span style={{ padding: '0px 0', display: 'inline-block' }}>
                                     Tổng cộng:
                                     <strong style={{ fontSize: '16px', width: '140px', display: 'inline-block', fontWeight: 'bold' }}>
-                                        {totalorder.toLocaleString('vi-VN')}.000 VNĐ
+                                        {totalorder.toLocaleString('vi-VN')} VNĐ
                                     </strong>
                                 </span>
                             </div>

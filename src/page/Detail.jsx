@@ -1,13 +1,55 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import lstHoa from '../Data/data';
-const Detail = () => {
+const Detail = ({ setCartItems }) => {
     const { Name } = useParams();
     const [item, setItem] = useState(null);
     const [LstSpLienQuan, setLstSpLienQuan] = useState([]);
+    const [quantity, setQuantity] = useState(1);
+
+    // Hàm để xử lý sự kiện tăng số lượng
+    const handleIncrease = () => {
+        setQuantity(prevQuantity => prevQuantity + 1);
+    };
+
+    // Hàm để xử lý sự kiện giảm số lượng
+    const handleDecrease = () => {
+        // Đảm bảo số lượng không thể giảm dưới 1
+        if (quantity > 1) {
+            setQuantity(prevQuantity => prevQuantity - 1);
+        }
+    };
+    const handleAddToCartAndNavigate = (item, quantity) => {
+        console.log('Item:', item);
+        console.log('Quantity:', quantity);
+        // Tìm kiếm xem mục đã tồn tại trong localStorage hay chưa
+        const storedCartItems = localStorage.getItem('cartItems');
+        const cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
+
+        const existingItem = cartItems.find((cartItem) => cartItem.Name === item.Name);
+
+        if (existingItem) {
+            // Nếu mục đã tồn tại, tăng giá trị quantity lên 1
+            existingItem.quantity = (existingItem.quantity || 0) + quantity;
+        } else {
+            // Nếu mục chưa tồn tại, thêm mục mới vào mảng cartItems với quantity là 1
+            const newItem = {
+                ...item,
+                quantity: quantity,
+            };
+            cartItems.push(newItem);
+        }
+
+        // Lưu mảng cartItems mới vào localStorage
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        setCartItems(cartItems);
+        // Navigate to the "/orders" route
+        navigate(`/orders`);
+    };
     const navigate = useNavigate();
     useEffect(() => {
         let foundItem = lstHoa.find(item => item.Name === Name);
+        console.log("foundItem", foundItem)
         setLstSpLienQuan(lstHoa.filter(item => item.Category === foundItem.Category))
         if (foundItem) {
             setItem(foundItem);
@@ -149,9 +191,9 @@ const Detail = () => {
                                     </div>
                                     <div style={{ margin: '10px 0', display: 'block' }}>
                                         <div style={{ display: 'inline-block', border: '1px solid #666', marginRight: '2px' }}>
-                                            <label style={{ borderRight: '1px solid #666', display: 'inline-block', padding: '5px 10px', cursor: 'pointer' }}>-</label>
-                                            <input type="text" style={{ width: '50px', height: '20px', textAlign: 'center', border: '0px' }} value="1" placeholder='Số lượng' />
-                                            <label htmlFor="" style={{ borderLeft: '1px solid #666', display: 'inline-block', padding: '5px 10px', cursor: 'pointer' }}>+</label>
+                                            <label onClick={handleDecrease} style={{ borderRight: '1px solid #666', display: 'inline-block', padding: '5px 10px', cursor: 'pointer' }}>-</label>
+                                            <input type="text" style={{ width: '50px', height: '20px', textAlign: 'center', border: '0px' }} value={quantity} placeholder='Số lượng' readOnly />
+                                            <label onClick={handleIncrease} style={{ borderLeft: '1px solid #666', display: 'inline-block', padding: '5px 10px', cursor: 'pointer' }}>+</label>
                                         </div>
                                         <label htmlFor="" style={{
                                             padding: '20px 0px !important',
@@ -169,7 +211,7 @@ const Detail = () => {
                                             display: 'flex',
                                             alignItems: 'center',  // Căn giữa theo chiều dọc
                                             justifyContent: 'center',  // Căn giữa theo chiều ngang
-                                        }}>
+                                        }} onClick={() => handleAddToCartAndNavigate(item, quantity)}>
                                             <span>
                                                 Đặt hàng ngay
                                                 <span style={{

@@ -96,11 +96,11 @@ const HoaSap = ({ setCartItems }) => {
                                         </p>
                                     </h2>
                                     <div style={{ display: 'inline-block', fontSize: 'medium', fontWeight: 'bold', color: '#E13028' }}>
-                                        <strong>{item.Price}</strong>
+                                        <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
                                         <span> VNĐ</span>
                                     </div>
                                     {item.PriceOld !== '' ? (
-                                        <div style={{ padding: '10px', textDecoration: 'line-through', marginLeft: '10px', display: 'inline-block', margin: '0' }}>{item.PriceOld}</div>
+                                        <div style={{ padding: '10px', textDecoration: 'line-through', marginLeft: '10px', display: 'inline-block', margin: '0' }}>{(parseInt(item.PriceOld, 10)).toLocaleString('vi-VN')}</div>
                                     ) : (
                                         null
                                     )}
