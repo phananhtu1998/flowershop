@@ -3,15 +3,19 @@ import React, { useState } from 'react';
 import { Pagination } from 'antd';
 import Container from 'react-bootstrap/Container';
 import { Route, Routes, useNavigate } from 'react-router-dom';
-import lstDataHoa from '../Data/data';
 import Detail from './Detail';
-let sortedData = lstDataHoa.filter(item => item.Category === "chauhoa");
-const ChauHoa = ({ setCartItems }) => {
+import lstdatahoa from '../Data/data';
+
+let sortedData = lstdatahoa.filter(item => item.Category === "bohoahuongduong");
+
+const BoHoaHuongDuong = ({ setCartItems }) => {
+
     const itemsPerPage = 16;
     const [currentPage, setCurrentPage] = useState(1);
     const [sortBy, setSortBy] = useState("1"); // Default sorting option
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+
     const sortData = () => {
         switch (sortBy) {
             case "2":
@@ -25,6 +29,7 @@ const ChauHoa = ({ setCartItems }) => {
         }
         return sortedData;
     };
+
     const currentItems = sortData().slice(indexOfFirstItem, indexOfLastItem);
     const navigate = useNavigate();
     const totalItems = sortedData.length;
@@ -33,7 +38,8 @@ const ChauHoa = ({ setCartItems }) => {
     const paginate = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
-    const handleAddToCartAndNavigate = (item, orderIndex) => {
+
+    const handleAddToCartAndNavigate = (item) => {
         // Tìm kiếm xem mục đã tồn tại trong localStorage hay chưa
         const storedCartItems = localStorage.getItem('cartItems');
         const cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
@@ -58,11 +64,14 @@ const ChauHoa = ({ setCartItems }) => {
         // Navigate to the "/orders" route
         navigate(`/orders`);
     };
+
+
+
     return (
         <div style={{ display: 'block', fontSize: 'small', lineHeight: '1.5' }}>
             <Container>
                 <h1 style={{ textAlign: 'center', display: 'block', fontSize: '2em', marginBlockStart: '0.67em', marginBlockEnd: '0.67em', marginInlineStart: '0px', marginInlineEnd: '0px', fontWeight: 'bold' }}>
-                    <span style={{ textAlign: 'center' }}>Chậu hoa tươi</span>
+                    <span style={{ textAlign: 'center' }}>Bó hoa hướng dương</span>
                 </h1>
                 <div style={{ padding: '5px', margin: '10px', borderRadius: '5px' }}>
                     <div style={{ display: 'block', textAlign: 'left', padding: '10px' }}>
@@ -76,7 +85,7 @@ const ChauHoa = ({ setCartItems }) => {
                     </div>
                     <ul style={{ padding: '0', margin: '0', listStyle: 'none', display: 'flex', flexWrap: 'wrap' }}>
                         {currentItems.map((item, index) => (
-                            <li key={index} style={{ flex: '0 0 25%', boxSizing: 'border-box', padding: '10px', textAlign: 'center' }}>
+                            < li key={index} style={{ flex: '0 0 25%', boxSizing: 'border-box', padding: '10px', textAlign: 'center' }}>
                                 <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '5px', border: 'solid 1px #df2f5538' }}>
                                     <div style={{ margin: '0', position: 'relative', paddingTop: '100%' }}>
                                         <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} style={{ padding: '10px', objectFit: 'contain', position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', cursor: 'pointer' }} src={item.Images} alt={item.Name} title={item.Name} />
@@ -116,7 +125,6 @@ const ChauHoa = ({ setCartItems }) => {
                             <Pagination
                                 current={currentPage}
                                 total={totalItems}
-                                showSizeChanger={false}
                                 pageSize={itemsPerPage}
                                 onChange={paginate}
                             />
@@ -128,7 +136,7 @@ const ChauHoa = ({ setCartItems }) => {
                 {currentItems.map((index) => (
                     <Route
                         key={index}
-                        path={`/chauhoa/${index + 1}`}
+                        path={`/bohoahuongduong/${index + 1}`}
                         element={<Detail index={index} />}
                     />
                 ))}
@@ -138,4 +146,4 @@ const ChauHoa = ({ setCartItems }) => {
     );
 };
 
-export default ChauHoa;
+export default BoHoaHuongDuong;

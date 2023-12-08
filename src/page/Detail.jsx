@@ -83,7 +83,7 @@ const Detail = ({ setCartItems }) => {
                                     </h1>
                                     <p style={{ fontSize: '18px', marginBottom: '10px !important', fontWeight: 'bold', color: '#E13028' }}>
                                         <span>Giá: </span>
-                                        <span>{item.Price}</span>
+                                        <span>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')} VNĐ</span>
                                     </p>
                                     <div style={{ display: 'block', verticalAlign: 'top', fontSize: '14px', background: '#ECF7ED', position: 'relative', boxSizing: 'border-box', textAlign: 'left' }}>
                                         <div style={{ border: '1px solid #c4ddc8', borderRadius: '10px' }}>
