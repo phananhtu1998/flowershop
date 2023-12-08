@@ -7,7 +7,7 @@ const WebFooter = () => {
     const formattedDate = format(currentDate, 'MM-yyyy');
     return (
         <div>
-            <div style={{ display: 'block', verticalAlign: 'top', background: '#155F8A' }}>
+            <div style={{ display: 'block', verticalAlign: 'top', background: '#231F20' }}>
                 <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                     <div style={{ padding: '20px 0 0' }}>
                         <div style={{ display: 'inline-block', width: '25%', verticalAlign: 'top' }}>
@@ -28,7 +28,7 @@ const WebFooter = () => {
                                             <input style={{ width: '500px', height: '40px', boxSizing: 'border-box', paddingLeft: '20px', writingMode: 'horizontal-tb', paddingBlock: '1px', paddingInline: '2px', textRendering: 'auto', color: 'fieldtext', letterSpacing: 'normal', wordSpacing: 'normal', lineHeight: 'normal', textTransform: 'none', textIndent: '0px', textShadow: 'none', display: 'inline-block', textAlign: 'center', appearance: 'auto', cursor: 'text', backgroundColor: 'field', margin: '0em', padding: '1px 0px', borderWidth: '2px', borderRadius: '10px' }} placeholder="Nhập số điện thoại của bạn chúng tôi sẽ gọi lại tư vấn ngay" />
                                         </span>
                                     </div>
-                                    <button style={{ height: '40px', color: 'white', padding: '0 20px', background: '#3399FF', fontSize: '18px', borderRadius: '3px' }}>Gửi</button>
+                                    <button style={{ height: '40px', color: 'white', padding: '0 20px', background: '#0084CB', fontSize: '18px', borderRadius: '3px', border: '1px #0084CB' }}>Gửi</button>
                                 </form>
                             </div>
                         </div>

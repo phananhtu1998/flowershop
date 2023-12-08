@@ -146,8 +146,8 @@ export default function Home() {
             <div>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #E35454' }}>
-                            <span style={{ background: '#E35454', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
+                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
                                 <span>
                                     <a href="/" style={{
                                         textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'
@@ -198,8 +198,8 @@ export default function Home() {
                 </Container>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #E35454' }}>
-                            <span style={{ background: '#E35454', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
+                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
                                 <span>
                                     <a href="/" style={{
                                         textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'
@@ -250,8 +250,8 @@ export default function Home() {
                 </Container>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #E35454' }}>
-                            <span style={{ background: '#E35454', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
+                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
                                 <span>
                                     <a href="/" style={{
                                         textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'
@@ -302,8 +302,8 @@ export default function Home() {
                 </Container>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #E35454' }}>
-                            <span style={{ background: '#E35454', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
+                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
                                 <span>
                                     <a href="/" style={{
                                         textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'
@@ -354,8 +354,8 @@ export default function Home() {
                 </Container>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #E35454' }}>
-                            <span style={{ background: '#E35454', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
+                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
                                 <span>
                                     <a href="/" style={{
                                         textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'
@@ -406,8 +406,8 @@ export default function Home() {
                 </Container>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #E35454' }}>
-                            <span style={{ background: '#E35454', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
+                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
                                 <span>
                                     <a href="/" style={{
                                         textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'
@@ -458,8 +458,8 @@ export default function Home() {
                 </Container>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #E35454' }}>
-                            <span style={{ background: '#E35454', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
+                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
                                 <span>
                                     <a href="/" style={{
                                         textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'
@@ -510,8 +510,8 @@ export default function Home() {
                 </Container>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #E35454' }}>
-                            <span style={{ background: '#E35454', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
+                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
                                 <span>
                                     <a href="/" style={{
                                         textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'
@@ -562,8 +562,8 @@ export default function Home() {
                 </Container>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #E35454' }}>
-                            <span style={{ background: '#E35454', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
+                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
                                 <span>
                                     <a href="/" style={{
                                         textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'
@@ -614,8 +614,8 @@ export default function Home() {
                 </Container>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #E35454' }}>
-                            <span style={{ background: '#E35454', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
+                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
                                 <span>
                                     <a href="/" style={{
                                         textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'

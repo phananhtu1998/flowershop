@@ -31,7 +31,7 @@ const WebHeader = () => {
     }
     return (
         <>
-            <div style={{ backgroundColor: '#93D250' }}>
+            <div style={{ backgroundColor: '#850132' }}>
                 <div style={{ display: 'block', verticalAlign: 'top', position: 'relative', boxSizing: 'border-box' }}>
                     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                         <div style={{ color: '#FFFFFF' }}>
@@ -50,10 +50,10 @@ const WebHeader = () => {
                                         </div>
                                         <div style={{ display: 'inline-block', color: '#0D0E0F', padding: '0 20px' }}>
                                             <p style={{ display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                <span style={{ color: '#c70a0a', fontSize: '12pt' }}>
+                                                <span style={{ color: '#FFFFFF', fontSize: '12pt' }}>
                                                     <strong style={{ fontWeight: 'bold' }}>
                                                         HOTLINE:
-                                                        <a style={{ textDecoration: 'none', color: '#c70a0a' }} href='tel:1900 3189'> 1900 3189</a>
+                                                        <a style={{ textDecoration: 'none', color: '#FFFFFF' }} href='tel:1900 3189'> 1900 3189</a>
                                                     </strong>
                                                 </span>
                                             </p>
