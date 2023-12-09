@@ -18,6 +18,9 @@ const BoHoaCuc = ({ setCartItems }) => {
 
     const sortData = () => {
         switch (sortBy) {
+            case "1":
+                sortedData.sort(() => Math.random() - 0.5);
+                break;
             case "2":
                 sortedData.sort((a, b) => parseFloat(a.Price) - parseFloat(b.Price));
                 break;
@@ -29,7 +32,6 @@ const BoHoaCuc = ({ setCartItems }) => {
         }
         return sortedData;
     };
-
     const currentItems = sortData().slice(indexOfFirstItem, indexOfLastItem);
     const navigate = useNavigate();
     const totalItems = sortedData.length;

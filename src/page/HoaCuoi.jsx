@@ -14,6 +14,9 @@ const HoaCuoi = ({ setCartItems }) => {
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const sortData = () => {
         switch (sortBy) {
+            case "1":
+                sortedData.sort(() => Math.random() - 0.5);
+                break;
             case "2":
                 sortedData.sort((a, b) => parseFloat(a.Price) - parseFloat(b.Price));
                 break;

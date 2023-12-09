@@ -24,6 +24,19 @@ import CayChoPhongKhach from './page/CayChoPhongKhach';
 import CayKhaiTruong from './page/CayKhaiTruong';
 import HoaCuoi from './page/HoaCuoi';
 import HoaDeBan from './page/HoaDeBan';
+import BoHoaCamChuong from './page/BoHoaCamChuong';
+import BoHoaCatTuong from './page/BoHoaCatTuong';
+import BoHoaCuc from './page/BoHoaCuc';
+import BoHoaHong from './page/BoHoaHong';
+import BoHoaHuongDuong from './page/BoHoaHuongDuong';
+import HoaLanvender from './page/HoaLavender';
+import BoHoaLan from './page/BoHoaLan';
+import BoHoaLanHoDiep from './page/BoHoaHoDiep';
+import BoHoaLy from './page/BoHoaLy';
+import BoHoaDongTien from './page/BoHoaDongTien';
+import HoaTulip from './page/HoaTulip';
+import CacLoaiHoa from './page/CacLoaiHoa';
+import CayXanhVanPhong from './page/CayXanhVanPhong';
 function AppFlower() {
   // Load cartItems from localStorage on component mount
   const [cartItems, setCartItems] = useState(() => {
@@ -39,7 +52,7 @@ function AppFlower() {
       <div>
         <WebHeader />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/chauhoatuoi" element={<ChauHoaTuoi onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/hoasinhnhat" element={<HoaSinhNhat onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/bohoa" element={<BoHoa onAddToCart={setCartItems} setCartItems={setCartItems} />} />
@@ -61,6 +74,19 @@ function AppFlower() {
           <Route path="/caykhaitruong" element={<CayKhaiTruong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/hoacuoi" element={<HoaCuoi onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/hoadeban" element={<HoaDeBan onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/bohoacamchuong" element={<BoHoaCamChuong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/bohoacattuong" element={<BoHoaCatTuong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/bohoacuc" element={<BoHoaCuc onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/bohoahong" element={<BoHoaHong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/bohoahuongduong" element={<BoHoaHuongDuong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/hoalavender" element={<HoaLanvender onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/bohoalan" element={<BoHoaLan onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/bohoalanhodiep" element={<BoHoaLanHoDiep onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/bohoaly" element={<BoHoaLy onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/BoHoaDongTien" element={<BoHoaDongTien onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/hoatulip" element={<HoaTulip onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/cacloaihoa" element={<CacLoaiHoa onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/cayxanhvanphong" element={<CayXanhVanPhong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
         </Routes>
         <WebFooter />
       </div>

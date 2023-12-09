@@ -53,7 +53,7 @@ const WebHeader = () => {
                                                 <span style={{ color: '#FFFFFF', fontSize: '12pt' }}>
                                                     <strong style={{ fontWeight: 'bold' }}>
                                                         HOTLINE:
-                                                        <a style={{ textDecoration: 'none', color: '#FFFFFF' }} href='tel:0328975111'> 0328975111</a>
+                                                        <a style={{ textDecoration: 'none', color: '#FFFFFF' }} href='tel:0979336771'> 0979336771</a>
                                                     </strong>
                                                 </span>
                                             </p>
@@ -66,7 +66,7 @@ const WebHeader = () => {
                 </div >
                 <div className={styles.divorder}>
                     <Container>
-                        <div style={{ position: 'relative' }}>
+                        <div style={{ position: 'relative', padding: '2px 0' }}>
                             <div>
                                 <span style={{ justifyContent: 'space-between' }}>
                                     <a href="/">

@@ -6,9 +6,9 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import Detail from './Detail';
 import lstdatahoa from '../Data/data';
 
-let sortedData = lstdatahoa.filter(item => item.Category === "bohoahuongduong");
+let sortedData = lstdatahoa.filter(item => item.Category === "cayxanhvanphong");
 
-const BoHoaHuongDuong = ({ setCartItems }) => {
+const CayXanhVanPhong = ({ setCartItems }) => {
 
     const itemsPerPage = 16;
     const [currentPage, setCurrentPage] = useState(1);
@@ -72,7 +72,7 @@ const BoHoaHuongDuong = ({ setCartItems }) => {
         <div style={{ display: 'block', fontSize: 'small', lineHeight: '1.5' }}>
             <Container>
                 <h1 style={{ textAlign: 'center', display: 'block', fontSize: '2em', marginBlockStart: '0.67em', marginBlockEnd: '0.67em', marginInlineStart: '0px', marginInlineEnd: '0px', fontWeight: 'bold' }}>
-                    <span style={{ textAlign: 'center' }}>Bó hoa hướng dương</span>
+                    <span style={{ textAlign: 'center' }}>Cây Xanh Văn Phòng</span>
                 </h1>
                 <div style={{ padding: '5px', margin: '10px', borderRadius: '5px' }}>
                     <div style={{ display: 'block', textAlign: 'left', padding: '10px' }}>
@@ -137,7 +137,7 @@ const BoHoaHuongDuong = ({ setCartItems }) => {
                 {currentItems.map((index) => (
                     <Route
                         key={index}
-                        path={`/bohoahuongduong/${index + 1}`}
+                        path={`/cayxanhvanphong/${index + 1}`}
                         element={<Detail index={index} />}
                     />
                 ))}
@@ -147,4 +147,4 @@ const BoHoaHuongDuong = ({ setCartItems }) => {
     );
 };
 
-export default BoHoaHuongDuong;
+export default CayXanhVanPhong;

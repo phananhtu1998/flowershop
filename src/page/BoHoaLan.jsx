@@ -15,9 +15,11 @@ const BoHoaLan = ({ setCartItems }) => {
     const [sortBy, setSortBy] = useState("1"); // Default sorting option
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-
     const sortData = () => {
         switch (sortBy) {
+            case "1":
+                sortedData.sort(() => Math.random() - 0.5);
+                break;
             case "2":
                 sortedData.sort((a, b) => parseFloat(a.Price) - parseFloat(b.Price));
                 break;
@@ -29,7 +31,6 @@ const BoHoaLan = ({ setCartItems }) => {
         }
         return sortedData;
     };
-
     const currentItems = sortData().slice(indexOfFirstItem, indexOfLastItem);
     const navigate = useNavigate();
     const totalItems = sortedData.length;

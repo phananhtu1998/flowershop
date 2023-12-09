@@ -20,14 +20,11 @@ const Detail = ({ setCartItems }) => {
         }
     };
     const handleAddToCartAndNavigate = (item, quantity) => {
-        console.log('Item:', item);
-        console.log('Quantity:', quantity);
         // Tìm kiếm xem mục đã tồn tại trong localStorage hay chưa
         const storedCartItems = localStorage.getItem('cartItems');
         const cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
 
         const existingItem = cartItems.find((cartItem) => cartItem.Name === item.Name);
-
         if (existingItem) {
             // Nếu mục đã tồn tại, tăng giá trị quantity lên 1
             existingItem.quantity = (existingItem.quantity || 0) + quantity;
@@ -49,7 +46,6 @@ const Detail = ({ setCartItems }) => {
     const navigate = useNavigate();
     useEffect(() => {
         let foundItem = lstHoa.find(item => item.Name === Name);
-        console.log("foundItem", foundItem)
         setLstSpLienQuan(lstHoa.filter(item => item.Category === foundItem.Category))
         if (foundItem) {
             setItem(foundItem);
@@ -318,7 +314,7 @@ const Detail = ({ setCartItems }) => {
                                                             <a style={{ color: 'inherit', fontSize: 'large', fontWeight: 'normal' }}>{item.Name}</a>
                                                         </h2>
                                                         <div style={{ fontSize: 'medium', fontWeight: 'normal', color: '#E13028' }}>
-                                                            <strong>{item.Price}</strong>
+                                                            <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
                                                             <span> VNĐ</span>
                                                         </div>
                                                         <div style={{ margin: '10px 0', display: 'block', textAlign: 'center' }}>
@@ -335,7 +331,7 @@ const Detail = ({ setCartItems }) => {
                                         display: 'block',
                                         textAlign: 'center'
                                     }}>
-                                        <a href="" style={{
+                                        <a href={'/' + item.Category + '/'} style={{
                                             padding: '8px 30px',
                                             color: '#fff',
                                             background: '#008CBA',

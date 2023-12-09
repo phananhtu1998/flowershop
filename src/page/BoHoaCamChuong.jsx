@@ -18,6 +18,9 @@ const BoHoaCamChuong = ({ setCartItems }) => {
 
     const sortData = () => {
         switch (sortBy) {
+            case "1":
+                sortedData.sort(() => Math.random() - 0.5);
+                break;
             case "2":
                 sortedData.sort((a, b) => parseFloat(a.Price) - parseFloat(b.Price));
                 break;
@@ -100,7 +103,7 @@ const BoHoaCamChuong = ({ setCartItems }) => {
                                         <span> VNĐ</span>
                                     </div>
                                     {item.PriceOld !== '' ? (
-                                        <div style={{ padding: '10px', textDecoration: 'line-through', marginLeft: '10px', display: 'inline-block', margin: '0' }}>{(parseInt(item.PriceOld, 10)).toLocaleString('vi-VN')}</div>
+                                        <div style={{ padding: '10px', textDecoration: 'line-through', marginLeft: '10px', display: 'inline-block', margin: '0' }}>{(parseInt(item.PriceOld, 10)).toLocaleString('vi-VN')} VNĐ</div>
                                     ) : (
                                         null
                                     )}
