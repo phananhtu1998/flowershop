@@ -558,4 +558,113 @@
     }
 }
 
-/* */
+/*360x740 */
+@media only screen and (max-width: 360px) and (max-height: 740px) {
+
+    /* bó hoa */
+    .customflexbox {
+        flex: 0 0 100%;
+        box-sizing: border-box;
+    }
+
+    .customstyleul {
+        padding: 0;
+        margin: -23px;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .custombox {
+        position: relative;
+        display: block;
+        width: 160px;
+        padding: 0;
+        background: #3498db;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        color: #fff;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        text-transform: uppercase;
+        text-align: center;
+        z-index: 1;
+        font-size: 6.5px;
+        transform: rotate(45deg);
+        right: -70px;
+        top: 5px;
+    }
+
+    /*  */
+    .customflexbox {
+        flex: 0 0 50%;
+        box-sizing: border-box;
+    }
+
+    .customhoalist {
+        padding: 0;
+        margin: -15px;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .customdanhmuchoabox {
+        position: relative;
+        display: block;
+        width: 100px;
+        padding: 0;
+        background: #3498db;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        color: #fff;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        text-transform: uppercase;
+        text-align: center;
+        z-index: 1;
+        font-size: 6.5px;
+        transform: rotate(45deg);
+        right: -90px;
+        top: 5px;
+    }
+
+    .customimage {
+        width: 100%;
+        height: 100%;
+        max-width: 200px;
+        /* Đặt giá trị max-width phù hợp với yêu cầu của bạn */
+    }
+
+    .divmargin {
+        margin: 5px 0 0;
+    }
+
+    .customatext {
+        font-size: small;
+    }
+
+    .customPricetext {
+        font-size: x-small;
+    }
+
+    .custombutton {
+        padding: 3px 15px;
+    }
+
+    .customonclickblock {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .custombutton {
+        padding: 8px 20px;
+        font-size: 8px;
+    }
+
+    .customtitlecontainer {
+        margin: 10px;
+    }
+
+    .customtextdebutton {
+        padding: 6px 20px;
+        font-size: 8px;
+        /* Điều chỉnh kích thước chữ cho màn nhỏ hơn */
+    }
+}
