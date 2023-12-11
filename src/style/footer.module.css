@@ -257,3 +257,65 @@
 .emailcus {
     font-size: 11pt;
 }
+
+@media (max-width: 768px) {
+
+    .customelementdiv,
+    .customiconelement {
+        width: 50%;
+    }
+
+    .custombuttondom {
+        width: 100%;
+    }
+
+    .inputcustom {
+        width: 100%;
+    }
+}
+
+/* Responsive styles for even smaller screens */
+@media (max-width: 414px) {
+
+    .customelementdiv,
+    .customiconelement {
+        width: 100%;
+    }
+
+    .customtextfootrt {
+        text-align: center;
+    }
+
+    .customlogotext {
+        text-align: center;
+    }
+
+    .imgcustomelement {
+        padding: 0;
+    }
+
+    .custombuttondom {
+        width: 15%;
+        /* Đặt lại chiều rộng */
+        font-size: 10px;
+        /* Điều chỉnh kích thước chữ nếu cần thiết */
+    }
+
+    .inputcustom {
+        font-size: 10px;
+        width: 280px;
+    }
+
+    .customicontext {
+        text-align: center;
+        margin: 10px;
+    }
+
+    .customtext {
+        text-align: center;
+    }
+
+    .customecocontainer {
+        padding-left: 25px;
+    }
+}
