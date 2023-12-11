@@ -1,34 +1,561 @@
-.divmain {
-    background-color: #F2F2F2;
+.divtitle {
+    margin: 30px 0 0 0;
+    border-bottom: 2px solid #850132;
 }
 
-.div134 {
+.customstyle {
+    background: #850132;
+    color: #fff;
+    padding: 6px 20px;
+    border-radius: 5px 5px 0 0;
+}
+
+.customtextstyle {
+    text-decoration: none;
+    font-style: italic;
+    color: inherit;
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.divnew {
+    padding: 20px 0 0;
+}
+
+.customstyleul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.div134 a {
+.customflexbox {
+    flex: 0 0 25%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+.customcontainer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    border: solid 1px #df2f5538;
+}
+
+.customcontainer:hover {
+    background-color: #edf0f1;
+}
+
+.custombox {
+    position: relative;
+    display: block;
+    width: 290px;
+    padding: 0;
+    background: #3498db;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 1;
+    font-size: 13px;
+    transform: rotate(45deg);
+    right: -115px;
+    top: 23px;
+}
+
+.customelement {
+    margin: 0;
+    position: relative;
+    padding-top: 100%;
+}
+
+.customlink {
     text-decoration: none;
     color: inherit;
-    font-size: 10pt;
 }
 
-.divDescription {
-    font-size: 18px;
-    font-weight: bolder;
-    color: #850132;
+.customimage {
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.divDescription p {
+.divmargin {
+    margin: 10px 0 0;
+}
+
+.customatext {
+    color: inherit;
+    font-size: large;
+    font-weight: normal;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.customPricetext {
+    font-size: medium;
+    font-weight: normal;
+    color: #E13028;
+}
+
+.customonclickblock {
+    margin: 10px;
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    text-align: center;
 }
 
-.divDescription1 {
-    font-size: 16pt;
-    color: #850132;
+.custombutton {
+    background: #E35454;
+    color: #FFF;
+    padding: 5px 25px;
+    border-radius: 20px;
+}
+
+.customtitlecontainer {
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.customtextdebutton {
+    padding: 8px 30px;
+    color: #fff;
+    background: #008CBA;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.customdivider {
+    margin: 30px 0 0 0;
+    border-bottom: 2px solid #850132;
+}
+
+.customstylecontainer {
+    background: #850132;
+    color: #fff;
+    padding: 6px 20px;
+    border-radius: 5px 5px 0 0;
+}
+
+.customdanhmuchoatext {
+    text-decoration: none;
+    font-style: italic;
+    color: inherit;
+    font-size: 22px;
     font-weight: bolder;
 }
+
+.customhoalist {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.customlishoabox {
+    flex: 0 0 25%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+.customlisthoacontainer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    border: solid 1px #df2f5538;
+}
+
+.customdanhmuchoabox {
+    position: relative;
+    display: block;
+    width: 290px;
+    padding: 0;
+    background: #3498db;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 1;
+    font-size: 13px;
+    transform: rotate(45deg);
+    right: -115px;
+    top: 23px;
+}
+
+.customhoaelement {
+    margin: 0;
+    position: relative;
+    padding-top: 100%;
+}
+
+.customtexthoa {
+    color: inherit;
+    font-size: large;
+    font-weight: normal;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.customtexthoa1 {
+    margin: 30px;
+    font-size: medium;
+    font-weight: normal;
+    color: #E13028;
+}
+
+.custombuttonflowew {
+    background: #E35454;
+    color: #FFF;
+    padding: 5px 25px;
+    border-radius: 20px;
+}
+
+.customcontainerflower {
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.customdividerflower {
+    margin: 30px 0 0 0;
+    border-bottom: 2px solid #850132;
+}
+
+.customtextflower {
+    font-size: medium;
+    font-weight: normal;
+    color: #E13028;
+}
+
+.customlinkflowers {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    .customflexbox {
+        flex: 0 0 100%;
+        box-sizing: border-box;
+    }
+
+    .customstyleul {
+        padding: 0;
+        margin: -15px;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .custombox {
+        position: relative;
+        display: block;
+        width: 160px;
+        padding: 0;
+        background: #3498db;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        color: #fff;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        text-transform: uppercase;
+        text-align: center;
+        z-index: 1;
+        font-size: 6.5px;
+        transform: rotate(45deg);
+        right: -70px;
+        top: 5px;
+    }
+
+    .customimage {
+        width: 100%;
+        height: 100%;
+        max-width: 200px;
+        /* Đặt giá trị max-width phù hợp với yêu cầu của bạn */
+    }
+
+    .divmargin {
+        margin: 5px 0 0;
+    }
+
+    .customatext {
+        font-size: small;
+    }
+
+    .customPricetext {
+        font-size: x-small;
+    }
+
+    .custombutton {
+        padding: 3px 15px;
+    }
+
+    .customonclickblock {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .custombutton {
+        padding: 8px 20px;
+        font-size: 10px;
+    }
+
+    .customtitlecontainer {
+        margin: 10px;
+    }
+
+    .customtextdebutton {
+        padding: 6px 20px;
+        font-size: 14px;
+        /* Điều chỉnh kích thước chữ cho màn nhỏ hơn */
+    }
+}
+
+/* ip xr*/
+@media only screen and (max-width: 414px) and (max-height: 896px) {
+
+    .customlishoabox {
+        flex: 0 0 50%;
+        box-sizing: border-box;
+    }
+
+    .customstyleul {
+        padding: 0;
+        margin: -15px;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .customdanhmuchoabox {
+        position: relative;
+        display: block;
+        width: 160px;
+        padding: 0;
+        background: #3498db;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        color: #fff;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        text-transform: uppercase;
+        text-align: center;
+        z-index: 1;
+        font-size: 6.5px;
+        transform: rotate(45deg);
+        right: -90px;
+        top: 5px;
+    }
+
+    .customimage {
+        width: 100%;
+        height: 100%;
+        max-width: 200px;
+        /* Đặt giá trị max-width phù hợp với yêu cầu của bạn */
+    }
+
+    .divmargin {
+        margin: 5px 0 0;
+    }
+
+    .customatext {
+        font-size: small;
+    }
+
+    .customPricetext {
+        font-size: x-small;
+    }
+
+    .custombutton {
+        padding: 3px 15px;
+    }
+
+    .customonclickblock {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .custombutton {
+        padding: 8px 20px;
+        font-size: 10px;
+    }
+
+    .customtitlecontainer {
+        margin: 10px;
+    }
+
+    .customtextdebutton {
+        padding: 6px 20px;
+        font-size: 14px;
+        /* Điều chỉnh kích thước chữ cho màn nhỏ hơn */
+    }
+}
+
+/* giỏ hoa */
+@media (max-width: 768px) {
+    .customflexbox {
+        flex: 0 0 50%;
+        box-sizing: border-box;
+    }
+
+    .customhoalist {
+        padding: 0;
+        margin: -15px;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .custombox {
+        position: relative;
+        display: block;
+        width: 160px;
+        padding: 0;
+        background: #3498db;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        color: #fff;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        text-transform: uppercase;
+        text-align: center;
+        z-index: 1;
+        font-size: 6.5px;
+        transform: rotate(45deg);
+        right: -90px;
+        top: 5px;
+    }
+
+    .customimage {
+        width: 100%;
+        height: 100%;
+        max-width: 200px;
+        /* Đặt giá trị max-width phù hợp với yêu cầu của bạn */
+    }
+
+    .divmargin {
+        margin: 5px 0 0;
+    }
+
+    .customatext {
+        font-size: small;
+    }
+
+    .customPricetext {
+        font-size: x-small;
+    }
+
+    .custombutton {
+        padding: 3px 15px;
+    }
+
+    .customonclickblock {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .custombutton {
+        padding: 8px 20px;
+        font-size: 10px;
+    }
+
+    .customtitlecontainer {
+        margin: 10px;
+    }
+
+    .customtextdebutton {
+        padding: 6px 20px;
+        font-size: 14px;
+        /* Điều chỉnh kích thước chữ cho màn nhỏ hơn */
+    }
+
+    .customtexthoa {
+        font-size: 14px;
+    }
+
+    .custombuttonflowew {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 414px) and (max-height: 896px) {
+
+    .customflexbox {
+        flex: 0 0 50%;
+        box-sizing: border-box;
+    }
+
+    .customhoalist {
+        padding: 0;
+        margin: -15px;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .customdanhmuchoabox {
+        position: relative;
+        display: block;
+        width: 160px;
+        padding: 0;
+        background: #3498db;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        color: #fff;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        text-transform: uppercase;
+        text-align: center;
+        z-index: 1;
+        font-size: 6.5px;
+        transform: rotate(45deg);
+        right: -90px;
+        top: 5px;
+    }
+
+    .customimage {
+        width: 100%;
+        height: 100%;
+        max-width: 200px;
+        /* Đặt giá trị max-width phù hợp với yêu cầu của bạn */
+    }
+
+    .divmargin {
+        margin: 5px 0 0;
+    }
+
+    .customatext {
+        font-size: small;
+    }
+
+    .customPricetext {
+        font-size: x-small;
+    }
+
+    .custombutton {
+        padding: 3px 15px;
+    }
+
+    .customonclickblock {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .custombutton {
+        padding: 8px 20px;
+        font-size: 10px;
+    }
+
+    .customtitlecontainer {
+        margin: 10px;
+    }
+
+    .customtextdebutton {
+        padding: 6px 20px;
+        font-size: 10px;
+        /* Điều chỉnh kích thước chữ cho màn nhỏ hơn */
+    }
+}
+
+/* */

@@ -301,7 +301,7 @@ const WebHeader = () => {
                                     </div>
                                 </div>
                                 <div className={styles.divslider}>
-                                    <div className={styles.divchild}>
+                                    <div className={styles.divchild} >
                                         <span>
                                             <Slider {...settings} >
                                                 {images.map((image, index) => (

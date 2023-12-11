@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
+import Styles from '../style/homepage.module.css'
 export default function Home({ setCartItems }) {
     const BoHoaTuoi = [
         { Name: 'Love', Price: '300000', Images: '/BoHoaTuoi/love_300x300.jpg' },
@@ -173,51 +174,49 @@ export default function Home({ setCartItems }) {
             <div>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
-                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div className={Styles.divtitle}>
+                            <span className={Styles.customstyle}>
                                 <span>
-                                    <a href='/bohoa/' style={{
-                                        textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'
-                                    }}>BÓ HOA TƯƠI</a>
+                                    <a href='/bohoa/' className={Styles.customtextstyle}>BÓ HOA TƯƠI</a>
                                 </span>
                             </span>
                         </div>
                     </div>
-                    <div style={{ padding: '20px 0 0' }}>
-                        <ul style={{ padding: '0', margin: '0', listStyle: 'none', display: 'flex', flexWrap: 'wrap' }}>
+                    <div className={Styles.divnew}>
+                        <ul className={Styles.customstyleul}>
                             {BoHoaTuoi.map((item, index) => (
-                                <li key={index} style={{ flex: '0 0 25%', boxSizing: 'border-box', padding: '10px', textAlign: 'center' }}>
-                                    <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '5px', border: 'solid 1px #df2f5538' }}>
-                                        <div style={{ position: 'relative', display: 'block', width: '290px', padding: '0', background: '#3498db', boxShadow: '0 5px 10px rgba(0,0,0,.1)', color: '#fff', textShadow: '0 1px 1px rgba(0,0,0,.2)', textTransform: 'uppercase', textAlign: 'center', zIndex: '1', fontSize: '13px', transform: 'rotate(45deg)', right: '-115px', top: '23px' }}>
+                                <li key={index} className={Styles.customflexbox}>
+                                    <div className={Styles.customcontainer}>
+                                        <div className={Styles.custombox}>
                                             <span>New</span>
                                         </div>
-                                        <div style={{ margin: '0', position: 'relative', paddingTop: '100%' }}>
-                                            <a style={{ textDecoration: 'none', color: 'inherit' }}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} style={{ objectFit: 'contain', position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }} src={item.Images} alt={item.Name}></img>
+                                        <div className={Styles.customelement}>
+                                            <a className={Styles.customlink}>
+                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
-                                            <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                            <a href="/" className={Styles.customlink}>
                                                 <i></i>
                                                 <span></span>
                                             </a>
                                         </div>
-                                        <h2 style={{ margin: '10px 0 0' }}>
-                                            <a style={{ color: 'inherit', fontSize: 'large', fontWeight: 'normal' }}>{item.Name}</a>
+                                        <h2 className={Styles.divmargin}>
+                                            <a className={Styles.customatext} title={item.Name}>{item.Name}</a>
                                         </h2>
-                                        <div style={{ fontSize: 'medium', fontWeight: 'normal', color: '#E13028' }}>
+                                        <div className={Styles.customPricetext}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
                                             <span> VNĐ</span>
                                         </div>
-                                        <div style={{ margin: '10px', display: 'block', textAlign: 'center' }}>
+                                        <div className={Styles.customonclickblock}>
                                             <label style={{ cursor: 'pointer' }}>
-                                                <span style={{ background: '#E35454', color: '#FFF', padding: '5px 25px', borderRadius: '20px' }} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
+                                                <span className={Styles.custombutton} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
                                             </label>
                                         </div>
                                     </div>
                                 </li>
                             ))}
                         </ul>
-                        <div style={{ margin: '15px', display: 'flex', justifyContent: 'center', cursor: 'pointer' }}>
-                            <a href='/bohoa/' style={{ padding: '8px 30px', color: '#fff', background: '#008CBA', borderRadius: '10px', textDecoration: 'none' }}>
+                        <div className={Styles.customtitlecontainer}>
+                            <a href='/bohoa/' className={Styles.customtextdebutton}>
                                 Xem thêm nhiều mẫu hơn
                             </a>
                         </div>
@@ -225,51 +224,49 @@ export default function Home({ setCartItems }) {
                 </Container>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
-                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div className={Styles.customdivider}>
+                            <span className={Styles.customstylecontainers}>
                                 <span>
-                                    <a href='/giohoa/' style={{
-                                        textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'
-                                    }}>GIỎ HOA TƯƠI</a>
+                                    <a href='/giohoa/' className={Styles.customdanhmuchoatext}>GIỎ HOA TƯƠI</a>
                                 </span>
                             </span>
                         </div>
                     </div>
-                    <div style={{ padding: '20px 0 0' }}>
-                        <ul style={{ padding: '0', margin: '0', listStyle: 'none', display: 'flex', flexWrap: 'wrap' }}>
+                    <div className={Styles.divnew}>
+                        <ul className={Styles.customhoalist}>
                             {GioHoaTuoi.map((item, index) => (
-                                <li key={index} style={{ flex: '0 0 25%', boxSizing: 'border-box', padding: '10px', textAlign: 'center' }}>
-                                    <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '5px', border: 'solid 1px #df2f5538' }}>
-                                        <div style={{ position: 'relative', display: 'block', width: '290px', padding: '0', background: '#3498db', boxShadow: '0 5px 10px rgba(0,0,0,.1)', color: '#fff', textShadow: '0 1px 1px rgba(0,0,0,.2)', textTransform: 'uppercase', textAlign: 'center', zIndex: '1', fontSize: '13px', transform: 'rotate(45deg)', right: '-115px', top: '23px' }}>
+                                <li key={index} className={Styles.customlishoabox}>
+                                    <div className={Styles.customlisthoacontainer}>
+                                        <div className={Styles.customdanhmuchoabox}>
                                             <span>New</span>
                                         </div>
-                                        <div style={{ margin: '0', position: 'relative', paddingTop: '100%' }}>
-                                            <a style={{ textDecoration: 'none', color: 'inherit' }}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} style={{ objectFit: 'contain', position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }} src={item.Images} alt={item.Name}></img>
+                                        <div className={Styles.customhoaelement}>
+                                            <a className={Styles.customlink}>
+                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
-                                            <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                            <a href="/" className={Styles.customlink}>
                                                 <i></i>
                                                 <span></span>
                                             </a>
                                         </div>
-                                        <h2 style={{ margin: '10px 0 0' }}>
-                                            <a style={{ color: 'inherit', fontSize: 'large', fontWeight: 'normal' }}>{item.Name}</a>
+                                        <h2 className={Styles.divmargin}>
+                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
                                         </h2>
-                                        <div style={{ margin: '30px', fontSize: 'medium', fontWeight: 'normal', color: '#E13028' }}>
+                                        <div className={Styles.customtexthoa1}>
                                             {/* <strong>{item.Price}</strong>
                                             <span> VNĐ</span> */}
                                         </div>
-                                        <div style={{ margin: '10px', display: 'block', textAlign: 'center' }}>
+                                        <div className={Styles.customonclickblock}>
                                             <label style={{ cursor: 'pointer' }}>
-                                                <span style={{ background: '#E35454', color: '#FFF', padding: '5px 25px', borderRadius: '20px' }} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
+                                                <span className={Styles.custombuttonflowew} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
                                             </label>
                                         </div>
                                     </div>
                                 </li>
                             ))}
                         </ul>
-                        <div style={{ margin: '15px', display: 'flex', justifyContent: 'center' }}>
-                            <a href='/giohoa/' style={{ padding: '8px 30px', color: '#fff', background: '#008CBA', borderRadius: '10px', textDecoration: 'none' }}>
+                        <div className={Styles.customcontainerflower}>
+                            <a href='/giohoa/' className={Styles.customtextdebutton}>
                                 Xem thêm nhiều mẫu hơn
                             </a>
                         </div>
@@ -277,51 +274,49 @@ export default function Home({ setCartItems }) {
                 </Container>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
-                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div className={Styles.customdividerflower}>
+                            <span className={Styles.customstylecontainers}>
                                 <span>
-                                    <a href="/" style={{
-                                        textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'
-                                    }}>HỘP HOA TƯƠI</a>
+                                    <a href="/" className={Styles.customdanhmuchoatext}>HỘP HOA TƯƠI</a>
                                 </span>
                             </span>
                         </div>
                     </div>
-                    <div style={{ padding: '20px 0 0' }}>
-                        <ul style={{ padding: '0', margin: '0', listStyle: 'none', display: 'flex', flexWrap: 'wrap' }}>
+                    <div className={Styles.divnew}>
+                        <ul className={Styles.customhoalist}>
                             {HopHoaTuoi.map((item, index) => (
-                                <li key={index} style={{ flex: '0 0 25%', boxSizing: 'border-box', padding: '10px', textAlign: 'center' }}>
-                                    <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '5px', border: 'solid 1px #df2f5538' }}>
-                                        <div style={{ position: 'relative', display: 'block', width: '290px', padding: '0', background: '#3498db', boxShadow: '0 5px 10px rgba(0,0,0,.1)', color: '#fff', textShadow: '0 1px 1px rgba(0,0,0,.2)', textTransform: 'uppercase', textAlign: 'center', zIndex: '1', fontSize: '13px', transform: 'rotate(45deg)', right: '-115px', top: '23px' }}>
+                                <li key={index} className={Styles.customlishoabox}>
+                                    <div className={Styles.customlisthoacontainer}>
+                                        <div className={Styles.customdanhmuchoabox}>
                                             <span>New</span>
                                         </div>
-                                        <div style={{ margin: '0', position: 'relative', paddingTop: '100%' }}>
-                                            <a style={{ textDecoration: 'none', color: 'inherit' }}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} style={{ objectFit: 'contain', position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }} src={item.Images} alt={item.Name}></img>
+                                        <div className={Styles.customhoaelement}>
+                                            <a className={Styles.customlink}>
+                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
-                                            <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                            <a href="/" className={Styles.customlink}>
                                                 <i></i>
                                                 <span></span>
                                             </a>
                                         </div>
-                                        <h2 style={{ margin: '10px 0 0' }}>
-                                            <a style={{ color: 'inherit', fontSize: 'large', fontWeight: 'normal' }}>{item.Name}</a>
+                                        <h2 className={Styles.divmargin}>
+                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
                                         </h2>
-                                        <div style={{ fontSize: 'medium', fontWeight: 'normal', color: '#E13028' }}>
+                                        <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
                                             <span> VNĐ</span>
                                         </div>
-                                        <div style={{ margin: '10px', display: 'block', textAlign: 'center' }}>
+                                        <div className={Styles.customonclickblock}>
                                             <label style={{ cursor: 'pointer' }}>
-                                                <span style={{ background: '#E35454', color: '#FFF', padding: '5px 25px', borderRadius: '20px' }} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
+                                                <span className={Styles.custombuttonflowew} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
                                             </label>
                                         </div>
                                     </div>
                                 </li>
                             ))}
                         </ul>
-                        <div style={{ margin: '15px', display: 'flex', justifyContent: 'center' }}>
-                            <a href='' style={{ padding: '8px 30px', color: '#fff', background: '#008CBA', borderRadius: '10px', textDecoration: 'none' }}>
+                        <div className={Styles.customcontainerflower}>
+                            <a href='' className={Styles.customtextdebutton}>
                                 Xem thêm nhiều mẫu hơn
                             </a>
                         </div>
@@ -329,51 +324,49 @@ export default function Home({ setCartItems }) {
                 </Container>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
-                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div className={Styles.customdividerflower}>
+                            <span className={Styles.customstylecontainers}>
                                 <span>
-                                    <a href='/lanhodiep/' style={{
-                                        textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'
-                                    }}>HOA LAN HỒ ĐIỆP</a>
+                                    <a href='/lanhodiep/' className={Styles.customdanhmuchoatext}>HOA LAN HỒ ĐIỆP</a>
                                 </span>
                             </span>
                         </div>
                     </div>
-                    <div style={{ padding: '20px 0 0' }}>
-                        <ul style={{ padding: '0', margin: '0', listStyle: 'none', display: 'flex', flexWrap: 'wrap' }}>
+                    <div className={Styles.divnew}>
+                        <ul className={Styles.customhoalist}>
                             {HoaLanHoDiep.map((item, index) => (
-                                <li key={index} style={{ flex: '0 0 25%', boxSizing: 'border-box', padding: '10px', textAlign: 'center' }}>
-                                    <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '5px', border: 'solid 1px #df2f5538' }}>
-                                        <div style={{ position: 'relative', display: 'block', width: '290px', padding: '0', background: '#3498db', boxShadow: '0 5px 10px rgba(0,0,0,.1)', color: '#fff', textShadow: '0 1px 1px rgba(0,0,0,.2)', textTransform: 'uppercase', textAlign: 'center', zIndex: '1', fontSize: '13px', transform: 'rotate(45deg)', right: '-115px', top: '23px' }}>
+                                <li key={index} className={Styles.customlishoabox}>
+                                    <div className={Styles.customlisthoacontainer}>
+                                        <div className={Styles.customdanhmuchoabox}>
                                             <span>New</span>
                                         </div>
-                                        <div style={{ margin: '0', position: 'relative', paddingTop: '100%' }}>
-                                            <a style={{ textDecoration: 'none', color: 'inherit' }}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} style={{ objectFit: 'contain', position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }} src={item.Images} alt={item.Name}></img>
+                                        <div className={Styles.customhoaelement}>
+                                            <a className={Styles.customlink}>
+                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
-                                            <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                            <a href="/" className={Styles.customlink}>
                                                 <i></i>
                                                 <span></span>
                                             </a>
                                         </div>
-                                        <h2 style={{ margin: '10px 0 0' }}>
-                                            <a style={{ color: 'inherit', fontSize: 'large', fontWeight: 'normal' }}>{item.Name}</a>
+                                        <h2 className={Styles.divmargin}>
+                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
                                         </h2>
-                                        <div style={{ fontSize: 'medium', fontWeight: 'normal', color: '#E13028' }}>
+                                        <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
                                             <span> VNĐ</span>
                                         </div>
-                                        <div style={{ margin: '10px', display: 'block', textAlign: 'center' }}>
+                                        <div className={Styles.customonclickblock}>
                                             <label style={{ cursor: 'pointer' }}>
-                                                <span style={{ background: '#E35454', color: '#FFF', padding: '5px 25px', borderRadius: '20px' }} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
+                                                <span className={Styles.custombuttonflowew} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
                                             </label>
                                         </div>
                                     </div>
                                 </li>
                             ))}
                         </ul>
-                        <div style={{ margin: '15px', display: 'flex', justifyContent: 'center' }}>
-                            <a href='/lanhodiep/' style={{ padding: '8px 30px', color: '#fff', background: '#008CBA', borderRadius: '10px', textDecoration: 'none' }}>
+                        <div className={Styles.customcontainerflower}>
+                            <a href='/lanhodiep/' className={Styles.customtextdebutton}>
                                 Xem thêm nhiều mẫu hơn
                             </a>
                         </div>
@@ -381,51 +374,49 @@ export default function Home({ setCartItems }) {
                 </Container>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
-                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div className={Styles.customdividerflower}>
+                            <span className={Styles.customstylecontainers}>
                                 <span>
-                                    <a href='/hoakhaitruong/' style={{
-                                        textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'
-                                    }}>HOA KHAI TRƯƠNG</a>
+                                    <a href='/hoakhaitruong/' className={Styles.customdanhmuchoatext}>HOA KHAI TRƯƠNG</a>
                                 </span>
                             </span>
                         </div>
                     </div>
-                    <div style={{ padding: '20px 0 0' }}>
-                        <ul style={{ padding: '0', margin: '0', listStyle: 'none', display: 'flex', flexWrap: 'wrap' }}>
+                    <div className={Styles.divnew}>
+                        <ul className={Styles.customhoalist}>
                             {HoaKhaiTruong.map((item, index) => (
-                                <li key={index} style={{ flex: '0 0 25%', boxSizing: 'border-box', padding: '10px', textAlign: 'center' }}>
-                                    <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '5px', border: 'solid 1px #df2f5538' }}>
-                                        <div style={{ position: 'relative', display: 'block', width: '290px', padding: '0', background: '#3498db', boxShadow: '0 5px 10px rgba(0,0,0,.1)', color: '#fff', textShadow: '0 1px 1px rgba(0,0,0,.2)', textTransform: 'uppercase', textAlign: 'center', zIndex: '1', fontSize: '13px', transform: 'rotate(45deg)', right: '-115px', top: '23px' }}>
+                                <li key={index} className={Styles.customlishoabox}>
+                                    <div className={Styles.customlisthoacontainer}>
+                                        <div className={Styles.customdanhmuchoabox}>
                                             <span>New</span>
                                         </div>
-                                        <div style={{ margin: '0', position: 'relative', paddingTop: '100%' }}>
-                                            <a style={{ textDecoration: 'none', color: 'inherit' }}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} style={{ objectFit: 'contain', position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }} src={item.Images} alt={item.Name}></img>
+                                        <div className={Styles.customhoaelement}>
+                                            <a className={Styles.customlinkflowers}>
+                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
-                                            <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                            <a href="/" className={Styles.customlinkflowers}>
                                                 <i></i>
                                                 <span></span>
                                             </a>
                                         </div>
-                                        <h2 style={{ margin: '10px 0 0' }}>
-                                            <a style={{ color: 'inherit', fontSize: 'large', fontWeight: 'normal' }}>{item.Name}</a>
+                                        <h2 className={Styles.divmargin}>
+                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
                                         </h2>
-                                        <div style={{ fontSize: 'medium', fontWeight: 'normal', color: '#E13028' }}>
+                                        <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
                                             <span> VNĐ</span>
                                         </div>
-                                        <div style={{ margin: '10px', display: 'block', textAlign: 'center' }}>
+                                        <div className={Styles.customonclickblock}>
                                             <label style={{ cursor: 'pointer' }}>
-                                                <span style={{ background: '#E35454', color: '#FFF', padding: '5px 25px', borderRadius: '20px' }} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
+                                                <span className={Styles.custombuttonflowew} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
                                             </label>
                                         </div>
                                     </div>
                                 </li>
                             ))}
                         </ul>
-                        <div style={{ margin: '15px', display: 'flex', justifyContent: 'center' }}>
-                            <a href='/hoakhaitruong/' style={{ padding: '8px 30px', color: '#fff', background: '#008CBA', borderRadius: '10px', textDecoration: 'none' }}>
+                        <div className={Styles.customcontainerflower}>
+                            <a href='/hoakhaitruong/' className={Styles.customtextdebutton}>
                                 Xem thêm nhiều mẫu hơn
                             </a>
                         </div>
@@ -433,51 +424,49 @@ export default function Home({ setCartItems }) {
                 </Container>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
-                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div className={Styles.customdividerflower}>
+                            <span className={Styles.customstylecontainers}>
                                 <span>
-                                    <a href='/hoachiabuon' style={{
-                                        textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'
-                                    }}>HOA CHIA BUỒN</a>
+                                    <a href='/hoachiabuon' className={Styles.customdanhmuchoatext}>HOA CHIA BUỒN</a>
                                 </span>
                             </span>
                         </div>
                     </div>
-                    <div style={{ padding: '20px 0 0' }}>
-                        <ul style={{ padding: '0', margin: '0', listStyle: 'none', display: 'flex', flexWrap: 'wrap' }}>
+                    <div className={Styles.divnew}>
+                        <ul className={Styles.customhoalist}>
                             {HoaChiaBuon.map((item, index) => (
-                                <li key={index} style={{ flex: '0 0 25%', boxSizing: 'border-box', padding: '10px', textAlign: 'center' }}>
-                                    <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '5px', border: 'solid 1px #df2f5538' }}>
-                                        <div style={{ position: 'relative', display: 'block', width: '290px', padding: '0', background: '#3498db', boxShadow: '0 5px 10px rgba(0,0,0,.1)', color: '#fff', textShadow: '0 1px 1px rgba(0,0,0,.2)', textTransform: 'uppercase', textAlign: 'center', zIndex: '1', fontSize: '13px', transform: 'rotate(45deg)', right: '-115px', top: '23px' }}>
+                                <li key={index} className={Styles.customlishoabox}>
+                                    <div className={Styles.customlisthoacontainer}>
+                                        <div className={Styles.customdanhmuchoabox}>
                                             <span>New</span>
                                         </div>
-                                        <div style={{ margin: '0', position: 'relative', paddingTop: '100%' }}>
-                                            <a style={{ textDecoration: 'none', color: 'inherit' }}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} style={{ objectFit: 'contain', position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }} src={item.Images} alt={item.Name}></img>
+                                        <div className={Styles.customhoaelement}>
+                                            <a className={Styles.customlinkflowers}>
+                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
-                                            <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                            <a href="/" className={Styles.customlinkflowers}>
                                                 <i></i>
                                                 <span></span>
                                             </a>
                                         </div>
-                                        <h2 style={{ margin: '10px 0 0' }}>
-                                            <a style={{ color: 'inherit', fontSize: 'large', fontWeight: 'normal' }}>{item.Name}</a>
+                                        <h2 className={Styles.divmargin}>
+                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
                                         </h2>
-                                        <div style={{ fontSize: 'medium', fontWeight: 'normal', color: '#E13028' }}>
+                                        <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
                                             <span> VNĐ</span>
                                         </div>
-                                        <div style={{ margin: '10px', display: 'block', textAlign: 'center' }}>
+                                        <div className={Styles.customonclickblock}>
                                             <label style={{ cursor: 'pointer' }}>
-                                                <span style={{ background: '#E35454', color: '#FFF', padding: '5px 25px', borderRadius: '20px' }} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
+                                                <span className={Styles.custombuttonflowew} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
                                             </label>
                                         </div>
                                     </div>
                                 </li>
                             ))}
                         </ul>
-                        <div style={{ margin: '15px', display: 'flex', justifyContent: 'center' }}>
-                            <a href='/hoachiabuon' style={{ padding: '8px 30px', color: '#fff', background: '#008CBA', borderRadius: '10px', textDecoration: 'none' }}>
+                        <div className={Styles.customcontainerflower}>
+                            <a href='/hoachiabuon' className={Styles.customtextdebutton}>
                                 Xem thêm nhiều mẫu hơn
                             </a>
                         </div>
@@ -485,51 +474,49 @@ export default function Home({ setCartItems }) {
                 </Container>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
-                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div className={Styles.customdividerflower}>
+                            <span className={Styles.customstylecontainers}>
                                 <span>
-                                    <a href='/gioquatraicay/' style={{
-                                        textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'
-                                    }}>GIỎ TRÁI CÂY QUÀ TẶNG</a>
+                                    <a href='/gioquatraicay/' className={Styles.customdanhmuchoatext}>GIỎ TRÁI CÂY QUÀ TẶNG</a>
                                 </span>
                             </span>
                         </div>
                     </div>
-                    <div style={{ padding: '20px 0 0' }}>
-                        <ul style={{ padding: '0', margin: '0', listStyle: 'none', display: 'flex', flexWrap: 'wrap' }}>
+                    <div className={Styles.divnew}>
+                        <ul className={Styles.customhoalist}>
                             {GioTraiCayQuaTang.map((item, index) => (
-                                <li key={index} style={{ flex: '0 0 25%', boxSizing: 'border-box', padding: '10px', textAlign: 'center' }}>
-                                    <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '5px', border: 'solid 1px #df2f5538' }}>
-                                        <div style={{ position: 'relative', display: 'block', width: '290px', padding: '0', background: '#3498db', boxShadow: '0 5px 10px rgba(0,0,0,.1)', color: '#fff', textShadow: '0 1px 1px rgba(0,0,0,.2)', textTransform: 'uppercase', textAlign: 'center', zIndex: '1', fontSize: '13px', transform: 'rotate(45deg)', right: '-115px', top: '23px' }}>
+                                <li key={index} className={Styles.customlishoabox}>
+                                    <div className={Styles.customlisthoacontainer}>
+                                        <div className={Styles.customdanhmuchoabox}>
                                             <span>New</span>
                                         </div>
-                                        <div style={{ margin: '0', position: 'relative', paddingTop: '100%' }}>
-                                            <a style={{ textDecoration: 'none', color: 'inherit' }}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} style={{ objectFit: 'contain', position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }} src={item.Images} alt={item.Name}></img>
+                                        <div className={Styles.customhoaelement}>
+                                            <a className={Styles.customlinkflowers}>
+                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
-                                            <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                            <a href="/" className={Styles.customlinkflowers}>
                                                 <i></i>
                                                 <span></span>
                                             </a>
                                         </div>
-                                        <h2 style={{ margin: '10px 0 0' }}>
-                                            <a style={{ color: 'inherit', fontSize: 'large', fontWeight: 'normal' }}>{item.Name}</a>
+                                        <h2 className={Styles.divmargin}>
+                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
                                         </h2>
-                                        <div style={{ fontSize: 'medium', fontWeight: 'normal', color: '#E13028' }}>
+                                        <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
                                             <span> VNĐ</span>
                                         </div>
-                                        <div style={{ margin: '10px', display: 'block', textAlign: 'center' }}>
+                                        <div className={Styles.customonclickblock}>
                                             <label style={{ cursor: 'pointer' }}>
-                                                <span style={{ background: '#E35454', color: '#FFF', padding: '5px 25px', borderRadius: '20px' }} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
+                                                <span className={Styles.custombuttonflowew} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
                                             </label>
                                         </div>
                                     </div>
                                 </li>
                             ))}
                         </ul>
-                        <div style={{ margin: '15px', display: 'flex', justifyContent: 'center' }}>
-                            <a href='/gioquatraicay/' style={{ padding: '8px 30px', color: '#fff', background: '#008CBA', borderRadius: '10px', textDecoration: 'none' }}>
+                        <div className={Styles.customcontainerflower}>
+                            <a href='/gioquatraicay/' className={Styles.customtextdebutton}>
                                 Xem thêm nhiều mẫu hơn
                             </a>
                         </div>
@@ -537,51 +524,49 @@ export default function Home({ setCartItems }) {
                 </Container>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
-                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div className={Styles.customdividerflower}>
+                            <span className={Styles.customstylecontainers}>
                                 <span>
-                                    <a href='/hoacuoi/' style={{
-                                        textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'
-                                    }}>Hoa cưới</a>
+                                    <a href='/hoacuoi/' className={Styles.customdanhmuchoatext}>Hoa cưới</a>
                                 </span>
                             </span>
                         </div>
                     </div>
-                    <div style={{ padding: '20px 0 0' }}>
-                        <ul style={{ padding: '0', margin: '0', listStyle: 'none', display: 'flex', flexWrap: 'wrap' }}>
+                    <div className={Styles.divnew}>
+                        <ul className={Styles.customhoalist}>
                             {HoaCuoi.map((item, index) => (
-                                <li key={index} style={{ flex: '0 0 25%', boxSizing: 'border-box', padding: '10px', textAlign: 'center' }}>
-                                    <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '5px', border: 'solid 1px #df2f5538' }}>
-                                        <div style={{ position: 'relative', display: 'block', width: '290px', padding: '0', background: '#3498db', boxShadow: '0 5px 10px rgba(0,0,0,.1)', color: '#fff', textShadow: '0 1px 1px rgba(0,0,0,.2)', textTransform: 'uppercase', textAlign: 'center', zIndex: '1', fontSize: '13px', transform: 'rotate(45deg)', right: '-115px', top: '23px' }}>
+                                <li key={index} className={Styles.customlishoabox}>
+                                    <div className={Styles.customlisthoacontainer}>
+                                        <div className={Styles.customdanhmuchoabox}>
                                             <span>New</span>
                                         </div>
-                                        <div style={{ margin: '0', position: 'relative', paddingTop: '100%' }}>
-                                            <a style={{ textDecoration: 'none', color: 'inherit' }}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} style={{ objectFit: 'contain', position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }} src={item.Images} alt={item.Name}></img>
+                                        <div className={Styles.customhoaelement}>
+                                            <a className={Styles.customlinkflowers}>
+                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
-                                            <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                            <a href="/" className={Styles.customlinkflowers}>
                                                 <i></i>
                                                 <span></span>
                                             </a>
                                         </div>
-                                        <h2 style={{ margin: '10px 0 0' }}>
-                                            <a style={{ color: 'inherit', fontSize: 'large', fontWeight: 'normal' }}>{item.Name}</a>
+                                        <h2 className={Styles.divmargin}>
+                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
                                         </h2>
-                                        <div style={{ fontSize: 'medium', fontWeight: 'normal', color: '#E13028' }}>
+                                        <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
                                             <span> VNĐ</span>
                                         </div>
-                                        <div style={{ margin: '10px', display: 'block', textAlign: 'center' }}>
+                                        <div className={Styles.customonclickblock}>
                                             <label style={{ cursor: 'pointer' }}>
-                                                <span style={{ background: '#E35454', color: '#FFF', padding: '5px 25px', borderRadius: '20px' }} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
+                                                <span className={Styles.custombuttonflowew} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
                                             </label>
                                         </div>
                                     </div>
                                 </li>
                             ))}
                         </ul>
-                        <div style={{ margin: '15px', display: 'flex', justifyContent: 'center' }}>
-                            <a href='/hoacuoi/' style={{ padding: '8px 30px', color: '#fff', background: '#008CBA', borderRadius: '10px', textDecoration: 'none' }}>
+                        <div className={Styles.customcontainerflower}>
+                            <a href='/hoacuoi/' className={Styles.customtextdebutton}>
                                 Xem thêm nhiều mẫu hơn
                             </a>
                         </div>
@@ -589,51 +574,49 @@ export default function Home({ setCartItems }) {
                 </Container>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
-                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div className={Styles.customdividerflower}>
+                            <span className={Styles.customstylecontainers}>
                                 <span>
-                                    <a href='/cayxanhvanphong/' style={{
-                                        textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'
-                                    }}>Cây xanh văn phòng</a>
+                                    <a href='/cayxanhvanphong/' className={Styles.customdanhmuchoatext}>Cây xanh văn phòng</a>
                                 </span>
                             </span>
                         </div>
                     </div>
-                    <div style={{ padding: '20px 0 0' }}>
-                        <ul style={{ padding: '0', margin: '0', listStyle: 'none', display: 'flex', flexWrap: 'wrap' }}>
+                    <div className={Styles.divnew}>
+                        <ul className={Styles.customhoalist}>
                             {CayXanhVP.map((item, index) => (
-                                <li key={index} style={{ flex: '0 0 25%', boxSizing: 'border-box', padding: '10px', textAlign: 'center' }}>
-                                    <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '5px', border: 'solid 1px #df2f5538' }}>
-                                        <div style={{ position: 'relative', display: 'block', width: '290px', padding: '0', background: '#3498db', boxShadow: '0 5px 10px rgba(0,0,0,.1)', color: '#fff', textShadow: '0 1px 1px rgba(0,0,0,.2)', textTransform: 'uppercase', textAlign: 'center', zIndex: '1', fontSize: '13px', transform: 'rotate(45deg)', right: '-115px', top: '23px' }}>
+                                <li key={index} className={Styles.customlishoabox}>
+                                    <div className={Styles.customlisthoacontainer}>
+                                        <div className={Styles.customdanhmuchoabox}>
                                             <span>New</span>
                                         </div>
-                                        <div style={{ margin: '0', position: 'relative', paddingTop: '100%' }}>
-                                            <a style={{ textDecoration: 'none', color: 'inherit' }}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} style={{ objectFit: 'contain', position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }} src={item.Images} alt={item.Name}></img>
+                                        <div className={Styles.customhoaelement}>
+                                            <a className={Styles.customlinkflowers}>
+                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
-                                            <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                            <a href="/" className={Styles.customlinkflowers}>
                                                 <i></i>
                                                 <span></span>
                                             </a>
                                         </div>
-                                        <h2 style={{ margin: '10px 0 0' }}>
-                                            <a style={{ color: 'inherit', fontSize: 'large', fontWeight: 'normal' }}>{item.Name}</a>
+                                        <h2 className={Styles.divmargin}>
+                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
                                         </h2>
-                                        <div style={{ fontSize: 'medium', fontWeight: 'normal', color: '#E13028' }}>
+                                        <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
                                             <span> VNĐ</span>
                                         </div>
-                                        <div style={{ margin: '10px', display: 'block', textAlign: 'center' }}>
+                                        <div className={Styles.customonclickblock}>
                                             <label style={{ cursor: 'pointer' }}>
-                                                <span style={{ background: '#E35454', color: '#FFF', padding: '5px 25px', borderRadius: '20px' }} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
+                                                <span className={Styles.custombuttonflowew} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
                                             </label>
                                         </div>
                                     </div>
                                 </li>
                             ))}
                         </ul>
-                        <div style={{ margin: '15px', display: 'flex', justifyContent: 'center' }}>
-                            <a href='/cayxanhvanphong/' style={{ padding: '8px 30px', color: '#fff', background: '#008CBA', borderRadius: '10px', textDecoration: 'none' }}>
+                        <div className={Styles.customcontainerflower}>
+                            <a href='/cayxanhvanphong/' className={Styles.customtextdebutton}>
                                 Xem thêm nhiều mẫu hơn
                             </a>
                         </div>
@@ -641,57 +624,55 @@ export default function Home({ setCartItems }) {
                 </Container>
                 <Container>
                     <div>
-                        <div style={{ margin: '30px 0 0 0', borderBottom: '2px solid #850132' }}>
-                            <span style={{ background: '#850132', color: '#fff', padding: '6px 20px', borderRadius: '5px 5px 0 0' }}>
+                        <div className={Styles.customdividerflower}>
+                            <span className={Styles.customstylecontainers}>
                                 <span>
-                                    <a href='/hoadeban/' style={{
-                                        textDecoration: 'none', fontStyle: 'italic', color: 'inherit', fontSize: '22px', fontWeight: 'bolder'
-                                    }}>Hoa để bàn</a>
+                                    <a href='/hoadeban/' className={Styles.customdanhmuchoatext}>Hoa để bàn</a>
                                 </span>
                             </span>
                         </div>
                     </div>
-                    <div style={{ padding: '20px 0 0' }}>
-                        <ul style={{ padding: '0', margin: '0', listStyle: 'none', display: 'flex', flexWrap: 'wrap' }}>
+                    <div className={Styles.divnew}>
+                        <ul className={Styles.customhoalist}>
                             {HoaDeBan.map((item, index) => (
-                                <li key={index} style={{ flex: '0 0 25%', boxSizing: 'border-box', padding: '10px', textAlign: 'center' }}>
-                                    <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '5px', border: 'solid 1px #df2f5538' }}>
-                                        <div style={{ position: 'relative', display: 'block', width: '290px', padding: '0', background: '#3498db', boxShadow: '0 5px 10px rgba(0,0,0,.1)', color: '#fff', textShadow: '0 1px 1px rgba(0,0,0,.2)', textTransform: 'uppercase', textAlign: 'center', zIndex: '1', fontSize: '13px', transform: 'rotate(45deg)', right: '-115px', top: '23px' }}>
+                                <li key={index} className={Styles.customlishoabox}>
+                                    <div className={Styles.customlisthoacontainer}>
+                                        <div className={Styles.customdanhmuchoabox}>
                                             <span>New</span>
                                         </div>
-                                        <div style={{ margin: '0', position: 'relative', paddingTop: '100%' }}>
-                                            <a style={{ textDecoration: 'none', color: 'inherit' }}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} style={{ objectFit: 'contain', position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }} src={item.Images} alt={item.Name}></img>
+                                        <div className={Styles.customhoaelement}>
+                                            <a className={Styles.customlinkflowers}>
+                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
-                                            <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                            <a href="/" className={Styles.customlinkflowers}>
                                                 <i></i>
                                                 <span></span>
                                             </a>
                                         </div>
-                                        <h2 style={{ margin: '10px 0 0' }}>
-                                            <a style={{ color: 'inherit', fontSize: 'large', fontWeight: 'normal' }}>{item.Name}</a>
+                                        <h2 className={Styles.divmargin}>
+                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
                                         </h2>
-                                        <div style={{ fontSize: 'medium', fontWeight: 'normal', color: '#E13028' }}>
+                                        <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
                                             <span> VNĐ</span>
                                         </div>
-                                        <div style={{ margin: '10px', display: 'block', textAlign: 'center' }}>
+                                        <div className={Styles.customonclickblock}>
                                             <label style={{ cursor: 'pointer' }}>
-                                                <span style={{ background: '#E35454', color: '#FFF', padding: '5px 25px', borderRadius: '20px' }} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
+                                                <span className={Styles.custombuttonflowew} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
                                             </label>
                                         </div>
                                     </div>
                                 </li>
                             ))}
                         </ul>
-                        <div style={{ margin: '15px', display: 'flex', justifyContent: 'center' }}>
-                            <a href='/hoadeban/' style={{ padding: '8px 30px', color: '#fff', background: '#008CBA', borderRadius: '10px', textDecoration: 'none' }}>
+                        <div className={Styles.customcontainerflower}>
+                            <a href='/hoadeban/' className={Styles.customtextdebutton}>
                                 Xem thêm nhiều mẫu hơn
                             </a>
                         </div>
                     </div>
                 </Container>
-            </div>
-        </div>
+            </div >
+        </div >
     )
 }
