@@ -177,7 +177,7 @@ export default function Home({ setCartItems }) {
                         <div className={Styles.customdivider}>
                             <span className={Styles.customstylecontainers}>
                                 <span>
-                                    <a href='/giohoa/' className={Styles.customdanhmuchoatext}>BÓ HOA TƯƠI</a>
+                                    <a href='/bohoa/' className={Styles.customdanhmuchoatext}>BÓ HOA TƯƠI</a>
                                 </span>
                             </span>
                         </div>
@@ -203,8 +203,8 @@ export default function Home({ setCartItems }) {
                                             <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
                                         </h2>
                                         <div className={Styles.customtexthoa1}>
-                                            {/* <strong>{item.Price}</strong>
-                                            <span> VNĐ</span> */}
+                                            <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
+                                            <span> VNĐ</span>
                                         </div>
                                         <div className={Styles.customonclickblock}>
                                             <label style={{ cursor: 'pointer' }}>
