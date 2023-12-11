@@ -174,23 +174,23 @@ export default function Home({ setCartItems }) {
             <div>
                 <Container>
                     <div>
-                        <div className={Styles.divtitle}>
-                            <span className={Styles.customstyle}>
+                        <div className={Styles.customdivider}>
+                            <span className={Styles.customstylecontainers}>
                                 <span>
-                                    <a href='/bohoa/' className={Styles.customtextstyle}>BÓ HOA TƯƠI</a>
+                                    <a href='/giohoa/' className={Styles.customdanhmuchoatext}>BÓ HOA TƯƠI</a>
                                 </span>
                             </span>
                         </div>
                     </div>
                     <div className={Styles.divnew}>
-                        <ul className={Styles.customstyleul}>
+                        <ul className={Styles.customhoalist}>
                             {BoHoaTuoi.map((item, index) => (
-                                <li key={index} className={Styles.customflexbox}>
-                                    <div className={Styles.customcontainer}>
-                                        <div className={Styles.custombox}>
+                                <li key={index} className={Styles.customlishoabox}>
+                                    <div className={Styles.customlisthoacontainer}>
+                                        <div className={Styles.customdanhmuchoabox}>
                                             <span>New</span>
                                         </div>
-                                        <div className={Styles.customelement}>
+                                        <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlink}>
                                                 <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
@@ -200,22 +200,22 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <a className={Styles.customatext} title={item.Name}>{item.Name}</a>
+                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
                                         </h2>
-                                        <div className={Styles.customPricetext}>
-                                            <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
-                                            <span> VNĐ</span>
+                                        <div className={Styles.customtexthoa1}>
+                                            {/* <strong>{item.Price}</strong>
+                                            <span> VNĐ</span> */}
                                         </div>
                                         <div className={Styles.customonclickblock}>
                                             <label style={{ cursor: 'pointer' }}>
-                                                <span className={Styles.custombutton} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
+                                                <span className={Styles.custombuttonflowew} onClick={() => handleAddToCartAndNavigate(item, index + 1)}>Mua hàng</span>
                                             </label>
                                         </div>
                                     </div>
                                 </li>
                             ))}
                         </ul>
-                        <div className={Styles.customtitlecontainer}>
+                        <div className={Styles.customcontainerflower}>
                             <a href='/bohoa/' className={Styles.customtextdebutton}>
                                 Xem thêm nhiều mẫu hơn
                             </a>
