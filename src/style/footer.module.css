@@ -1,0 +1,259 @@
+.customelement {
+    display: block;
+    vertical-align: top;
+    background: #231F20;
+}
+
+.customcontainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.divpadding {
+    padding: 20px 0 0;
+}
+
+.customelementdiv {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+}
+
+.customtext {
+    padding: 10px 0;
+    color: #fff;
+}
+
+.fontsizetuvan {
+    font-size: 20pt;
+}
+
+.poisitiondiv {
+    position: relative;
+}
+
+.customecocontainer {
+    display: flex;
+    align-items: center;
+}
+
+.divdisplay {
+    display: block;
+}
+
+.inputcustom {
+    width: 500px;
+    height: 40px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    writing-mode: horizontal-tb;
+    padding-block: 1px;
+    padding-inline: 2px;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    appearance: auto;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-radius: 10px;
+}
+
+.custombuttondom {
+    height: 40px;
+    color: white;
+    padding: 0 20px;
+    background: #0084CB;
+    font-size: 18px;
+    border-radius: 3px;
+    border: 1px solid #0084CB;
+}
+
+.customiconelement {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+
+.customicontext {
+    text-align: right;
+    display: block;
+}
+
+.customiconelementcus {
+    color: #fff;
+    position: relative;
+}
+
+.customdomicondes {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    line-height: 1;
+}
+
+.divcustomfootercontainer {
+    display: block;
+    vertical-align: top;
+    background: #9E9E9E;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.customwrapper {
+    max-width: 1200px;
+    margin: auto;
+    display: block;
+}
+
+.customfooterdivider {
+    display: block;
+    vertical-align: top;
+    border-bottom: 1px solid #fff;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.customtextfootrt {
+    display: block;
+    color: #FFFFFF;
+}
+
+.customtextcontainerFooter {
+    padding: 20px 0;
+    position: relative;
+    display: block;
+    color: #FFFFFF;
+}
+
+.customtextcondes {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+.customdsftext {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.customfsmelement {
+    position: relative;
+    display: block;
+}
+
+.pcustomtext {
+    text-align: justify;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.spancustomtext {
+    font-size: 11pt;
+    color: #9c0808;
+}
+
+.zalodiv {
+    display: block;
+}
+
+.qrcustomtext {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 0 0 20px;
+}
+
+.imgcustomelement {
+    padding: 0 10px 0 20px;
+    position: relative;
+    display: block;
+    color: #FFFFFF;
+}
+
+.customlogotext {
+    text-align: center;
+    display: block;
+}
+
+.divcustomimage {
+    width: 200px;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.hotrocustomelement {
+    display: block;
+    color: #FFFFFF;
+}
+
+.camketcustomelement {
+    position: relative;
+    display: block;
+    color: #FFFFFF;
+    padding: 0 10px 0 20px;
+}
+
+.dambaocustomtext {
+    font-size: 11pt;
+    color: #FFFFFF;
+}
+
+.thanhtoancustomtext {
+    font-size: 14.6667px;
+    color: #FFFFFF;
+}
+
+.tuyendungcustomelement {
+    padding: 0 10px 0 20px;
+    position: relative;
+    display: block;
+}
+
+.newcustomcontainer {
+    display: block;
+    vertical-align: top;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.newcustompadding {
+    padding: 10px 0;
+}
+
+.newpcustomcenter {
+    text-align: center;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.newfontsizecus {
+    font-size: 14.6667px;
+}
+
+.emailcus {
+    font-size: 11pt;
+}

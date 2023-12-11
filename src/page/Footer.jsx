@@ -1,53 +1,54 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebookF, faGooglePlusG, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { format, addMonths } from 'date-fns';
+import { format } from 'date-fns';
+import style from '../style/footer.module.css'
 const WebFooter = () => {
     const currentDate = new Date();
     const formattedDate = format(currentDate, 'MM-yyyy');
     return (
         <div>
-            <div style={{ display: 'block', verticalAlign: 'top', background: '#231F20' }}>
-                <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-                    <div style={{ padding: '20px 0 0' }}>
-                        <div style={{ display: 'inline-block', width: '25%', verticalAlign: 'top' }}>
-                            <div style={{ padding: '10px 0', color: '#fff' }}>
+            <div className={style.customelement}>
+                <div className={style.customcontainer}>
+                    <div className={style.divpadding}>
+                        <div className={style.customelementdiv}>
+                            <div className={style.customtext}>
                                 <div>
-                                    <span style={{ fontSize: '20pt' }}>
+                                    <span className={style.customtext}>
                                         <strong>TƯ VẤN NHANH</strong>
                                     </span>
                                 </div>
                             </div>
                         </div>
-                        <div style={{ display: 'inline-block', width: '25%', verticalAlign: 'top' }}>
-                            <div style={{ position: 'relative' }}>
-                                <form style={{ display: 'flex', alignItems: 'center' }}>
-                                    <div style={{ display: 'block' }}>
+                        <div className={style.customelementdiv}>
+                            <div className={style.poisitiondiv}>
+                                <form className={style.customecocontainer}>
+                                    <div className={style.divdisplay}>
                                         <span></span>
                                         <span>
-                                            <input style={{ width: '500px', height: '40px', boxSizing: 'border-box', paddingLeft: '20px', writingMode: 'horizontal-tb', paddingBlock: '1px', paddingInline: '2px', textRendering: 'auto', color: 'fieldtext', letterSpacing: 'normal', wordSpacing: 'normal', lineHeight: 'normal', textTransform: 'none', textIndent: '0px', textShadow: 'none', display: 'inline-block', textAlign: 'center', appearance: 'auto', cursor: 'text', backgroundColor: 'field', margin: '0em', padding: '1px 0px', borderWidth: '2px', borderRadius: '10px' }} placeholder="Nhập số điện thoại của bạn chúng tôi sẽ gọi lại tư vấn ngay" />
+                                            <input className={style.inputcustom} placeholder="Nhập số điện thoại của bạn chúng tôi sẽ gọi lại tư vấn ngay" />
                                         </span>
                                     </div>
-                                    <button style={{ height: '40px', color: 'white', padding: '0 20px', background: '#0084CB', fontSize: '18px', borderRadius: '3px', border: '1px #0084CB' }}>Gửi</button>
+                                    <button className={style.custombuttondom}>Gửi</button>
                                 </form>
                             </div>
                         </div>
-                        <div style={{ display: 'inline-block', width: '50%', verticalAlign: 'top' }}>
-                            <div style={{ textAlign: 'right', display: 'block' }}>
-                                <div style={{ color: '#fff', position: 'relative' }}>
-                                    <span style={{ width: '30px', height: '30px', fontSize: '18px', alignItems: 'center', justifyContent: 'center', margin: '5px' }}>
+                        <div className={style.customiconelement}>
+                            <div className={style.customicontext}>
+                                <div className={style.customiconelementcus}>
+                                    <span className={style.customdomicondes}>
                                         <FontAwesomeIcon icon={faFacebookF} color='white' />
                                     </span>
-                                    <span style={{ width: '30px', height: '30px', fontSize: '18px', alignItems: 'center', justifyContent: 'center', margin: '5px' }}>
+                                    <span className={style.customdomicondes}>
                                         <FontAwesomeIcon icon={faTwitter} color='white' />
                                     </span>
-                                    <span style={{ width: '30px', height: '30px', fontSize: '18px', alignItems: 'center', justifyContent: 'center', margin: '5px' }}>
+                                    <span className={style.customdomicondes}>
                                         <FontAwesomeIcon icon={faGooglePlusG} color='white' />
                                     </span>
-                                    <span style={{ width: '30px', height: '30px', fontSize: '18px', alignItems: 'center', justifyContent: 'center', margin: '5px' }}>
+                                    <span className={style.customdomicondes}>
                                         <FontAwesomeIcon icon={faYoutube} color='white' />
                                     </span>
-                                    <span style={{ width: '30px', height: '30px', fontSize: '18px', alignItems: 'center', justifyContent: 'center', margin: '5px' }}>
+                                    <span className={style.customdomicondes}>
                                         <FontAwesomeIcon icon={faInstagram} color='white' />
                                     </span>
                                 </div>
@@ -56,160 +57,136 @@ const WebFooter = () => {
                     </div>
                 </div>
             </div>
-            <div style={{
-                display: 'block',
-                verticalAlign: 'top',
-                background: '#9E9E9E',
-                position: 'relative',
-                boxSizing: 'border-box'
-            }}>
-                <div style={{
-                    maxWidth: '1200px',
-                    margin: 'auto',
-                    display: 'block'
-                }}>
+            <div className={style.divcustomfootercontainer}>
+                <div className={style.customwrapper}>
                     <div style={{
                         color: '#FFFFFF'
                     }}>
-                        <div style={{
-                            display: 'block',
-                            verticalAlign: 'top',
-                            borderBottom: '1px solid #fff',
-                            position: 'relative',
-                            boxSizing: 'border-box'
-                        }}>
-                            <div style={{
-                                display: 'block',
-                                color: '#FFFFFF'
-                            }}>
-                                <div style={{
-                                    padding: '20px 0',
-                                    position: 'relative',
-                                    display: 'block',
-                                    color: '#FFFFFF'
-                                }}>
-                                    <div style={{ display: 'inline-block', width: '25%', verticalAlign: 'top' }}>
+                        <div className={style.customfooterdivider}>
+                            <div className={style.customtextfootrt}>
+                                <div className={style.customtextcontainerFooter}>
+                                    <div className={style.customelementdiv}>
                                         <div color='#FFFFFF'>
-                                            <div style={{ fontSize: '16px', fontWeight: 'bold', textTransform: 'uppercase', padding: '10px 0' }}>
-                                                <span style={{ fontSize: '16px', fontWeight: 'bold', textTransform: 'uppercase' }}>VỀ HOADEPTOANQUOC.COM</span>
+                                            <div className={style.customtextcondes}>
+                                                <span className={style.customdsftext}>VỀ HOADEPTOANQUOC.COM</span>
                                             </div>
-                                            <div style={{ position: 'relative', display: 'block' }}>
-                                                <p style={{ textAlign: 'justify', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                    <span style={{ fontSize: '11pt', color: '#9c0808' }}>
+                                            <div className={style.customfsmelement}>
+                                                <p className={style.pcustomtext}>
+                                                    <span className={style.spancustomtext}>
                                                         <strong fontWeight="bold">Hỗ trợ tư vấn mua hàng 24/7</strong>
                                                     </span>
                                                 </p>
-                                                <p style={{ textAlign: 'justify', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                    <span style={{ fontSize: '14.6667px' }}>
+                                                <p className={style.pcustomtext}>
+                                                    <span className={style.newfontsizecus}>
                                                         <span style={{ color: '#9c0808' }}>
                                                             <strong style={{ fontWeight: 'bold' }}>XEM TOÀN BỘ ĐỊA CHỈ CỬA HÀNG</strong>
                                                         </span>
                                                     </span>
                                                 </p>
-                                                <p style={{ textAlign: 'justify', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                    <span style={{ fontSize: '11pt' }}>
+                                                <p className={style.pcustomtext}>
+                                                    <span className={style.emailcus}>
                                                         <strong>Hotline:
                                                             <a style={{ textDecoration: 'none', color: '#FFFFFF' }} href="tel:19003189"> 19003189</a>
                                                         </strong>
                                                     </span>
                                                 </p>
-                                                <p style={{ textAlign: 'justify', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                    <span style={{ fontSize: '11pt' }}>
+                                                <p className={style.pcustomtext}>
+                                                    <span className={style.emailcus}>
                                                         Email:&nbsp;hoathuongyeu.com@gmail.com
                                                     </span>
                                                 </p>
-                                                <p style={{ textAlign: 'justify', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                    <span style={{ fontSize: '11pt' }}>
+                                                <p className={style.pcustomtext}>
+                                                    <span className={style.emailcus}>
                                                         Dịch vụ giao hoa đến 63 tỉnh thành Việt Nam.
                                                     </span>
                                                 </p>
-                                                <p style={{ textAlign: 'justify', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                    <span style={{ fontSize: '11pt' }}>
+                                                <p className={style.pcustomtext}>
+                                                    <span className={style.emailcus}>
                                                         Chúng tôi giao hoa gần như hoàn toàn Miễn Phí đến các Quận nội thành Tp. Hồ Chí Minh. Và tính phí giao hàng có hỗ trợ đối với các tỉnh thành khác.
                                                     </span>
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div style={{ display: 'inline-block', width: '25%', verticalAlign: 'top' }}>
-                                        <div style={{ display: 'block' }}>
-                                            <div style={{ fontSize: '16px', fontWeight: 'bold', textTransform: 'uppercase', padding: '10px 0 0 20px' }}>
+                                    <div className={style.customelementdiv}>
+                                        <div className={style.zalodiv}>
+                                            <div className={style.qrcustomtext}>
                                                 <span>MÃ QR OA ZALO</span>
                                             </div>
-                                            <div style={{ padding: '0 10px 0 20px', position: 'relative', display: 'block', color: '#FFFFFF' }}>
-                                                <div style={{ textAlign: 'center', display: 'block' }}>
-                                                    <img style={{ width: '200px', height: 'auto', maxWidth: '100%', verticalAlign: 'middle', overflowClipMargin: 'content-box', overflow: 'clip' }} src="/qrzalo.png" alt="" />
+                                            <div className={style.imgcustomelement}>
+                                                <div className={style.customlogotext}>
+                                                    <img className={style.divcustomimage} src="/qrzalo.png" alt="" />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div style={{ display: 'inline-block', width: '25%', verticalAlign: 'top' }}>
-                                        <div style={{ display: 'block', color: '#FFFFFF' }}>
-                                            <div style={{ fontSize: '16px', fontWeight: 'bold', textTransform: 'uppercase', padding: '10px 0 0 20px' }}>
+                                    <div className={style.customelementdiv}>
+                                        <div className={style.hotrocustomelement}>
+                                            <div className={style.qrcustomtext}>
                                                 <span>HỖ TRỢ KHÁCH HÀNG</span>
                                             </div>
-                                            <div style={{ position: 'relative', display: 'block', color: '#FFFFFF', padding: '0 10px 0 20px' }}>
-                                                <p style={{ textAlign: 'justify', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                    <span style={{ fontSize: '11pt', color: '#FFFFFF' }}>
+                                            <div className={style.camketcustomelement}>
+                                                <p className={style.pcustomtext}>
+                                                    <span className={style.dambaocustomtext}>
                                                         Cam kết mua hàng online đảm bảo
                                                     </span>
                                                 </p>
-                                                <p style={{ textAlign: 'justify', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                    <span style={{ fontSize: '14.6667px', color: '#FFFFFF' }}>
+                                                <p className={style.pcustomtext}>
+                                                    <span className={style.thanhtoancustomtext}>
                                                         Cam kết bảo mật thông tin
                                                     </span>
                                                 </p>
-                                                <p style={{ textAlign: 'justify', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                    <span style={{ fontSize: '14.6667px', color: '#FFFFFF' }}>
+                                                <p className={style.pcustomtext}>
+                                                    <span className={style.thanhtoancustomtext}>
                                                         Cam kết bảo mật thanh toán
                                                     </span>
                                                 </p>
-                                                <p style={{ textAlign: 'justify', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                    <span style={{ fontSize: '14.6667px', color: '#FFFFFF' }}>
+                                                <p className={style.pcustomtext}>
+                                                    <span className={style.thanhtoancustomtext}>
                                                         Hướng dẫn thanh toán
                                                     </span>
                                                 </p>
-                                                <p style={{ textAlign: 'justify', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                    <span style={{ fontSize: '14.6667px', color: '#FFFFFF' }}>
+                                                <p className={style.pcustomtext}>
+                                                    <span className={style.thanhtoancustomtext}>
                                                         Quy định đổi trả
                                                     </span>
                                                 </p>
-                                                <p style={{ textAlign: 'justify', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                    <span style={{ fontSize: '14.6667px', color: '#FFFFFF' }}>
+                                                <p className={style.pcustomtext}>
+                                                    <span className={style.thanhtoancustomtext}>
                                                         Hệ thống cửa hàng trên toàn quốc
                                                     </span>
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div style={{ display: 'inline-block', width: '25%', verticalAlign: 'top' }}>
-                                        <div style={{ display: 'block' }}>
-                                            <div style={{ fontSize: '16px', fontWeight: 'bold', textTransform: 'uppercase', padding: '10px 0 0 20px' }}>
+                                    <div className={style.customelementdiv}>
+                                        <div className={style.zalodiv}>
+                                            <div className={style.qrcustomtext}>
                                                 <span>HỢP TÁC & LIÊN KẾT</span>
                                             </div>
-                                            <div style={{ padding: '0 10px 0 20px', position: 'relative', display: 'block' }}>
-                                                <p style={{ textAlign: 'justify', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                    <span style={{ fontSize: '14.6667px', color: '#FFFFFF' }}>
+                                            <div className={style.tuyendungcustomelement}>
+                                                <p className={style.pcustomtext}>
+                                                    <span className={style.thanhtoancustomtext}>
                                                         Thông tin tuyển dụng
                                                     </span>
                                                 </p>
-                                                <p style={{ textAlign: 'justify', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                    <span style={{ fontSize: '14.6667px', color: '#FFFFFF' }}>
+                                                <p className={style.pcustomtext}>
+                                                    <span className={style.thanhtoancustomtext}>
                                                         Liên hệ hợp tác
                                                     </span>
                                                 </p>
-                                                <p style={{ textAlign: 'justify', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                    <span style={{ fontSize: '14.6667px', color: '#FFFFFF' }}>
+                                                <p className={style.pcustomtext}>
+                                                    <span className={style.thanhtoancustomtext}>
                                                         Chính sách và điều khoản
                                                     </span>
                                                 </p>
-                                                <p style={{ textAlign: 'justify', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                    <span style={{ fontSize: '14.6667px', color: '#FFFFFF' }}>
+                                                <p className={style.pcustomtext}>
+                                                    <span className={style.thanhtoancustomtext}>
                                                         Dạy cắm hoa
                                                     </span>
                                                 </p>
-                                                <p style={{ textAlign: 'justify', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                    <span style={{ fontSize: '14.6667px', color: '#FFFFFF' }}>
+                                                <p className={style.pcustomtext}>
+                                                    <span className={style.thanhtoancustomtext}>
                                                         Tư vấn mở shop
                                                     </span>
                                                 </p>
@@ -222,10 +199,10 @@ const WebFooter = () => {
                     </div>
                 </div>
             </div>
-            <div style={{ display: 'block', verticalAlign: 'top', position: 'relative', boxSizing: 'border-box' }}>
-                <div style={{ textAlign: 'center', display: 'block' }}>
-                    <div style={{ padding: '10px 0' }}>
-                        <p style={{ textAlign: 'center', display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
+            <div className={style.newcustomcontainer}>
+                <div className={style.customlogotext}>
+                    <div className={style.newcustompadding}>
+                        <p className={style.newpcustomcenter}>
                             Bản quyền thuộc về Hoadeptoanquoc.com - Website được xây dựng từ 2023 - Cập nhật mới nhất {formattedDate}
                         </p>
                     </div>
