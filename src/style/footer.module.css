@@ -574,6 +574,62 @@
     }
 }
 
+@media (max-width: 390px) {
+
+    .customelementdiv,
+    .customiconelement {
+        width: 100%;
+    }
+
+    .customtextfootrt {
+        text-align: center;
+    }
+
+    .customlogotext {
+        text-align: center;
+    }
+
+    .imgcustomelement {
+        padding: 0;
+    }
+
+    .custombuttondom {
+        width: 14%;
+        /* Đặt lại chiều rộng */
+        font-size: 10px;
+        /* Điều chỉnh kích thước chữ nếu cần thiết */
+    }
+
+    .inputcustom {
+        font-size: 10px;
+        width: 300px;
+    }
+
+    .customicontext {
+        text-align: center;
+        margin: 10px;
+    }
+
+    .customtext {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .customecocontainer {
+        padding-left: 16px;
+    }
+
+    .newpcustomcenter {
+        padding: 1px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .pcustomtext {
+        padding: 0px 5px;
+    }
+}
+
 @media (max-width: 384px) {
 
     .customelementdiv,
@@ -662,6 +718,65 @@
     .inputcustom {
         font-size: 10px;
         width: 280px;
+    }
+
+    .customicontext {
+        text-align: center;
+        margin: 10px;
+    }
+
+    .customtext {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .customecocontainer {
+        padding-left: 7px;
+    }
+
+    .newpcustomcenter {
+        padding: 1px;
+        text-align: center;
+    }
+
+    .pcustomtext {
+        padding: 0px 5px;
+    }
+
+    .newpcustomcenter {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 240px) {
+
+    .customelementdiv,
+    .customiconelement {
+        width: 100%;
+    }
+
+    .customtextfootrt {
+        text-align: center;
+    }
+
+    .customlogotext {
+        text-align: center;
+    }
+
+    .imgcustomelement {
+        padding: 0;
+    }
+
+    .custombuttondom {
+        width: 18%;
+        /* Đặt lại chiều rộng */
+        font-size: 4px;
+        /* Điều chỉnh kích thước chữ nếu cần thiết */
+    }
+
+    .inputcustom {
+        font-size: 6px;
+        width: 167px;
     }
 
     .customicontext {

@@ -702,7 +702,7 @@
 
     .customtextdebutton {
         padding: 6px 20px;
-        font-size: 14px;
+        font-size: 10px;
         /* Điều chỉnh kích thước chữ cho màn nhỏ hơn */
     }
 
@@ -711,6 +711,10 @@
     }
 
     .custombuttonflowew {
+        font-size: 10px;
+    }
+
+    .customdanhmuchoatext {
         font-size: 10px;
     }
 }
