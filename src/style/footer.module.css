@@ -258,23 +258,157 @@
     font-size: 11pt;
 }
 
+/* reponsive */
+@media (max-width: 834px) {
+
+    .customelementdiv,
+    .customiconelement {
+        width: 100%;
+    }
+
+    .customtextfootrt {
+        text-align: center;
+    }
+
+    .customlogotext {
+        text-align: center;
+    }
+
+    .imgcustomelement {
+        padding: 0;
+    }
+
+    .custombuttondom {
+        width: 10%;
+        /* Đặt lại chiều rộng */
+        font-size: 16px;
+        /* Điều chỉnh kích thước chữ nếu cần thiết */
+    }
+
+    .inputcustom {
+        font-size: 16px;
+        width: 520px;
+    }
+
+    .customicontext {
+        text-align: center;
+        margin: 10px;
+    }
+
+    .customtext {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .customecocontainer {
+        padding-left: 100px;
+    }
+
+    .pcustomtext {
+        padding: 0px 5px;
+    }
+}
+
 @media (max-width: 768px) {
 
     .customelementdiv,
     .customiconelement {
-        width: 50%;
+        width: 100%;
+    }
+
+    .customtextfootrt {
+        text-align: center;
+    }
+
+    .customlogotext {
+        text-align: center;
+    }
+
+    .imgcustomelement {
+        padding: 0;
     }
 
     .custombuttondom {
-        width: 100%;
+        width: 10%;
+        /* Đặt lại chiều rộng */
+        font-size: 16px;
+        /* Điều chỉnh kích thước chữ nếu cần thiết */
     }
 
     .inputcustom {
-        width: 100%;
+        font-size: 16px;
+        width: 520px;
+    }
+
+    .customicontext {
+        text-align: center;
+        margin: 10px;
+    }
+
+    .customtext {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .customecocontainer {
+        padding-left: 80px;
+    }
+
+    .pcustomtext {
+        padding: 0px 5px;
     }
 }
 
-/* Responsive styles for even smaller screens */
+@media (max-width: 768px) {
+
+    .customelementdiv,
+    .customiconelement {
+        width: 100%;
+    }
+
+    .customtextfootrt {
+        text-align: center;
+    }
+
+    .customlogotext {
+        text-align: center;
+    }
+
+    .imgcustomelement {
+        padding: 0;
+    }
+
+    .custombuttondom {
+        width: 10%;
+        /* Đặt lại chiều rộng */
+        font-size: 16px;
+        /* Điều chỉnh kích thước chữ nếu cần thiết */
+    }
+
+    .inputcustom {
+        font-size: 16px;
+        width: 520px;
+    }
+
+    .customicontext {
+        text-align: center;
+        margin: 10px;
+    }
+
+    .customtext {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .customecocontainer {
+        padding-left: 70px;
+    }
+
+    .pcustomtext {
+        padding: 0px 5px;
+    }
+}
+
 @media (max-width: 414px) {
 
     .customelementdiv,
@@ -295,7 +429,231 @@
     }
 
     .custombuttondom {
-        width: 15%;
+        width: 14%;
+        /* Đặt lại chiều rộng */
+        font-size: 10px;
+        /* Điều chỉnh kích thước chữ nếu cần thiết */
+    }
+
+    .inputcustom {
+        font-size: 10px;
+        width: 300px;
+    }
+
+    .customicontext {
+        text-align: center;
+        margin: 10px;
+    }
+
+    .customtext {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .customecocontainer {
+        padding-left: 21px;
+    }
+
+    .newpcustomcenter {
+        padding: 1px;
+        text-align: center;
+    }
+
+    .pcustomtext {
+        padding: 0px 5px;
+    }
+}
+
+@media (max-width: 412px) {
+
+    .customelementdiv,
+    .customiconelement {
+        width: 100%;
+    }
+
+    .customtextfootrt {
+        text-align: center;
+    }
+
+    .customlogotext {
+        text-align: center;
+    }
+
+    .imgcustomelement {
+        padding: 0;
+    }
+
+    .custombuttondom {
+        width: 14%;
+        /* Đặt lại chiều rộng */
+        font-size: 10px;
+        /* Điều chỉnh kích thước chữ nếu cần thiết */
+    }
+
+    .inputcustom {
+        font-size: 10px;
+        width: 300px;
+    }
+
+    .customicontext {
+        text-align: center;
+        margin: 10px;
+    }
+
+    .customtext {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .customecocontainer {
+        padding-left: 18px;
+    }
+
+    .newpcustomcenter {
+        padding: 1px;
+        text-align: center;
+    }
+
+    .pcustomtext {
+        padding: 0px 5px;
+    }
+}
+
+@media (max-width: 393px) {
+
+    .customelementdiv,
+    .customiconelement {
+        width: 100%;
+    }
+
+    .customtextfootrt {
+        text-align: center;
+    }
+
+    .customlogotext {
+        text-align: center;
+    }
+
+    .imgcustomelement {
+        padding: 0;
+    }
+
+    .custombuttondom {
+        width: 14%;
+        /* Đặt lại chiều rộng */
+        font-size: 10px;
+        /* Điều chỉnh kích thước chữ nếu cần thiết */
+    }
+
+    .inputcustom {
+        font-size: 10px;
+        width: 300px;
+    }
+
+    .customicontext {
+        text-align: center;
+        margin: 10px;
+    }
+
+    .customtext {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .customecocontainer {
+        padding-left: 11px;
+    }
+
+    .newpcustomcenter {
+        padding: 1px;
+        text-align: center;
+    }
+
+    .pcustomtext {
+        padding: 0px 5px;
+    }
+}
+
+@media (max-width: 384px) {
+
+    .customelementdiv,
+    .customiconelement {
+        width: 100%;
+    }
+
+    .customtextfootrt {
+        text-align: center;
+    }
+
+    .customlogotext {
+        text-align: center;
+    }
+
+    .imgcustomelement {
+        padding: 0;
+    }
+
+    .custombuttondom {
+        width: 14%;
+        /* Đặt lại chiều rộng */
+        font-size: 10px;
+        /* Điều chỉnh kích thước chữ nếu cần thiết */
+    }
+
+    .inputcustom {
+        font-size: 10px;
+        width: 300px;
+    }
+
+    .customicontext {
+        text-align: center;
+        margin: 10px;
+    }
+
+    .customtext {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .customecocontainer {
+        padding-left: 6px;
+    }
+
+    .newpcustomcenter {
+        padding: 1px;
+        text-align: center;
+    }
+
+    .pcustomtext {
+        padding: 0px 5px;
+    }
+
+    .newpcustomcenter {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .customelementdiv,
+    .customiconelement {
+        width: 100%;
+    }
+
+    .customtextfootrt {
+        text-align: center;
+    }
+
+    .customlogotext {
+        text-align: center;
+    }
+
+    .imgcustomelement {
+        padding: 0;
+    }
+
+    .custombuttondom {
+        width: 14%;
         /* Đặt lại chiều rộng */
         font-size: 10px;
         /* Điều chỉnh kích thước chữ nếu cần thiết */
@@ -313,9 +671,23 @@
 
     .customtext {
         text-align: center;
+        font-size: 17px;
     }
 
     .customecocontainer {
-        padding-left: 25px;
+        padding-left: 7px;
+    }
+
+    .newpcustomcenter {
+        padding: 1px;
+        text-align: center;
+    }
+
+    .pcustomtext {
+        padding: 0px 5px;
+    }
+
+    .newpcustomcenter {
+        font-size: 12px;
     }
 }
