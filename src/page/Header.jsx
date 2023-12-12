@@ -161,92 +161,92 @@ const WebHeader = () => {
                                         <Nav style={{ fontWeight: 'bold', fontSize: '13.5px' }} className="me-auto">
                                             <Nav.Link as={Link} to="/">TRANG CHỦ</Nav.Link>
                                             <NavDropdown title="KIỂU DÁNG" id="basic-nav-dropdown">
-                                                <NavDropdown.Item as={Link} to="/bohoa">
+                                                <NavDropdown.Item as={Link} to="/bohoa/">
                                                     Bó hoa
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/giohoa">
+                                                <NavDropdown.Item as={Link} to="/giohoa/">
                                                     Giỏ hoa-hộp hoa
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/chauhoatuoi">
+                                                <NavDropdown.Item as={Link} to="/chauhoatuoi/">
                                                     Chậu hoa tươi
                                                 </NavDropdown.Item>
                                             </NavDropdown>
-                                            <Nav.Link as={Link} to="/hoasinhnhat">HOA SINH NHẬT</Nav.Link>
-                                            <Nav.Link as={Link} to="/hoasap">HOA SÁP</Nav.Link>
-                                            <Nav.Link as={Link} to="/hoachucmung">HOA CHÚC MỪNG</Nav.Link>
-                                            <Nav.Link as={Link} to="/hoachiabuon">HOA CHIA BUỒN</Nav.Link>
+                                            <Nav.Link as={Link} to="/hoasinhnhat/">HOA SINH NHẬT</Nav.Link>
+                                            <Nav.Link as={Link} to="/hoasap/">HOA SÁP</Nav.Link>
+                                            <Nav.Link as={Link} to="/hoachucmung/">HOA CHÚC MỪNG</Nav.Link>
+                                            <Nav.Link as={Link} to="/hoachiabuon/">HOA CHIA BUỒN</Nav.Link>
                                             <NavDropdown title="TRÁI CÂY" id="basic-nav-dropdown">
-                                                <NavDropdown.Item as={Link} to="/traicaykho">
+                                                <NavDropdown.Item as={Link} to="/traicaykho/">
                                                     Trái cây khô
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/traicayvanphong">
+                                                <NavDropdown.Item as={Link} to="/traicayvanphong/">
                                                     Trái cây văn phòng
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/gioquatraicay">
+                                                <NavDropdown.Item as={Link} to="/gioquatraicay/">
                                                     Giỏ quà trái cây
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/traicaybanle">
+                                                <NavDropdown.Item as={Link} to="/traicaybanle/">
                                                     Trái cây bán lẻ
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/traicaybansi">
+                                                <NavDropdown.Item as={Link} to="/traicaybansi/">
                                                     trái cây bán sỉ
                                                 </NavDropdown.Item>
                                             </NavDropdown>
-                                            <Nav.Link as={Link} to="/lanhodiep">LAN HỒ ĐIỆP</Nav.Link>
+                                            <Nav.Link as={Link} to="/lanhodiep/">LAN HỒ ĐIỆP</Nav.Link>
                                             <NavDropdown title="LOẠI HOA" id="basic-nav-dropdown">
-                                                <NavDropdown.Item as={Link} to="/bohoabi">
+                                                <NavDropdown.Item as={Link} to="/bohoabi/">
                                                     Bó hoa bi
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/bohoacamchuong">
+                                                <NavDropdown.Item as={Link} to="/bohoacamchuong/">
                                                     Bó hoa cẩm chướng
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/bohoacattuong">
+                                                <NavDropdown.Item as={Link} to="/bohoacattuong/">
                                                     Bó hoa cát tường
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/bohoacuc">
+                                                <NavDropdown.Item as={Link} to="/bohoacuc/">
                                                     Bó hoa cúc
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/bohoahong">
+                                                <NavDropdown.Item as={Link} to="/bohoahong/">
                                                     Bó hoa hồng
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/bohoahuongduong">
+                                                <NavDropdown.Item as={Link} to="/bohoahuongduong/">
                                                     Bó hoa hướng dương
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/hoalavender">
+                                                <NavDropdown.Item as={Link} to="/hoalavender/">
                                                     Hoa Lavender
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/bohoalan">
+                                                <NavDropdown.Item as={Link} to="/bohoalan/">
                                                     Bó hoa lan
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/bohoalanhodiep">
+                                                <NavDropdown.Item as={Link} to="/bohoalanhodiep/">
                                                     Bó hoa lan hồ điệp
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/bohoaly">
+                                                <NavDropdown.Item as={Link} to="/bohoaly/">
                                                     Bó hoa ly
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/bohoadongtien">
+                                                <NavDropdown.Item as={Link} to="/bohoadongtien/">
                                                     Bó hoa đồng tiền
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/hoatulip">
+                                                <NavDropdown.Item as={Link} to="/hoatulip/">
                                                     Hoa tulip
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/cacloaihoa">
+                                                <NavDropdown.Item as={Link} to="/cacloaihoa/">
                                                     Các loài hoa
                                                 </NavDropdown.Item>
                                             </NavDropdown>
                                             <NavDropdown title="CÂY VĂN PHÒNG" id="basic-nav-dropdown">
-                                                <NavDropdown.Item as={Link} to="/caydeban">
+                                                <NavDropdown.Item as={Link} to="/caydeban/">
                                                     Cây để bàn
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/caychophongkhach">
+                                                <NavDropdown.Item as={Link} to="/caychophongkhach/">
                                                     Cây cho phòng khách
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/caykhaitruong">
+                                                <NavDropdown.Item as={Link} to="/caykhaitruong/">
                                                     Cây khai trương
                                                 </NavDropdown.Item>
                                             </NavDropdown>
-                                            <Nav.Link as={Link} to="/hoacuoi">HOA CƯỚI</Nav.Link>
-                                            <Nav.Link as={Link} to="/hoadeban">HOA ĐỂ BÀN</Nav.Link>
+                                            <Nav.Link as={Link} to="/hoacuoi/">HOA CƯỚI</Nav.Link>
+                                            <Nav.Link as={Link} to="/hoadeban/">HOA ĐỂ BÀN</Nav.Link>
                                         </Nav>
                                     </Navbar.Collapse>
                                 </Container>

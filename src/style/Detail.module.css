@@ -1,0 +1,10 @@
+.nodetaildiv {
+    text-align: center;
+}
+
+.customelement {
+    display: block;
+    vertical-align: top;
+    position: relative;
+    box-sizing: border-box;
+}

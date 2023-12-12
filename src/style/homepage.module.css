@@ -262,6 +262,80 @@
     }
 }
 
+@media (max-width: 430px) {
+    .customflexbox {
+        flex: 0 0 100%;
+        box-sizing: border-box;
+    }
+
+    .customdanhmuchoabox {
+        font-size: 10px;
+        width: 150px;
+        font-size: 5px;
+        right: -62px;
+        top: 11px;
+    }
+
+    .customhoalist {
+        padding: 0;
+        margin: 0 31px;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .customimage {
+        width: 100%;
+        height: 100%;
+        max-width: 200px;
+        /* Đặt giá trị max-width phù hợp với yêu cầu của bạn */
+    }
+
+    .divmargin {
+        margin: 5px 0 0;
+    }
+
+    .customatext {
+        font-size: small;
+    }
+
+    .customPricetext {
+        font-size: x-small;
+    }
+
+    .custombutton {
+        padding: 3px 15px;
+    }
+
+    .customonclickblock {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .custombutton {
+        padding: 8px 20px;
+        font-size: 10px;
+    }
+
+    .customtitlecontainer {
+        margin: 10px;
+    }
+
+    .customtextdebutton {
+        padding: 6px 20px;
+        font-size: 14px;
+        /* Điều chỉnh kích thước chữ cho màn nhỏ hơn */
+    }
+
+    .customtexthoa {
+        font-size: 14px;
+    }
+
+    .custombuttonflowew {
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 414px) {
     .customflexbox {
         flex: 0 0 100%;

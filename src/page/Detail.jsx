@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import lstHoa from '../Data/data';
+import style from '../style/Detail.module.css'
 const Detail = ({ setCartItems }) => {
     const { Name } = useParams();
     const [item, setItem] = useState(null);
@@ -55,10 +56,10 @@ const Detail = ({ setCartItems }) => {
         return <div style={{ textAlign: "center" }}>Không có sản phẩm !</div>; // You might want to add a loading state or handle not found case
     }
     return (
-        <div style={{ display: 'block', verticalAlign: 'top', position: 'relative', boxSizing: 'border-box' }}>
+        <div className={style.customelement}>
             <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                 <div style={{ padding: '10px 0' }}>
-                    <div style={{ display: 'block', verticalAlign: 'top', position: 'relative', boxSizing: 'border-box' }}>
+                    <div className={style.customelement}>
                         <div style={{ display: 'block', verticalAlign: 'top', position: 'relative', boxSizing: 'border-box', textAlign: 'left' }}>
                             <div style={{ padding: '10px 0', position: 'relative' }}>
                                 <p style={{ display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}></p>
@@ -168,7 +169,7 @@ const Detail = ({ setCartItems }) => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div style={{ display: 'block', verticalAlign: 'top', position: 'relative', boxSizing: 'border-box' }}>
+                                    <div className={style.customelement}>
                                         <div style={{ display: 'block' }}>
                                             <div style={{ position: 'relative' }}>
                                                 <div style={{ background: '#ee3f862e', padding: '10px', marginBottom: '10px', border: 'solid 1px #ccc', borderRadius: '5px', fontSize: '15px' }}>
