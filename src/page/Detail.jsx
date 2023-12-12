@@ -57,123 +57,123 @@ const Detail = ({ setCartItems }) => {
     }
     return (
         <div className={style.customelement}>
-            <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-                <div style={{ padding: '10px 0' }}>
+            <div className={style.customcontainer}>
+                <div className={style.stylediv}>
                     <div className={style.customelement}>
-                        <div style={{ display: 'block', verticalAlign: 'top', position: 'relative', boxSizing: 'border-box', textAlign: 'left' }}>
-                            <div style={{ padding: '10px 0', position: 'relative' }}>
-                                <p style={{ display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}></p>
-                                <div style={{ width: '50%', display: 'inline-block', verticalAlign: 'top' }}>
-                                    <div style={{ margin: '0', position: 'relative', paddingTop: '100%' }}>
-                                        <a style={{ textDecoration: 'none', color: 'indianred' }}>
-                                            <img style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', objectFit: 'contain', zIndex: '1', maxWidth: '100%' }} src={item.Images} alt="" />
+                        <div className={style.customelementdetail}>
+                            <div className={style.customcontainerdetail}>
+                                <p className={style.customblock}></p>
+                                <div className={style.customdivelement}>
+                                    <div className={style.customdivcontainer}>
+                                        <a className={style.customdivlink}>
+                                            <img className={style.customimage} src={item.Images} alt="" />
                                         </a>
                                     </div>
-                                    <div style={{ margin: '10px 0', display: 'block' }}>
-                                        <img style={{ height: '50px', border: '1px solid #ccc', padding: '1px', cursor: 'pointer' }} src={item.Images} alt="" />
+                                    <div className={style.customblocklimk}>
+                                        <img className={style.customdivelementlink} src={item.Images} alt="" />
                                     </div>
                                 </div>
 
-                                <div style={{ width: '48%', display: 'inline-block', verticalAlign: 'top', marginLeft: '2%' }}>
-                                    <h1 style={{ fontSize: '24px', margin: '10px 0 0', fontWeight: 'normal' }}>
+                                <div className={style.namecustomelement}>
+                                    <h1 className={style.customtext}>
                                         <span>{item.Name}</span>
                                     </h1>
-                                    <p style={{ fontSize: '18px', marginBottom: '10px !important', fontWeight: 'bold', color: '#E13028' }}>
+                                    <p className={style.pcustomtext}>
                                         <span>Giá: </span>
                                         <span>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')} VNĐ</span>
                                     </p>
-                                    <div style={{ display: 'block', verticalAlign: 'top', fontSize: '14px', background: '#ECF7ED', position: 'relative', boxSizing: 'border-box', textAlign: 'left' }}>
-                                        <div style={{ border: '1px solid #c4ddc8', borderRadius: '10px' }}>
-                                            <div style={{ padding: '20px', position: 'relative', display: 'block' }}>
-                                                <div style={{ textAlign: 'justify' }}>
-                                                    <span style={{ color: '#008000' }}>
-                                                        <strong style={{ fontWeight: 'bold' }}>Hệ thống cửa hàng của Hoa Thương Yêu gồm 3139 cửa hàng trên toàn quốc. Nhận đặt và giao hoa tại tất các xã, phường, thị trấn của các quận huyện trên toàn quốc.</strong>
+                                    <div className={style.hethongcustomelement}>
+                                        <div className={style.htcustomborder}>
+                                            <div className={style.htcustomcontainer}>
+                                                <div className={style.customtexts}>
+                                                    <span className={style.colorfortext}>
+                                                        <strong className={style.fontweghttext}>Hệ thống cửa hàng của Hoa Thương Yêu gồm 3139 cửa hàng trên toàn quốc. Nhận đặt và giao hoa tại tất các xã, phường, thị trấn của các quận huyện trên toàn quốc.</strong>
                                                     </span>
                                                 </div>
-                                                <div style={{ textAlign: 'justify' }}>
+                                                <div className={style.customtexts}>
                                                     &nbsp;
                                                 </div>
-                                                <div style={{ textAlign: 'justify' }}>
-                                                    <span style={{ color: '#008000' }}>
-                                                        <strong style={{ fontWeight: 'bold' }}>Chương trình giá khuyến mãi hiện áp dụng tại Hồ Chí Minh, các khu vực khác khách hàng vui lòng liên hệ bộ phận tư vấn để cập nhật ưu đãi tùy thời điểm</strong>
+                                                <div className={style.customtexts}>
+                                                    <span className={style.colorfortext}>
+                                                        <strong className={style.fontweghttext}>Chương trình giá khuyến mãi hiện áp dụng tại Hồ Chí Minh, các khu vực khác khách hàng vui lòng liên hệ bộ phận tư vấn để cập nhật ưu đãi tùy thời điểm</strong>
                                                     </span>
                                                 </div>
-                                                <div style={{ textAlign: 'justify' }}>
+                                                <div className={style.customtexts}>
                                                     &nbsp;
                                                 </div>
-                                                <div style={{ textAlign: 'justify' }}>
-                                                    <span style={{ color: '#008000' }}>
-                                                        <strong style={{ fontWeight: 'bold' }}>Quý khách cần đặt hoa có thể bấm vào
-                                                            <span style={{ color: '#ff0000', fontWeight: 'bold' }}> ĐẶT HÀNG NGAY </span>
+                                                <div className={style.customtexts}>
+                                                    <span className={style.colorfortext}>
+                                                        <strong className={style.fontweghttext}>Quý khách cần đặt hoa có thể bấm vào
+                                                            <span className={style.dtcustomtext}> ĐẶT HÀNG NGAY </span>
                                                             bên dưới và đặt trực tiếp trên website hoặc liên hệ SĐT và zalo để được nhân viên tư vấn cụ thể:
                                                         </strong>
                                                     </span>
                                                 </div>
-                                                <div style={{ textAlign: 'justify' }}>
+                                                <div className={style.customtexts}>
                                                     &nbsp;
                                                 </div>
-                                                <div style={{ display: 'block', fontSize: '14px' }}>
-                                                    <p style={{ display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                        <strong style={{ fontWeight: 'bold', fontSize: '14px' }}>Hotline: </strong>
-                                                        <span style={{ color: '#ff0000', fontSize: '14px' }}>
-                                                            <strong style={{ fontWeight: 'bold' }}>
-                                                                <a style={{ color: '#ff0000', textDecoration: 'none' }} href='tel:19003189'> 0979336771</a>
+                                                <div className={style.displayBlock}>
+                                                    <p className={style.customblock}>
+                                                        <strong className={style.boldText}>Hotline: </strong>
+                                                        <span className={style.redText}>
+                                                            <strong className={style.fontweghttext}>
+                                                                <a className={style.redLink} href='tel:19003189'> 0979336771</a>
                                                             </strong>
                                                             &nbsp;
                                                         </span>
                                                     </p>
                                                 </div>
-                                                <div style={{ textAlign: 'justify' }}>
+                                                <div className={style.customtexts}>
                                                     &nbsp;
                                                 </div>
-                                                <div style={{ display: 'block', fontWeight: 'bold' }}>
-                                                    <a style={{ textDecoration: 'none', color: 'red' }} href="https://zalo.me/1664071818027683536">
-                                                        <img src="/zalo.png" alt="" style={{ width: '20px', height: '20px', verticalAlign: 'middle', aspectRatio: 'auto 20/20', overflowClipMargin: 'content-box', overflow: 'clip', cursor: 'pointer' }} />
+                                                <div className={style.boldBlock}>
+                                                    <a className={style.redNoDecoration} href="https://zalo.me/1664071818027683536">
+                                                        <img src="/zalo.png" alt="" className={style.iconStyle} />
                                                         &nbsp; CHAT ĐỂ ĐƯỢC TƯ VẤN
                                                     </a>
                                                 </div>
                                                 <div style={{ display: 'block', fontWeight: 'bold', marginTop: '5px' }}>
-                                                    <a style={{ textDecoration: 'none', color: 'red' }} href="https://zalo.me/1664071818027683536">
-                                                        <img src="/fb.png" alt="" style={{ width: '20px', height: '20px', verticalAlign: 'middle', aspectRatio: 'auto 20/20', overflowClipMargin: 'content-box', overflow: 'clip', cursor: 'pointer' }} />
+                                                    <a className={style.redNoDecoration} href="https://zalo.me/1664071818027683536">
+                                                        <img src="/fb.png" alt="" className={style.iconStyle} />
                                                         &nbsp; CHAT ĐỂ ĐƯỢC TƯ VẤN
                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div style={{ display: 'block', verticalAlign: 'top', fontSize: '14px' }}>
-                                        <div style={{ border: '1px solid #ccc', borderRadius: '10px' }}>
-                                            <div style={{ position: 'relative', display: 'block' }}>
+                                    <div className={style.blockStyle}>
+                                        <div className={style.borderStyle}>
+                                            <div className={style.relativeBlockStyle}>
                                                 &nbsp;&nbsp;✅ MIỄN PHÍ BANNER, THIỆP trị giá 20.000đ
                                             </div>
-                                            <div style={{ position: 'relative', display: 'block' }}>
+                                            <div className={style.relativeBlockStyle}>
                                                 &nbsp;&nbsp;✅ Giảm 5% cho lần mua thứ 5 trở đi
                                             </div>
-                                            <div style={{ position: 'relative', display: 'block' }}>
+                                            <div className={style.relativeBlockStyle}>
                                                 &nbsp;&nbsp;✅ Giảm 7% cho lần mua thứ 7
                                             </div>
-                                            <div style={{ position: 'relative', display: 'block' }}>
+                                            <div className={style.relativeBlockStyle}>
                                                 &nbsp;&nbsp;✅ Giảm 10% cho lần mua thứ 10 trở đi
                                             </div>
-                                            <div style={{ position: 'relative', display: 'block' }}>
+                                            <div className={style.relativeBlockStyle}>
                                                 &nbsp;&nbsp;✅ Gửi hình trước khi giao, cam kết hài lòng 100%
                                             </div>
-                                            <div style={{ position: 'relative', display: 'block' }}>
+                                            <div className={style.relativeBlockStyle}>
                                                 &nbsp;&nbsp;✅ Cam kết hoa tươi trên 3 ngày
                                             </div>
-                                            <div style={{ position: 'relative', display: 'block' }}>
+                                            <div className={style.relativeBlockStyle}>
                                                 &nbsp;&nbsp;✅ Một số mẫu chỉ có tại TPHCM và Hà Nội, khách hàng ở các tỉnh vui lòng liên hệ trực tiếp để biết thêm chi tiết.
                                             </div>
-                                            <div style={{ position: 'relative', display: 'block' }}>
+                                            <div className={style.relativeBlockStyle}>
                                                 &nbsp;&nbsp;✅ Sản phẩm tại Tphcm & Hà Nội có thể đạt 95%-98%, sản phẩm tại các tỉnh thành khác có thể đạt 90%-95% (do sản phẩm được làm thủ công và đặc điểm theo mùa của hàng nông nghiệp)
                                             </div>
                                         </div>
                                     </div>
                                     <div className={style.customelement}>
-                                        <div style={{ display: 'block' }}>
-                                            <div style={{ position: 'relative' }}>
-                                                <div style={{ background: '#ee3f862e', padding: '10px', marginBottom: '10px', border: 'solid 1px #ccc', borderRadius: '5px', fontSize: '15px' }}>
-                                                    <p style={{ display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
+                                        <div className={style.blockdisplaygia}>
+                                            <div className={style.relativepoisition}>
+                                                <div className={style.cardStyle}>
+                                                    <p className={style.customblock}>
                                                         🌸Giá Hồ Điệp tại Thành phố Hồ Chí Minh 250,000vnd /1 cành,
                                                         <br />
                                                         🌸Giá Hồ Điệp tại Đà Nẵng và Hà Nội là 330,000vnd/ 1 cành
@@ -186,37 +186,16 @@ const Detail = ({ setCartItems }) => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div style={{ margin: '10px 0', display: 'block' }}>
-                                        <div style={{ display: 'inline-block', border: '1px solid #666', marginRight: '2px' }}>
-                                            <label onClick={handleDecrease} style={{ borderRight: '1px solid #666', display: 'inline-block', padding: '5px 10px', cursor: 'pointer' }}>-</label>
-                                            <input type="text" style={{ width: '50px', height: '20px', textAlign: 'center', border: '0px' }} value={quantity} placeholder='Số lượng' readOnly />
-                                            <label onClick={handleIncrease} style={{ borderLeft: '1px solid #666', display: 'inline-block', padding: '5px 10px', cursor: 'pointer' }}>+</label>
+                                    <div className={style.customblocklimk}>
+                                        <div className={style.inlineBorderStyle}>
+                                            <label onClick={handleDecrease} className={style.inlineBlockWithBorderRight}>-</label>
+                                            <input type="text" className={style.customStyle} value={quantity} placeholder='Số lượng' readOnly />
+                                            <label onClick={handleIncrease} className={style.inlineBlockWithBorderLeft}>+</label>
                                         </div>
-                                        <label htmlFor="" style={{
-                                            padding: '20px 0px !important',
-                                            borderRadius: '5px',
-                                            width: '100%',
-                                            marginTop: '15px',
-                                            height: '70px',
-                                            lineHeight: '1.2',
-                                            textAlign: 'center',
-                                            fontSize: '20px',
-                                            textTransform: 'uppercase',
-                                            background: '#E35454',
-                                            color: '#FFF',
-                                            cursor: 'pointer',
-                                            display: 'flex',
-                                            alignItems: 'center',  // Căn giữa theo chiều dọc
-                                            justifyContent: 'center',  // Căn giữa theo chiều ngang
-                                        }} onClick={() => handleAddToCartAndNavigate(item, quantity)}>
+                                        <label htmlFor="" className={style.customButton} onClick={() => handleAddToCartAndNavigate(item, quantity)}>
                                             <span>
                                                 Đặt hàng ngay
-                                                <span style={{
-                                                    display: 'block',
-                                                    textTransform: 'none',
-                                                    fontSize: '16px',
-                                                    lineHeight: '1'
-                                                }}>
+                                                <span className={style.textStyles}>
                                                     Miễn phí giao hàng nội thành TPHCM
                                                 </span>
                                             </span>
@@ -225,49 +204,16 @@ const Detail = ({ setCartItems }) => {
                                 </div>
                             </div>
                         </div>
-                        <div style={{ display: 'block' }}>
-                            <span style={{ fontWeight: 'inherit' }}></span>
+                        <div className={style.blockdisplaygia}>
+                            <span className={style.iherihfontweight}></span>
                         </div>
-                        <div style={{ display: 'block', margin: '40px 0 0', verticalAlign: 'top' }}>
-                            <div style={{ textAlign: 'center' }}>
-                                <div style={{
-                                    textTransform: 'uppercase',
-                                    position: 'relative',
-                                    marginBottom: '30px',
-                                    padding: '0',
-                                    fontSize: '28px',
-                                    textAlign: 'center',
-                                    color: '#E35454'
-                                }}>
-                                    <div style={{
-                                        width: '27px',
-                                        height: '27px',
-                                        background: '#FFF',
-                                        position: 'absolute',
-                                        bottom: '-32px',
-                                        left: '0',
-                                        right: '0',
-                                        margin: '0 auto',
-                                        zIndex: '1',
-                                        backgroundImage: 'url(/interface.png)',
-                                        backgroundSize: '27px'
-                                    }}>
+                        <div className={style.blockStyles}>
+                            <div className={style.centertextalign}>
+                                <div className={style.uppercaseTitle}>
+                                    <div className={style.customImage}>
                                     </div>
-                                    <span style={{
-                                        fontSize: '28px',
-                                        textAlign: 'center',
-                                        color: '#E35454'
-                                    }}>Sản phẩm liên quan</span>
-                                    <div style={{
-                                        width: "170px",
-                                        height: "1px",
-                                        background: "#CCC",
-                                        position: "absolute",
-                                        bottom: "-18px",
-                                        left: "0",
-                                        right: "0",
-                                        margin: "0 auto"
-                                    }}></div>
+                                    <span className={style.customTextde}>Sản phẩm liên quan</span>
+                                    <div className={style.separatorLine}></div>
                                 </div>
 
                                 <div style={{
