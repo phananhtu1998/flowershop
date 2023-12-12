@@ -382,6 +382,8 @@
         width: 10%;
         /* Đặt lại chiều rộng */
         font-size: 16px;
+        text-align: center;
+        padding: 2px;
         /* Điều chỉnh kích thước chữ nếu cần thiết */
     }
 
@@ -432,6 +434,8 @@
         width: 14%;
         /* Đặt lại chiều rộng */
         font-size: 10px;
+        text-align: center;
+        padding: 2px;
         /* Điều chỉnh kích thước chữ nếu cần thiết */
     }
 
@@ -653,6 +657,8 @@
         width: 14%;
         /* Đặt lại chiều rộng */
         font-size: 10px;
+        text-align: center;
+        padding: 2px;
         /* Điều chỉnh kích thước chữ nếu cần thiết */
     }
 
@@ -709,9 +715,11 @@
     }
 
     .custombuttondom {
-        width: 14%;
+        width: 13%;
         /* Đặt lại chiều rộng */
         font-size: 10px;
+        text-align: center;
+        padding: 2px;
         /* Điều chỉnh kích thước chữ nếu cần thiết */
     }
 
@@ -770,7 +778,7 @@
     .custombuttondom {
         width: 18%;
         /* Đặt lại chiều rộng */
-        font-size: 4px;
+        font-size: 9px;
         /* Điều chỉnh kích thước chữ nếu cần thiết */
     }
 
