@@ -44,6 +44,31 @@ const Detail = ({ setCartItems }) => {
         // Navigate to the "/orders" route
         navigate(`/orders`);
     };
+    const handleAddToCartAndNavigateMuaHang = (item, orderIndex) => {
+        // Tìm kiếm xem mục đã tồn tại trong localStorage hay chưa
+        const storedCartItems = localStorage.getItem('cartItems');
+        const cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
+
+        const existingItem = cartItems.find((cartItem) => cartItem.Name === item.Name);
+
+        if (existingItem) {
+            // Nếu mục đã tồn tại, tăng giá trị quantity lên 1
+            existingItem.quantity = (existingItem.quantity || 0) + 1;
+        } else {
+            // Nếu mục chưa tồn tại, thêm mục mới vào mảng cartItems với quantity là 1
+            const newItem = {
+                ...item,
+                quantity: 1,
+            };
+            cartItems.push(newItem);
+        }
+
+        // Lưu mảng cartItems mới vào localStorage
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        setCartItems(cartItems);
+        // Navigate to the "/orders" route
+        navigate(`/orders`);
+    };
     const navigate = useNavigate();
     useEffect(() => {
         let foundItem = lstHoa.find(item => item.Name === Name);
@@ -243,7 +268,7 @@ const Detail = ({ setCartItems }) => {
                                                         </div>
                                                         <div className={style.centeredBlockdiv}>
                                                             <label style={{ cursor: 'pointer' }}>
-                                                                <span className={style.customButtonmuahang}>Mua hàng</span>
+                                                                <span className={style.customButtonmuahang} onClick={() => handleAddToCartAndNavigateMuaHang(item, index + 1)}>Mua hàng</span>
                                                             </label>
                                                         </div>
                                                     </div>
