@@ -1,8 +1,12 @@
 import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
-import Styles from '../style/homepage.module.css'
+import Styles from '../style/homepage.module.css';
+import React, { useEffect } from 'react';
 export default function Home({ setCartItems }) {
+    useEffect(() => {
+        document.title = "Hoa Đẹp Toàn Quốc";
+    });
     const BoHoaTuoi = [
         { Name: 'Love', Price: '300000', Images: '/BoHoaTuoi/love_300x300.jpg' },
         { Name: 'Bó hoa hồng trắng + Baby trắng', Price: '390000', Images: '/BoHoaTuoi/bo-hoa-hong-trang-baby-trang_300x300.jpg' },

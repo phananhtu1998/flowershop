@@ -1,5 +1,5 @@
 // Trong component Bohoa
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Pagination } from 'antd';
 import Container from 'react-bootstrap/Container';
 import { Route, Routes, useNavigate } from 'react-router-dom';
@@ -9,7 +9,9 @@ import lstdatahoa from '../Data/data';
 let sortedData = lstdatahoa.filter(item => item.Category === "bohoacattuong");
 
 const BoHoaCatTuong = ({ setCartItems }) => {
-
+    useEffect(() => {
+        document.title = "Bó Hoa Cát Tường";
+    });
     const itemsPerPage = 16;
     const [currentPage, setCurrentPage] = useState(1);
     const [sortBy, setSortBy] = useState("1"); // Default sorting option

@@ -8,6 +8,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Orders = ({ cartItems, setCartItems }) => {
+    useEffect(() => {
+        document.title = "Giỏ Hàng";
+    });
     // lấy giá trị để gửi lên api
     const [Name, setCustomerName] = useState('');
     const [Phone, setCustomerPhone] = useState('');

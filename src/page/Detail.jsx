@@ -3,6 +3,9 @@ import { useParams, useNavigate } from 'react-router-dom';
 import lstHoa from '../Data/data';
 import style from '../style/Detail.module.css'
 const Detail = ({ setCartItems }) => {
+    useEffect(() => {
+        document.title = "Chi Tiết";
+    });
     const { Name } = useParams();
     const [item, setItem] = useState(null);
     const [LstSpLienQuan, setLstSpLienQuan] = useState([]);
