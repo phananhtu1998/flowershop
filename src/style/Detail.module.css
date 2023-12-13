@@ -316,3 +316,396 @@
     right: 0;
     margin: 0 auto;
 }
+
+.centeredBlock {
+    padding: 20px 0 0;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.divcenteredBlock {
+    display: block;
+    text-align: center;
+}
+
+.customList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.columnContainer {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    clear: both;
+    text-align: center;
+}
+
+.containerWithBorder {
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    border: solid 1px #df2f5538;
+}
+
+.rotatedBox {
+    position: absolute;
+    display: block;
+    width: 290px;
+    padding: 0;
+    background-color: #3498db;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1;
+    font-size: 13px;
+    transform: rotate(45deg);
+    right: -115px;
+    top: 23px;
+}
+
+.relativeContainer {
+    margin: 10px;
+    position: relative;
+    padding-top: 100%;
+}
+
+.absoluteCover {
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.noDecoration {
+    text-decoration: none;
+    color: inherit;
+}
+
+.h2marginstyle {
+    margin: 10px 0 0;
+}
+
+.inheritFont {
+    color: inherit;
+    font-size: large;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.inheritFont:hover {
+    color: #d31212;
+    cursor: pointer;
+}
+
+.mediumText {
+    font-size: medium;
+    font-weight: normal;
+    color: #E13028;
+}
+
+.centeredBlockdiv {
+    margin: 10px 0;
+    display: block;
+    text-align: center;
+}
+
+.customButtonmuahang {
+    background: #E35454;
+    color: #FFF;
+    padding: 5px 25px;
+    border-radius: 20px;
+}
+
+.centerblocktext {
+    display: block;
+    text-align: center;
+}
+
+.buttonStylecusor {
+    padding: 8px 30px;
+    color: #fff;
+    background: #008CBA;
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .customlist {
+        flex-direction: column;
+    }
+
+    .licustombox {
+        flex: 0 0 100%;
+    }
+
+    .customdivelement {
+        width: 100%;
+    }
+
+    .columnContainer {
+        width: 100%;
+    }
+
+    .customdivelement {
+        width: 50%;
+    }
+
+    .columnContainer {
+        width: 50%;
+    }
+}
+
+/* ip14 promax */
+@media only screen and (max-width: 430px) {
+    .customlist {
+        flex-direction: column;
+    }
+
+    .licustombox {
+        flex: 0 0 100%;
+    }
+
+    .customdivelement {
+        width: 100%;
+    }
+
+    .columnContainer {
+        width: 100%;
+    }
+
+    .customdivelement {
+        width: 100%;
+    }
+
+    .columnContainer {
+        width: 50%;
+    }
+
+    /* tên sản phẩm */
+    .customtext {
+        font-size: 20px;
+    }
+
+    /* giá sản phẩm */
+    .pcustomtext {
+        font-size: 16px;
+    }
+
+    .namecustomelement {
+        width: 96%;
+    }
+
+    .centeredBlock {
+        margin-right: 40px;
+    }
+
+    .rotatedBox {
+        width: 297px;
+        font-size: 10px;
+        right: -128px;
+        top: 13px;
+    }
+
+    .inheritFont {
+        font-size: 14px;
+    }
+
+    .customButtonmuahang {
+        font-size: 10px;
+    }
+
+    .centerblocktext {
+        width: 100%;
+        margin: 0px 22px;
+    }
+
+    .buttonStylecusor {
+        border-radius: 3px;
+        font-size: 13px;
+    }
+
+    .customblocklimk {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .customlist {
+        flex-direction: column;
+    }
+
+    .licustombox {
+        flex: 0 0 100%;
+    }
+
+    .customdivelement {
+        width: 100%;
+    }
+
+    .columnContainer {
+        width: 100%;
+    }
+
+    .customdivelement {
+        width: 100%;
+    }
+
+    .columnContainer {
+        width: 50%;
+    }
+
+    /* tên sản phẩm */
+    .customtext {
+        font-size: 20px;
+    }
+
+    /* giá sản phẩm */
+    .pcustomtext {
+        font-size: 16px;
+    }
+
+    .namecustomelement {
+        width: 96%;
+    }
+
+    .centeredBlock {
+        margin-right: 32px;
+    }
+
+    .rotatedBox {
+        width: 297px;
+        font-size: 10px;
+        right: -128px;
+        top: 13px;
+    }
+
+    .inheritFont {
+        font-size: 14px;
+    }
+
+    .customButtonmuahang {
+        font-size: 10px;
+    }
+
+    .centerblocktext {
+        width: 100%;
+        margin: 0px 22px;
+    }
+
+    .buttonStylecusor {
+        border-radius: 3px;
+        font-size: 13px;
+    }
+
+    .customTextde {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 240px) {
+    .customlist {
+        flex-direction: column;
+    }
+
+    .licustombox {
+        flex: 0 0 100%;
+    }
+
+    .customdivelement {
+        width: 100%;
+    }
+
+    .columnContainer {
+        width: 100%;
+    }
+
+    .customdivelement {
+        width: 100%;
+    }
+
+    .columnContainer {
+        width: 100%;
+    }
+
+    /* tên sản phẩm */
+    .customtext {
+        font-size: 16px;
+    }
+
+    /* giá sản phẩm */
+    .pcustomtext {
+        font-size: 14px;
+    }
+
+    .namecustomelement {
+        width: 96%;
+    }
+
+    .centeredBlock {
+        margin-right: 32px;
+    }
+
+    .rotatedBox {
+        width: 297px;
+        font-size: 10px;
+        right: -128px;
+        top: 13px;
+    }
+
+    .inheritFont {
+        font-size: 14px;
+    }
+
+    .customButton {
+        font-size: 11px;
+    }
+
+    .customButtonmuahang {
+        font-size: 10px;
+    }
+
+    .centerblocktext {
+        width: 100%;
+        margin: 0px 22px;
+    }
+
+    .buttonStylecusor {
+        border-radius: 3px;
+        font-size: 13px;
+    }
+
+    .hethongcustomelement {
+        font-size: 12px;
+    }
+
+    .blockStyle {
+        font-size: 12px;
+    }
+
+    .cardStyle {
+        font-size: 12px;
+    }
+
+    .customblocklimk {
+        text-align: center;
+    }
+
+    .customTextde {
+        font-size: 19px;
+    }
+}
