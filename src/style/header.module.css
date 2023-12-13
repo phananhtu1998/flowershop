@@ -238,6 +238,36 @@
     }
 }
 
+@media (max-width: 834px) {
+    .div134 {
+        flex-direction: column;
+        /* Hiển thị các phần tử theo chiều dọc */
+        align-items: center;
+    }
+
+    .divDescription {
+        text-align: center;
+    }
+
+    .divDescription1 {
+        text-align: center;
+        margin-top: 15px;
+        /* Tăng khoảng cách giữa divDescription và divDescription1 */
+    }
+
+    .divslider {
+        width: 100%;
+        /* Chiếm toàn bộ chiều rộng */
+        margin-top: 15px;
+        /* Tăng khoảng cách giữa divDescription1 và divslider */
+    }
+
+    .divchild {
+        max-width: 100%;
+        /* Chiếm toàn bộ chiều rộng */
+    }
+}
+
 @media (max-width: 800px) {
     .div134 {
         flex-direction: column;
