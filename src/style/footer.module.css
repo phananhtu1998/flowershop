@@ -259,7 +259,8 @@
 }
 
 /* reponsive */
-@media (max-width: 834px) {
+/* reponsive */
+@media (max-width: 956px) {
 
     .customelementdiv,
     .customiconelement {
@@ -280,6 +281,50 @@
 
     .custombuttondom {
         width: 10%;
+        /* Đặt lại chiều rộng */
+        font-size: 16px;
+        /* Điều chỉnh kích thước chữ nếu cần thiết */
+    }
+
+    .inputcustom {
+        font-size: 16px;
+        width: 520px;
+    }
+
+    .customtext {
+        text-align: center;
+    }
+
+    .customecocontainer {
+        padding: 0px 179px;
+    }
+
+    .customiconelementcus {
+        text-align: center;
+    }
+}
+
+@media (max-width: 834px) {
+
+    .customelementdiv,
+    .customiconelement {
+        width: 100%;
+    }
+
+    .customtextfootrt {
+        text-align: center;
+    }
+
+    .customlogotext {
+        text-align: center;
+    }
+
+    .imgcustomelement {
+        padding: 0;
+    }
+
+    .custombuttondom {
+        width: 13%;
         /* Đặt lại chiều rộng */
         font-size: 16px;
         /* Điều chỉnh kích thước chữ nếu cần thiết */
@@ -329,7 +374,7 @@
     }
 
     .custombuttondom {
-        width: 10%;
+        width: 16%;
         /* Đặt lại chiều rộng */
         font-size: 16px;
         /* Điều chỉnh kích thước chữ nếu cần thiết */
@@ -351,7 +396,57 @@
     }
 
     .customecocontainer {
-        padding-left: 80px;
+        padding-left: 45px;
+    }
+
+    .pcustomtext {
+        padding: 0px 5px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .customelementdiv,
+    .customiconelement {
+        width: 100%;
+    }
+
+    .customtextfootrt {
+        text-align: center;
+    }
+
+    .customlogotext {
+        text-align: center;
+    }
+
+    .imgcustomelement {
+        padding: 0;
+    }
+
+    .custombuttondom {
+        width: 18%;
+        /* Đặt lại chiều rộng */
+        font-size: 16px;
+        /* Điều chỉnh kích thước chữ nếu cần thiết */
+    }
+
+    .inputcustom {
+        font-size: 16px;
+        width: 450px;
+    }
+
+    .customicontext {
+        text-align: center;
+        margin: 10px;
+    }
+
+    .customtext {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .customecocontainer {
+        padding-left: 28px;
     }
 
     .pcustomtext {
@@ -456,7 +551,7 @@
     }
 
     .customecocontainer {
-        padding-left: 21px;
+        padding-left: 42px;
     }
 
     .newpcustomcenter {
@@ -679,7 +774,7 @@
     }
 
     .customecocontainer {
-        padding-left: 6px;
+        padding-left: 18px;
     }
 
     .newpcustomcenter {
@@ -740,7 +835,7 @@
     }
 
     .customecocontainer {
-        padding-left: 7px;
+        padding-left: 24px;
     }
 
     .newpcustomcenter {

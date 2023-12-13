@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { DeleteOutlined } from '@ant-design/icons';
+import style from '../style/muahang.module.css'
 
 const Orders = ({ cartItems, setCartItems }) => {
     let totalorder = 0;
@@ -79,88 +80,62 @@ const Orders = ({ cartItems, setCartItems }) => {
         setCartItems(filteredCartItems);
     }
     return (
-        <div style={{ display: 'block', verticalAlign: 'top' }}>
-            <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'block' }}>
-                <div style={{ padding: '10px 0', position: 'relative' }}>
-                    <div style={{ boxSizing: 'border-box' }}>
+        <div className={style.customStyle}>
+            <div className={style.containerStyle}>
+                <div className={style.relativeContainer}>
+                    <div className={style.divstyle}>
                         <div>
-                            <h1 style={{
-                                display: 'block',
-                                fontSize: '2em',
-                                marginBlockStart: '0.76em',
-                                marginBlockEnd: '0.76em',
-                                marginInlineStart: '0px',
-                                marginInlineEnd: '0px',
-                                fontWeight: 'bold'
-                            }}>
+                            <h1 className={style.emphasisText}>
                                 <span>Giỏ hàng của bạn</span>
                             </h1>
                             <div>
-                                <div style={{ padding: '20px 0px 10px 0', marginBottom: '20px', borderBottom: '1px dotted #ccc', fontWeight: 'bold', fontSize: '18px' }}>
-                                    <div style={{ width: '20%', display: 'inline-block' }}></div>
-                                    <div style={{ width: '30%', display: 'inline-block' }}>Tên</div>
-                                    <div style={{ width: '20%', textAlign: 'right', display: 'inline-block' }}>Đơn giá</div>
-                                    <div style={{ width: '20%', textAlign: 'right', display: 'inline-block' }}>Số lượng</div>
-                                    <div style={{ width: '10%', textAlign: 'right', display: 'inline-block' }}>Thành tiền</div>
+                                <div className={style.sectionHeader}>
+                                    <div className={style.inlineBlock}></div>
+                                    <div className={style.inlineBlock30}>Tên</div>
+                                    <div className={style.rightAligned}>Đơn giá</div>
+                                    <div className={style.rightAligned}>Số lượng</div>
+                                    <div className={style.divrightAligned}>Thành tiền</div>
                                 </div>
 
                                 {cartItems.map((item, index) => (
                                     totalorder += (item.Price * item.quantity),
                                     number++,
-                                    < div key={index} style={{ fontSize: '16px', display: 'block', padding: '2px' }}>
+                                    < div key={index} className={style.customStyleblock}>
                                         <div>
-                                            <div style={{ display: 'inline-block', width: '20%', verticalAlign: 'top', textAlign: 'center' }}>
-                                                <a style={{ textDecoration: 'none', color: 'inherit' }}>
-                                                    <img style={{ width: '80px', maxWidth: '100%', height: 'auto' }} src={item.Images} alt="" width={200} />
+                                            <div className={style.customInlineBlock}>
+                                                <a className={style.customTextStyle}>
+                                                    <img className={style.imgResponsive} src={item.Images} alt="" width={200} />
                                                 </a>
                                             </div>
-                                            <div style={{ display: 'inline-block', width: '30%', verticalAlign: 'top', fontSize: '16px' }}>
-                                                <a style={{ textDecoration: 'none', color: 'inherit' }}>{number}. {item.Name} </a>
-                                                <p style={{ display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
-                                                    <span style={{ width: '20%' }}>Ghi chú</span>
-                                                    <input style={{ width: '78%', marginLeft: '2%' }} type="text" />
+                                            <div className={style.customdivInlineBlock}>
+                                                <a className={style.customTextStyle}>{number}. {item.Name} </a>
+                                                <p className={style.customBlock}>
+                                                    <span className={style.spanstyle}>Ghi chú</span>
+                                                    <input className={style.customWidth} type="text" />
                                                 </p>
-                                                <div style={{ display: 'block' }}></div>
+                                                <div className={style.displayblock}></div>
                                             </div>
-                                            <div style={{ display: 'inline-block', width: '20%', verticalAlign: 'top', textAlign: 'right', whiteSpace: 'nowrap' }}>
-                                                <strong style={{ fontWeight: 'bold', textAlign: 'right', whiteSpace: 'nowrap', fontSize: '16px' }}>
+                                            <div className={style.divcustomInlineBlock}>
+                                                <strong className={style.customStylebold}>
                                                     <span>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')} VNĐ</span>
                                                 </strong>
                                             </div>
                                             {/* số lượng */}
-                                            <div style={{ display: 'inline-block', width: '20%', verticalAlign: 'top', textAlign: 'right', whiteSpace: 'nowrap' }}>
-                                                <div style={{ border: '1px solid #666', marginRight: '2px', display: 'inline-block' }}>
-                                                    <label style={{ display: 'inline-block', borderRight: '1px solid #666', padding: '5px 10px', cursor: 'pointer' }} onClick={() => handleDecrease(item)}>-</label>
-                                                    <input style={{ width: '50px', textAlign: 'center', border: '0px', writingMode: 'horizontal-tb', paddingBlock: '1px', paddingInline: '2px', margin: '0' }} type="text" value={item.quantity} readOnly />
-                                                    <label style={{ borderLeft: '1px solid #666', display: 'inline-block', padding: '5px 10px', cursor: 'pointer' }} onClick={() => handleIncrease(item)}>+</label>
+                                            <div className={style.divcustomInlineBlock}>
+                                                <div className={style.borderStyle}>
+                                                    <label className={style.inlineBlockWithBorder} onClick={() => handleDecrease(item)}>-</label>
+                                                    <input className={style.horizontalText} type="text" value={item.quantity} readOnly />
+                                                    <label className={style.borderLeftContainer} onClick={() => handleIncrease(item)}>+</label>
                                                 </div>
                                             </div>
                                             {/* Thành tiền */}
-                                            <div style={{ display: 'inline-block', fontWeight: 'bold', width: '10%', textAlign: 'right' }}>
+                                            <div className={style.boldRightContainer}>
                                                 {(item.Price * item.quantity).toLocaleString('vi-VN')} VNĐ
                                             </div>
                                             {/* xóa */}
-                                            <div style={{
-                                                textAlign: 'right',
-                                                borderBottom: '1px dotted #ccc',
-                                                padding: '10px 0',
-                                                marginBottom: '20px'
-                                            }}>
-                                                <a style={{ textDecoration: 'none', color: 'inherit' }} onClick={() => DeleteItem(item)} title='Xóa'>
-                                                    <i style={{
-                                                        display: 'inline-block',
-                                                        fontSize: '20px',
-                                                        fontStyle: 'normal',
-                                                        fontFamily: 'Font Awesome 5 Pro',
-                                                        fontVariant: 'normal',
-                                                        textRendering: 'auto',
-                                                        lineHeight: '1',
-                                                        cursor: 'pointer',
-                                                        textAlign: 'right',
-                                                        padding: '5px',
-                                                        color: 'inherit',
-                                                        fontWeight: '300'
-                                                    }}>
+                                            <div className={style.textAlignRightContainer}>
+                                                <a className={style.customTextStyle} onClick={() => DeleteItem(item)} title='Xóa'>
+                                                    <i className={style.iconContainer}>
                                                         <DeleteOutlined />
                                                     </i>
                                                 </a>
@@ -170,11 +145,11 @@ const Orders = ({ cartItems, setCartItems }) => {
                                 ))}
                             </div>
                             <br />
-                            <div style={{ borderBottom: '1px dotted rgb(204, 204, 204' }}></div>
-                            <div style={{ fontSize: '18px', textAlign: 'right', display: 'block' }}>
-                                <span style={{ padding: '0px 0', display: 'inline-block' }}>
+                            <div className={style.borderBottomDotted}></div>
+                            <div className={style.blockright}>
+                                <span className={style.paddingInlineBlock}>
                                     Tổng cộng:
-                                    <strong style={{ fontSize: '16px', width: '140px', display: 'inline-block', fontWeight: 'bold' }}>
+                                    <strong className={style.inlineBlockStyle}>
                                         {totalorder.toLocaleString('vi-VN')} VNĐ
                                     </strong>
                                 </span>
@@ -182,138 +157,48 @@ const Orders = ({ cartItems, setCartItems }) => {
                         </div>
                     </div>
                     {/* điền thông tin */}
-                    <div style={{ textAlign: 'left', display: 'block' }}>
+                    <div className={style.textLeftStyle}>
                         {/* H3 */}
-                        <div style={{ padding: '5px 0px', display: 'block' }}>
-                            <h3 style={{
-                                fontSize: '25px',
-                                margin: '0',
-                                marginBlockStart: '1em',
-                                marginBlockEnd: '1em',
-                                marginInlineStart: '0px',
-                                marginInlineEnd: '0px',
-                                fontWeight: 'bold'
-                            }}>
+                        <div className={style.customPaddingStyle}>
+                            <h3 className={style.divcustomTextStyle}>
                                 Quý khách vui lòng điền thông tin để đặt hàng
                             </h3>
                         </div>
                         {/* input */}
-                        <div style={{ padding: '5px 0px', display: 'block', boxSizing: 'border-box' }}>
+                        <div className={style.customBlockStyle}>
                             <span>
-                                <input style={{
-                                    verticalAlign: 'middle',
-                                    width: '600px',
-                                    height: '40px',
-                                    paddingLeft: '10px',
-                                    writingMode: 'horizontal-tb',
-                                    paddingBlock: '1px',
-                                    paddingInline: '2px',
-                                    lineHeight: '1.5',
-                                    fontSize: '14px'
-                                }} type="text" placeholder='Tên người đặt' />
+                                <input className={style.customInputStyle} type="text" placeholder='Tên người đặt' />
                             </span>
                         </div>
-                        <div style={{ padding: '5px 0px', display: 'block', boxSizing: 'border-box' }}>
+                        <div className={style.customBlockStyle}>
                             <span>
-                                <input style={{
-                                    verticalAlign: 'middle',
-                                    width: '600px',
-                                    height: '40px',
-                                    paddingLeft: '10px',
-                                    writingMode: 'horizontal-tb',
-                                    paddingBlock: '1px',
-                                    paddingInline: '2px',
-                                    fontSize: '14px'
-                                }} type="text" placeholder='SĐT người đặt' />
+                                <input className={style.hktcustomInputStyle} type="text" placeholder='SĐT người đặt' />
                             </span>
                         </div>
-                        <div style={{ padding: '5px 0px', display: 'block', boxSizing: 'border-box' }}>
+                        <div className={style.customBlockStyle}>
                             <span>
-                                <input style={{
-                                    verticalAlign: 'middle',
-                                    width: '600px',
-                                    height: '40px',
-                                    paddingLeft: '10px',
-                                    writingMode: 'horizontal-tb',
-                                    paddingBlock: '1px',
-                                    paddingInline: '2px',
-                                    fontSize: '14px'
-                                }} type="text" placeholder='Bạn muốn nhận hoa khi nào? (Ví dụ: 15h ngày 15/01/2021)' />
+                                <input className={style.hktcustomInputStyle} type="text" placeholder='Bạn muốn nhận hoa khi nào? (Ví dụ: 15h ngày 15/01/2021)' />
                             </span>
                         </div>
-                        <div style={{ padding: '5px 0px', display: 'block', boxSizing: 'border-box' }}>
+                        <div className={style.customBlockStyle}>
                             <span>
-                                <textarea style={{
-                                    verticalAlign: 'top',
-                                    height: '88px',
-                                    width: '600px',
-                                    padding: '10px',
-                                    fontFamily: 'monospace',
-                                    textRendering: 'auto',
-                                    color: 'fieldtext',
-                                    letterSpacing: 'normal',
-                                    wordSpacing: 'normal',
-                                    lineHeight: 'normal',
-                                    textTransform: 'none',
-                                    textIndent: '0px',
-                                    textShadow: 'none',
-                                    display: 'inline-block',
-                                    textAlign: 'start',
-                                    appearance: 'auto',
-                                    cursor: 'text',
-                                    resize: 'auto',
-                                    margin: '0em',
-                                }} placeholder='Tên, SĐT và địa chỉ người nhận'>
+                                <textarea className={style.customTextAreaStyle} placeholder='Tên, SĐT và địa chỉ người nhận'>
 
                                 </textarea>
                             </span>
                         </div>
-                        <div style={{ padding: '5px 0px', display: 'block', boxSizing: 'border-box' }}>
+                        <div className={style.customBlockStyle}>
                             <span>
-                                <input style={{
-                                    verticalAlign: 'middle',
-                                    width: '600px',
-                                    height: '40px',
-                                    paddingLeft: '10px',
-                                    writingMode: 'horizontal-tb',
-                                    paddingBlock: '1px',
-                                    paddingInline: '2px',
-                                    fontSize: '14px'
-                                }} type="text" placeholder='Nội dung thông điệp BANNER hoặc THIỆP (Ví dụ: Banner: Công ty ABC chúc mừng khai trương)' />
+                                <input className={style.hktcustomInputStyle} type="text" placeholder='Nội dung thông điệp BANNER hoặc THIỆP (Ví dụ: Banner: Công ty ABC chúc mừng khai trương)' />
                             </span>
                         </div>
                     </div>
                     {/* botton tiếp tục và quay lại */}
-                    <p style={{ display: 'block', marginBlockStart: '1em', marginBlockEnd: '1em', marginInlineStart: '0px', marginInlineEnd: '0px' }}>
+                    <p className={style.customBlock}>
                         <label style={{ verticalAlign: 'top', width: '25%', paddingRight: '10px', display: 'inline-block', textAlign: 'right' }}>
                         </label>
-                        <button style={{
-                            marginLeft: '0',
-                            height: '40px',
-                            textTransform: 'uppercase',
-                            fontWeight: 'bold',
-                            width: '300px',
-                            float: 'left',
-                            background: '#4caf50',
-                            padding: '10px 20px',
-                            border: 'none',
-                            borderRadius: '3px',
-                            color: '#fff',
-                        }}> « Quay lại chọn hàng </button>
-                        <button style={{
-                            marginRight: '0',
-                            height: '40px',
-                            textTransform: 'uppercase',
-                            fontWeight: 'bold',
-                            width: '290px',
-                            margin: '0 10px',
-                            float: 'left',
-                            background: '#df2f55',
-                            padding: '10px 20px',
-                            border: 'none',
-                            borderRadius: '3px',
-                            color: '#fff'
-                        }}>
+                        <button className={style.customButtonStyle}> « Quay lại chọn hàng </button>
+                        <button className={style.customButtonnextStyle}>
                             Tiếp tục
                         </button>
                     </p>
