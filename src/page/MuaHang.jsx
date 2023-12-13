@@ -2,9 +2,58 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { DeleteOutlined } from '@ant-design/icons';
-import style from '../style/muahang.module.css'
+import style from '../style/muahang.module.css';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Orders = ({ cartItems, setCartItems }) => {
+    // lấy giá trị để gửi lên api
+    const [Name, setCustomerName] = useState('');
+    const [Phone, setCustomerPhone] = useState('');
+    const [Date, setDeliveryTime] = useState('');
+    const [Info, setDeliveryInfo] = useState('');
+    const [Description, setDescription] = useState('');
+    // xử lý lưu thông tin đơn hàng
+    const handleContinue = async () => {
+        if (!Name || !Phone || !Date || !Info) {
+            toast.error('Vui lòng điền đầy đủ thông tin', { position: toast.POSITION.TOP_RIGHT });
+            return; // Exit the function if validation fails
+        }
+        const orderDetails = cartItems.map((item) => ({
+            Name,
+            Phone,
+            Date,
+            Info,
+            Description,
+            Title: item.Name,
+            Price: item.Price,
+            Quantity: item.quantity,
+            TotalPrice: item.Price * item.quantity,
+        }));
+        try {
+            const response = await axios.post('https://sheetdb.io/api/v1/ttfybaa7ifqlm', orderDetails, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            if (response.status === 201) {
+                console.log('Data sent successfully to SheetDB');
+                toast.success('Lỗi!', { position: toast.POSITION.TOP_RIGHT });
+                // Handle success logic
+            } else {
+                console.error('Failed to send data to SheetDB');
+                toast.error('Lỗi', { position: toast.POSITION.TOP_RIGHT });
+                // Handle error logic
+            }
+        } catch (error) {
+            console.error('Error sending data:', error.message);
+            toast.error('Lỗi', { position: toast.POSITION.TOP_RIGHT });
+            // Handle error logic
+        }
+    };
+    // 
     let totalorder = 0;
     let number = 0;
     const [quantityMap, setQuantityMap] = useState({});
@@ -167,29 +216,29 @@ const Orders = ({ cartItems, setCartItems }) => {
                         {/* input */}
                         <div className={style.customBlockStyle}>
                             <span>
-                                <input className={style.customInputStyle} type="text" placeholder='Tên người đặt' />
+                                <input className={style.customInputStyle} onChange={(e) => setCustomerName(e.target.value)} type="text" placeholder='Tên người đặt' required />
                             </span>
                         </div>
                         <div className={style.customBlockStyle}>
                             <span>
-                                <input className={style.hktcustomInputStyle} type="text" placeholder='SĐT người đặt' />
+                                <input className={style.hktcustomInputStyle} onChange={(e) => setCustomerPhone(e.target.value)} type="text" placeholder='SĐT người đặt' required />
                             </span>
                         </div>
                         <div className={style.customBlockStyle}>
                             <span>
-                                <input className={style.hktcustomInputStyle} type="text" placeholder='Bạn muốn nhận hoa khi nào? (Ví dụ: 15h ngày 15/01/2021)' />
+                                <input className={style.hktcustomInputStyle} onChange={(e) => setDeliveryTime(e.target.value)} type="text" placeholder='Bạn muốn nhận hoa khi nào? (Ví dụ: 15h ngày 15/01/2021)' />
                             </span>
                         </div>
                         <div className={style.customBlockStyle}>
                             <span>
-                                <textarea className={style.customTextAreaStyle} placeholder='Tên, SĐT và địa chỉ người nhận'>
+                                <textarea className={style.customTextAreaStyle} onChange={(e) => setDeliveryInfo(e.target.value)} placeholder='Tên, SĐT và địa chỉ người nhận' required>
 
                                 </textarea>
                             </span>
                         </div>
                         <div className={style.customBlockStyle}>
                             <span>
-                                <input className={style.hktcustomInputStyle} type="text" placeholder='Nội dung thông điệp BANNER hoặc THIỆP (Ví dụ: Banner: Công ty ABC chúc mừng khai trương)' />
+                                <input className={style.hktcustomInputStyle} onChange={(e) => setDescription(e.target.value)} type="text" placeholder='Nội dung thông điệp BANNER hoặc THIỆP (Ví dụ: Banner: Công ty ABC chúc mừng khai trương)' />
                             </span>
                         </div>
                     </div>
@@ -198,13 +247,14 @@ const Orders = ({ cartItems, setCartItems }) => {
                         <label style={{ verticalAlign: 'top', width: '25%', paddingRight: '10px', display: 'inline-block', textAlign: 'right' }}>
                         </label>
                         <button className={style.customButtonStyle}> « Quay lại chọn hàng </button>
-                        <button className={style.customButtonnextStyle}>
+                        <button className={style.customButtonnextStyle} onClick={handleContinue}>
                             Tiếp tục
                         </button>
                     </p>
                 </div>
 
             </div>
+            <ToastContainer />
         </div >
     );
 };
