@@ -53,40 +53,40 @@ function AppFlower() {
         <WebHeader />
         <Routes>
           <Route path="/" element={<Home onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/chauhoatuoi/" element={<ChauHoaTuoi onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/hoasinhnhat/" element={<HoaSinhNhat onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/bohoa/" element={<BoHoa onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/chau-hoa-tuoi/" element={<ChauHoaTuoi onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/hoa-sinh-nhat/" element={<HoaSinhNhat onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/bo-hoa/" element={<BoHoa onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/orders/" element={<Orders cartItems={cartItems} setCartItems={setCartItems} />} />
-          <Route path="/giohoa/" element={<GioHoa onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/chitiet/:Name" element={<Detail onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/hoasap/" element={<HoaSap onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/hoachucmung/" element={<HoaChucMung onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/bohoabi/" element={<BoHoaBi onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/hoachiabuon/" element={<HoaChiaBuon onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/traicaykho/" element={<TraiCayKho onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/traicayvanphong/" element={<TraiCayVanPhong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/gioquatraicay/" element={<GioQuaTraiCay onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/traicaybanle/" element={<TraiCayBanLe onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/traicaybansi/" element={<TraiCayBanSi onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/lanhodiep/" element={<LanHoDiep onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/caydeban/" element={<CayDeBan onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/caychophongkhach/" element={<CayChoPhongKhach onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/caykhaitruong/" element={<CayKhaiTruong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/hoacuoi/" element={<HoaCuoi onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/hoadeban/" element={<HoaDeBan onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/bohoacamchuong/" element={<BoHoaCamChuong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/bohoacattuong/" element={<BoHoaCatTuong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/bohoacuc/" element={<BoHoaCuc onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/bohoahong/" element={<BoHoaHong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/bohoahuongduong/" element={<BoHoaHuongDuong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/hoalavender/" element={<HoaLanvender onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/bohoalan" element={<BoHoaLan onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/bohoalanhodiep/" element={<BoHoaLanHoDiep onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/bohoaly/" element={<BoHoaLy onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/gio-hoa/" element={<GioHoa onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/chi-tiet/:Name" element={<Detail onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/hoa-sap/" element={<HoaSap onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/hoa-chuc-mung/" element={<HoaChucMung onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/bo-hoa-bi/" element={<BoHoaBi onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/hoa-chia-buon/" element={<HoaChiaBuon onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/trai-cay-kho/" element={<TraiCayKho onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/trai-cay-van-phong/" element={<TraiCayVanPhong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/gio-qua-trai-cay/" element={<GioQuaTraiCay onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/trai-cay-ban-le/" element={<TraiCayBanLe onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/trai-cay-ban-si/" element={<TraiCayBanSi onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/lan-ho-diep/" element={<LanHoDiep onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/cay-de-ban/" element={<CayDeBan onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/cay-cho-phong-khach/" element={<CayChoPhongKhach onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/cay-khai-truong/" element={<CayKhaiTruong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/hoa-cuoi/" element={<HoaCuoi onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/hoa-de-ban/" element={<HoaDeBan onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/bo-hoa-cam-chuong/" element={<BoHoaCamChuong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/bo-hoa-cat-tuong/" element={<BoHoaCatTuong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/bo-hoa-cuc/" element={<BoHoaCuc onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/bo-hoa-hong/" element={<BoHoaHong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/bo-hoa-huong-duong/" element={<BoHoaHuongDuong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/hoa-lavender/" element={<HoaLanvender onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/bo-hoa-lan" element={<BoHoaLan onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/bo-hoa-lan-ho-diep/" element={<BoHoaLanHoDiep onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/bo-hoa-ly/" element={<BoHoaLy onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/BoHoaDongTien/" element={<BoHoaDongTien onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/hoatulip/" element={<HoaTulip onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/cacloaihoa/" element={<CacLoaiHoa onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/cayxanhvanphong/" element={<CayXanhVanPhong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/hoa-tu-lip/" element={<HoaTulip onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/cac-loai-hoa/" element={<CacLoaiHoa onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/cay-xanh-van-phong/" element={<CayXanhVanPhong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
         </Routes>
         <WebFooter />
       </div>

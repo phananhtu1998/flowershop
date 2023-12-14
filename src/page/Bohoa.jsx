@@ -135,7 +135,7 @@ const Bohoa = ({ setCartItems }) => {
                 {currentItems.map((index) => (
                     <Route
                         key={index}
-                        path={`/bohoa/${index + 1}`}
+                        path={`/bo-hoa/${index + 1}`}
                         element={<Detail index={index} />}
                     />
                 ))}
