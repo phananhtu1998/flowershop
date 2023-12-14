@@ -4,7 +4,7 @@ import lstHoa from '../Data/data';
 import style from '../style/Detail.module.css'
 const Detail = ({ setCartItems }) => {
     useEffect(() => {
-        document.title = "Chi Tiết";
+        document.title = Name;
     });
     const { Name } = useParams();
     const [item, setItem] = useState(null);

@@ -60,6 +60,10 @@
     border: solid 1px #df2f5538;
 }
 
+.divcustomcontainer:hover {
+    border: solid 1px red;
+}
+
 .divcustomelement {
     margin: 0;
     position: relative;
