@@ -753,7 +753,7 @@ const flowerData =
         { Name: 'Chậu lan hồ điệp 5 cành 2', Price: '1250000', Category: 'lanhodiep', PriceOld: '', Images: '/LanHoDiep/chau-lan-ho-diep-5-canh_2_300x300.jpg' },
         { Name: 'Chậu lan hồ điệp 5 cành 3', Price: '1250000', Category: 'lanhodiep', PriceOld: '', Images: '/LanHoDiep/chau-lan-ho-diep-5-canh_3_300x300.jpg' },
         { Name: 'Chậu lan hồ điệp 5 cành 4', Price: '1250000', Category: 'lanhodiep', PriceOld: '', Images: '/LanHoDiep/chau-lan-ho-diep-5-canh_4_300x300.jpg' },
-        { Name: 'Chậu hồ điệp 5 cành 5', Price: '1250000', Category: 'lanhodiep', PriceOld: '', Images: '/LanHoDiep/chau-ho-diep-5-canh_300x300.jpg' },
+        { Name: 'Chậu hồ điệp 5 cành 5', Price: '1250000', Category: 'lanhodiep', PriceOld: '', Images: '/LanHoDiep/chau-ho-diep-5-canh_5_300x300.jpg' },
         { Name: 'Chậu lan hồ điệp 5 cành 5', Price: '1250000', Category: 'lanhodiep', PriceOld: '', Images: '/LanHoDiep/chau-lan-ho-diep-5-canh_5_300x300.jpg' },
         { Name: 'Chậu lan hồ điệp 5 cành 6', Price: '1250000', Category: 'lanhodiep', PriceOld: '', Images: '/LanHoDiep/chau-lan-ho-diep-5-canh_6_300x300.jpg' },
         { Name: 'Chậu lan hồ điệp 5 cành 7', Price: '1250000', Category: 'lanhodiep', PriceOld: '', Images: '/LanHoDiep/chau-lan-ho-diep-5-canh_7_300x300.jpg' },
