@@ -6,11 +6,11 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import Detail from './Detail';
 import lstdatahoa from '../Data/data';
 import style from '../style/danhmuchoa.module.css';
-let sortedData = lstdatahoa.filter(item => item.Category === "traicaybansi");
+let sortedData = lstdatahoa.filter(item => item.Category === "giohoatuoi");
 
-const TraiCayBanSi = ({ setCartItems }) => {
+const GioHoaTuoi = ({ setCartItems }) => {
     useEffect(() => {
-        document.title = "Trái Cây Bán Sỉ";
+        document.title = "Giỏ Hoa";
     });
     const itemsPerPage = 16;
     const [currentPage, setCurrentPage] = useState(1);
@@ -76,7 +76,7 @@ const TraiCayBanSi = ({ setCartItems }) => {
         <div className={style.customstyles}>
             <Container>
                 <h1 className={style.h1customtext}>
-                    <span className={style.spantextcenter}>Trái cây bán sỉ</span>
+                    <span className={style.spantextcenter}>Giỏ hoa</span>
                 </h1>
                 <div className={style.custombox}>
                     <div className={style.customcontainer}>
@@ -142,7 +142,7 @@ const TraiCayBanSi = ({ setCartItems }) => {
                 {currentItems.map((index) => (
                     <Route
                         key={index}
-                        path={`/trai-cay-ban-si/${index + 1}`}
+                        path={`/gio-hoa-tuoi/${index + 1}`}
                         element={<Detail index={index} />}
                     />
                 ))}
@@ -152,4 +152,4 @@ const TraiCayBanSi = ({ setCartItems }) => {
     );
 };
 
-export default TraiCayBanSi;
+export default GioHoaTuoi;

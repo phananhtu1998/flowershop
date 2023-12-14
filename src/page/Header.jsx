@@ -17,12 +17,12 @@ import "../style/global.css"
 const WebHeader = () => {
     //slider
     const images = [
-        '/banner/banner_hty-vn.jpg',
-        '/banner/Screenshot_1.png',
-        '/banner/SpringFlowersBanner.png',
+        '/banner/banner4.png',
         '/banner/banner1.png',
-        '/banner/434433_63-tinh-thanh.jpg',
-        '/banner/434445_only-rose.jpg'
+        '/banner/banner2.png',
+        '/banner/banner6.png',
+        '/banner/banner3.png',
+        '/banner/banner5.png'
     ];
     const settings = {
         dots: true,
@@ -192,7 +192,7 @@ const WebHeader = () => {
                                                     trái cây bán sỉ
                                                 </NavDropdown.Item>
                                             </NavDropdown>
-                                            <Nav.Link as={Link} to="/lanhodiep/">LAN HỒ ĐIỆP</Nav.Link>
+                                            <Nav.Link as={Link} to="/lan-ho-diep/">LAN HỒ ĐIỆP</Nav.Link>
                                             <NavDropdown title="LOẠI HOA" id="basic-nav-dropdown">
                                                 <NavDropdown.Item as={Link} to="/bo-hoa-bi/">
                                                     Bó hoa bi
@@ -271,32 +271,32 @@ const WebHeader = () => {
                                     <div>
                                         <p>
                                             <span className={styles.danhmuc}>✿
-                                                <a href='/'> BÓ HOA TƯƠI</a>
+                                                <Link to="/bo-hoa/" style={{ cursor: 'pointer' }}> BÓ HOA TƯƠI</Link>
                                             </span>
                                         </p>
                                         <p>
                                             <span className={styles.danhmuc}>✿
-                                                <a href='/'> HỘP HOA TƯƠI</a>
+                                                <Link to="/gio-hoa/" style={{ cursor: 'pointer' }}> Hộp HOA TƯƠI</Link>
                                             </span>
                                         </p>
                                         <p>
                                             <span className={styles.danhmuc}>✿
-                                                <a href='/'> GIỎ HOA TƯƠI</a>
+                                                <Link to="/gio-hoa-tuoi/" style={{ cursor: 'pointer' }}> GIỎ HOA</Link>
                                             </span>
                                         </p>
                                         <p>
                                             <span className={styles.danhmuc}>✿
-                                                <a href='/'> KỆ HOA CHÚC MỪNG</a>
+                                                <Link to="/hoa-chuc-mung/" style={{ cursor: 'pointer' }}> KỆ HOA CHÚC MỪNG</Link>
                                             </span>
                                         </p>
                                         <p>
                                             <span className={styles.danhmuc}>✿
-                                                <a href='/'> KỆ HOA CHIA BUỒN</a>
+                                                <Link to="/hoa-chia-buon/" style={{ cursor: 'pointer' }}> KỆ HOA CHIA BUỒN</Link>
                                             </span>
                                         </p>
                                         <p>
                                             <span className={styles.danhmuc}>✿
-                                                <a href='/'> HOA LAN HỒ ĐIỆP</a>
+                                                <Link to="/lan-ho-diep/" style={{ cursor: 'pointer' }}> HOA LAN HỒ ĐIỆP</Link>
                                             </span>
                                         </p>
                                     </div>

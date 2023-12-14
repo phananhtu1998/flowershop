@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import lstDataHoa from '../Data/data';
 import Detail from './Detail';
+import style from '../style/danhmuchoa.module.css';
 let sortedData = lstDataHoa.filter(item => item.Category === "hoacuoi");
 const HoaCuoi = ({ setCartItems }) => {
     useEffect(() => {
@@ -65,49 +66,49 @@ const HoaCuoi = ({ setCartItems }) => {
         navigate(`/orders`);
     };
     return (
-        <div style={{ display: 'block', fontSize: 'small', lineHeight: '1.5' }}>
+        <div className={style.customstyles}>
             <Container>
-                <h1 style={{ textAlign: 'center', display: 'block', fontSize: '2em', marginBlockStart: '0.67em', marginBlockEnd: '0.67em', marginInlineStart: '0px', marginInlineEnd: '0px', fontWeight: 'bold' }}>
-                    <span style={{ textAlign: 'center' }}>HOA CƯỚI</span>
+                <h1 className={style.h1customtext}>
+                    <span className={style.spantextcenter}>Hoa cưới</span>
                 </h1>
-                <div style={{ padding: '5px', margin: '10px', borderRadius: '5px' }}>
-                    <div style={{ display: 'block', textAlign: 'left', padding: '10px' }}>
+                <div className={style.custombox}>
+                    <div className={style.customcontainer}>
                         <span>Sắp xếp </span>
                         <select value={sortBy}
-                            onChange={(e) => setSortBy(e.target.value)} style={{ maxWidth: '100%', textAlign: 'center', border: '2px solid #666', borderRadius: '5px' }}>
+                            onChange={(e) => setSortBy(e.target.value)} className={style.onchangcustomcontainer}>
                             <option value="1">Mới nhất</option>
                             <option value="2">Giá tăng dần</option>
                             <option value="3">Giá giảm dần</option>
                         </select>
                     </div>
-                    <ul style={{ padding: '0', margin: '0', listStyle: 'none', display: 'flex', flexWrap: 'wrap' }}>
+                    <ul className={style.customlist}>
                         {currentItems.map((item, index) => (
-                            <li key={index} style={{ flex: '0 0 25%', boxSizing: 'border-box', padding: '10px', textAlign: 'center' }}>
-                                <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '5px', border: 'solid 1px #df2f5538' }}>
-                                    <div style={{ margin: '0', position: 'relative', paddingTop: '100%' }}>
-                                        <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} style={{ padding: '10px', objectFit: 'contain', position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', cursor: 'pointer' }} src={item.Images} alt={item.Name} title={item.Name} />
+                            <li key={index} className={style.licustombox}>
+                                <div className={style.divcustomcontainer}>
+                                    <div className={style.divcustomelement}>
+                                        <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={style.customimage} src={item.Images} alt={item.Name} title={item.Name} />
                                     </div>
-                                    <h2 style={{ margin: '10px 0 0', color: 'inherit', fontSize: 'medium', fontWeight: 'normal', lineHeight: '1.1', textDecoration: 'none' }}>
+                                    <h2 className={style.customtexth2}>
                                         <p style={{ cursor: 'pointer' }} onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} title={item.Name}>
                                             {item.Name}
                                         </p>
                                     </h2>
-                                    <div style={{ display: 'inline-block', fontSize: 'medium', fontWeight: 'bold', color: '#E13028' }}>
+                                    <div className={style.custominlineblock}>
                                         <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
                                         <span> VNĐ</span>
                                     </div>
                                     {item.PriceOld !== '' ? (
-                                        <div style={{ padding: '10px', textDecoration: 'line-through', marginLeft: '10px', display: 'inline-block', margin: '0' }}>{(parseInt(item.PriceOld, 10)).toLocaleString('vi-VN')}</div>
+                                        <div className={style.custominlineelement}>{(parseInt(item.PriceOld, 10)).toLocaleString('vi-VN')}</div>
                                     ) : (
                                         null
                                     )}
-                                    <div style={{ margin: '10px', display: 'block', textAlign: 'center' }}>
+                                    <div className={style.customblockcenter}>
                                         <label style={{ cursor: 'pointer' }}>
                                             <span
                                                 onClick={() => handleAddToCartAndNavigate(item, index + 1)}
-                                                style={{ textDecoration: 'none', color: 'inherit' }}
+                                                className={style.customlink}
                                             >
-                                                <span style={{ background: '#E35454', color: '#FFF', padding: '5px 25px', borderRadius: '20px' }}>Mua hàng</span>
+                                                <span className={style.custombutton}>Mua hàng</span>
                                             </span>
                                         </label>
                                     </div>
@@ -117,7 +118,7 @@ const HoaCuoi = ({ setCartItems }) => {
                         ))
                         }
                     </ul>
-                    <div style={{ margin: '10px 0px', display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+                    <div className={style.paginaioncustomcontainer}>
                         {pageNumbers > 1 && (
                             <Pagination
                                 current={currentPage}
@@ -134,7 +135,7 @@ const HoaCuoi = ({ setCartItems }) => {
                 {currentItems.map((index) => (
                     <Route
                         key={index}
-                        path={`/hoacuoi/${index + 1}`}
+                        path={`/hoa-cuoi/${index + 1}`}
                         element={<Detail index={index} />}
                     />
                 ))}
