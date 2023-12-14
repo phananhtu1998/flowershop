@@ -91,10 +91,10 @@ const BoHoaLanHoDiep = ({ setCartItems }) => {
                             <li key={index} className={style.licustombox}>
                                 <div className={style.divcustomcontainer}>
                                     <div className={style.divcustomelement}>
-                                        <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={style.customimage} src={item.Images} alt={item.Name} title={item.Name} />
+                                        <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={style.customimage} src={item.Images} alt={item.Name} title={item.Name} />
                                     </div>
                                     <h2 className={style.customtexth2}>
-                                        <p style={{ cursor: 'pointer' }} onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} title={item.Name}>
+                                        <p style={{ cursor: 'pointer' }} onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} title={item.Name}>
                                             {item.Name}
                                         </p>
                                     </h2>

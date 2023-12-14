@@ -128,7 +128,7 @@ const WebHeader = () => {
                                                         <div>
                                                             <ul className={styles.ulstyle}>
                                                                 {datanew.map((item, index) => (
-                                                                    <li onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={styles.searchItem} style={{ listStyle: 'none', marginBottom: '5px', cursor: 'pointer' }} title={item.Name} key={index}>
+                                                                    <li onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={styles.searchItem} style={{ listStyle: 'none', marginBottom: '5px', cursor: 'pointer' }} title={item.Name} key={index}>
                                                                         <div className={styles.div3}>
                                                                             <div className={styles.div3child}>
                                                                                 <img className={styles.customimage} src={item.Images} alt="" />

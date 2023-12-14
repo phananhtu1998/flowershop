@@ -196,7 +196,7 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlink}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
                                             <a href="/" className={Styles.customlink}>
                                                 <i></i>
@@ -246,7 +246,7 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlink}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
                                             <a href="/" className={Styles.customlink}>
                                                 <i></i>
@@ -296,7 +296,7 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlink}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
                                             <a href="/" className={Styles.customlink}>
                                                 <i></i>
@@ -346,7 +346,7 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlink}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
                                             <a href="/" className={Styles.customlink}>
                                                 <i></i>
@@ -396,7 +396,7 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlinkflowers}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
                                             <a href="/" className={Styles.customlinkflowers}>
                                                 <i></i>
@@ -446,7 +446,7 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlinkflowers}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
                                             <a href="/" className={Styles.customlinkflowers}>
                                                 <i></i>
@@ -496,7 +496,7 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlinkflowers}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
                                             <a href="/" className={Styles.customlinkflowers}>
                                                 <i></i>
@@ -546,7 +546,7 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlinkflowers}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
                                             <a href="/" className={Styles.customlinkflowers}>
                                                 <i></i>
@@ -596,7 +596,7 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlinkflowers}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
                                             <a href="/" className={Styles.customlinkflowers}>
                                                 <i></i>
@@ -646,7 +646,7 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlinkflowers}>
-                                                <img onClick={() => navigate(`/chitiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
                                             </a>
                                             <a href="/" className={Styles.customlinkflowers}>
                                                 <i></i>

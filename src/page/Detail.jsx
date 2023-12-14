@@ -254,7 +254,7 @@ const Detail = ({ setCartItems }) => {
                                                             <span>NEW</span>
                                                         </div>
                                                         <div className={style.relativeContainer}>
-                                                            <a className={style.noDecoration} href={`/chitiet/${item.Name}`}>
+                                                            <a className={style.noDecoration} href={`/chi-tiet/${item.Name}`}>
                                                                 <img className={style.absoluteCover} src={item.Images} alt={item.Name}></img>
                                                             </a>
                                                             <a href="/" className={style.noDecoration}>
