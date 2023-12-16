@@ -105,7 +105,7 @@ const WebHeader = () => {
                         <div className={styles.divlogo}>
                             <div>
                                 <span className={styles.spanlogo}>
-                                    <a href="/">
+                                    <a href="/orders">
                                         <img src={logo} alt="Logo" />
                                     </a>
                                 </span>
