@@ -14,6 +14,14 @@
     left: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    /* Đảm bảo không bị tràn khi ảnh phóng to */
+    transition: transform 0.5s ease;
+    /* Tạo hiệu ứng chuyển động mượt mà */
+}
+
+.customimage:hover {
+    transform: scale(1.1);
 }
 
 .divmargin {
@@ -112,6 +120,11 @@
 .customlisthoacontainer:hover {
     border: solid 1px red;
 }
+
+.customtexthoa:hover {
+    color: red;
+}
+
 
 .customdanhmuchoabox {
     position: relative;

@@ -8,18 +8,18 @@ export default function Home({ setCartItems }) {
         document.title = "Hoa Đẹp Toàn Quốc";
     });
     const BoHoaTuoi = [
-        { Name: 'Love', Price: '300000', Images: '/BoHoaTuoi/love_300x300.jpg' },
-        { Name: 'Bó hoa hồng trắng + Baby trắng', Price: '390000', Images: '/BoHoaTuoi/bo-hoa-hong-trang-baby-trang_300x300.jpg' },
-        { Name: 'Baby girl', Price: '300000', Images: '/BoHoaTuoi/baby-girl_300x300.jpg' },
-        { Name: 'Bó hoa cúc Tana', Price: '280000', Images: '/BoHoaTuoi/bo-hoa-cuc-tana_300x300.jpg' },
-        { Name: 'Bó hoa hồng 7 bông kèm phụ kiện', Price: '300000', Images: '/BoHoaTuoi/bo-hoa-hong-7-bong-kem-phu-kien_300x300.jpg' },
-        { Name: 'Tình hồng', Price: '300000', Images: '/BoHoaTuoi/tinh-hong_300x300.jpg' },
-        { Name: 'Bó hoa hướng dương phối baby trắng', Price: '350000', Images: '/BoHoaTuoi/bo-hoa-huong-duong-phoi-baby-trang_300x300.jpg' },
-        { Name: 'Bó hoa hồng kem phối bi trắng đẹp', Price: '280000', Images: '/BoHoaTuoi/bo-hoa-cuc-tana_300x300.jpg' },
-        { Name: 'Cô bé mùa đông', Price: '250000', Images: '/BoHoaTuoi/co-be-mua-dong_300x300.jpg' },
-        { Name: 'Bó hoa đỏ rạng ngời', Price: '660000', Images: '/BoHoaTuoi/bo-hoa-hong-do-rang-ngoi_300x300.jpg' },
-        { Name: 'Màu tình yêu', Price: '2200000', Images: '/BoHoaTuoi/mau-tinh-yeu_300x300.jpg' },
-        { Name: 'Bó hoa Pink', Price: '420000', Images: '/BoHoaTuoi/bo-hoa-pink_300x300.jpg' },
+        { Name: 'Everyday with you', Price: '200000', Images: '/boHoa/13111_everyday-with-you.jpg' },
+        { Name: 'Dating', Price: '250000', Images: '/boHoa/14270_dating.jpg' },
+        { Name: 'Nồng nàn', Price: '300000', Images: '/boHoa/14470_nong-nan.jpg' },
+        { Name: 'Điều thân thương', Price: '150000', Images: '/boHoa/13234_dieu-than-thuong.jpg' },
+        { Name: 'Say you do', Price: '300000', Images: '/boHoa/14339_say-you-do.jpg' },
+        { Name: 'Tana baby 2', Price: '350000', Images: '/boHoa/13291_my-tana.jpg' },
+        { Name: 'Bó Hoa Tú Cầu', Price: '400000', Images: '/boHoa/6041_bo-hoa-tu-cau.jpg' },
+        { Name: 'Đắm say 2', Price: '250000', Images: '/boHoa/14432_dam-say.jpg' },
+        { Name: 'Adore', Price: '400000', Images: '/boHoa/14645_adore.jpg' },
+        { Name: 'The greatest thing', Price: '450000', Images: '/boHoa/13293_the-greatest-thing.jpg' },
+        { Name: 'Mừng thành công', Price: '3000000', Images: '/boHoa/14474_mung-thanh-cong.jpg' },
+        { Name: 'Eternal Bloom', Price: '500000', Images: '/boHoa/14649_eternal-bloom.jpg' },
     ]
     const GioHoaTuoi = [
         { Name: 'Hộp hoa hồng đỏ', Images: '/GioHoaTuoi/hop-hoa-hong-do_300x300.jpg' },

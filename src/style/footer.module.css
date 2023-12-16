@@ -10,7 +10,7 @@
 }
 
 .divpadding {
-    padding: 20px 0 0;
+    padding: 20px 0;
 }
 
 .customelementdiv {
@@ -82,6 +82,7 @@
     display: inline-block;
     width: 50%;
     vertical-align: top;
+    padding: 10px;
 }
 
 .customicontext {

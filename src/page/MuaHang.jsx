@@ -251,7 +251,7 @@ const Orders = ({ cartItems, setCartItems }) => {
                         </label>
                         <button className={style.customButtonStyle}> « Quay lại chọn hàng </button>
                         <button className={style.customButtonnextStyle} onClick={handleContinue}>
-                            Tiếp tục
+                            Mua ngay
                         </button>
                     </p>
                 </div>

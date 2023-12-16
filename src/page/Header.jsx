@@ -135,7 +135,7 @@ const WebHeader = () => {
                                                                                 <span className={styles.spandiv3}> {item.Name}</span>
                                                                             </div>
                                                                             <div>
-                                                                                <span style={{ color: 'red' }}>{item.Price}</span>
+                                                                                <span style={{ color: 'red' }}>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')} VNĐ</span>
                                                                             </div>
                                                                         </div>
                                                                     </li>

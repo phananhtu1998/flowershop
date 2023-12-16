@@ -37,7 +37,9 @@ const WebFooter = () => {
                             <div className={style.customicontext}>
                                 <div className={style.customiconelementcus}>
                                     <span className={style.customdomicondes}>
-                                        <FontAwesomeIcon icon={faFacebookF} color='white' />
+                                        <a href='https://www.facebook.com/profile.php?id=61554591125337&mibextid=LQQJ4d' target="_blank">
+                                            <FontAwesomeIcon href='https://www.facebook.com/profile.php?id=61554591125337&mibextid=LQQJ4d' icon={faFacebookF} color='white' />
+                                        </a>
                                     </span>
                                     <span className={style.customdomicondes}>
                                         <FontAwesomeIcon icon={faTwitter} color='white' />
