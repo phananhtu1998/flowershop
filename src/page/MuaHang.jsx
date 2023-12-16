@@ -43,7 +43,7 @@ const Orders = ({ cartItems, setCartItems }) => {
 
             if (response.status === 201) {
                 console.log('Data sent successfully to SheetDB');
-                toast.success('Lỗi!', { position: toast.POSITION.TOP_RIGHT });
+                toast.success('Đặt hoa thành công!', { position: toast.POSITION.TOP_RIGHT });
                 // Handle success logic
             } else {
                 console.error('Failed to send data to SheetDB');
