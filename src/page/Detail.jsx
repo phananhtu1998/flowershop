@@ -161,7 +161,7 @@ const Detail = ({ setCartItems }) => {
                                                     </a>
                                                 </div>
                                                 <div style={{ display: 'block', fontWeight: 'bold', marginTop: '5px' }}>
-                                                    <a className={style.redNoDecoration} href='https://www.facebook.com/profile.php?id=61554591125337&mibextid=LQQJ4d' target="_blank">
+                                                    <a className={style.redNoDecoration} href='https://www.facebook.com/messages/t/61554591125337' target="_blank">
                                                         <img src="/fb.png" alt="" className={style.iconStyle} />
                                                         &nbsp; CHAT ĐỂ ĐƯỢC TƯ VẤN
                                                     </a>

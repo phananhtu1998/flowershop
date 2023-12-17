@@ -25,7 +25,7 @@
 }
 
 .divmargin {
-    margin: 10px 0 0;
+    margin: 1px 0 0;
 }
 
 .customatext {
@@ -159,7 +159,7 @@
 }
 
 .customtexthoa1 {
-    margin: 30px;
+    margin: 3px;
     font-size: medium;
     font-weight: normal;
     color: #E13028;
@@ -235,10 +235,6 @@
         /* Đặt giá trị max-width phù hợp với yêu cầu của bạn */
     }
 
-    .divmargin {
-        margin: 5px 0 0;
-    }
-
     .customatext {
         font-size: small;
     }
@@ -307,10 +303,6 @@
         height: 100%;
         max-width: 200px;
         /* Đặt giá trị max-width phù hợp với yêu cầu của bạn */
-    }
-
-    .divmargin {
-        margin: 5px 0 0;
     }
 
     .customatext {
@@ -383,10 +375,6 @@
         /* Đặt giá trị max-width phù hợp với yêu cầu của bạn */
     }
 
-    .divmargin {
-        margin: 5px 0 0;
-    }
-
     .customatext {
         font-size: small;
     }
@@ -455,10 +443,6 @@
         height: 100%;
         max-width: 200px;
         /* Đặt giá trị max-width phù hợp với yêu cầu của bạn */
-    }
-
-    .divmargin {
-        margin: 5px 0 0;
     }
 
     .customatext {
@@ -533,10 +517,6 @@
         /* Đặt giá trị max-width phù hợp với yêu cầu của bạn */
     }
 
-    .divmargin {
-        margin: 5px 0 0;
-    }
-
     .customatext {
         font-size: small;
     }
@@ -605,10 +585,6 @@
         height: 100%;
         max-width: 200px;
         /* Đặt giá trị max-width phù hợp với yêu cầu của bạn */
-    }
-
-    .divmargin {
-        margin: 5px 0 0;
     }
 
     .customatext {
@@ -688,10 +664,6 @@
         /* Đặt giá trị max-width phù hợp với yêu cầu của bạn */
     }
 
-    .divmargin {
-        margin: 5px 0 0;
-    }
-
     .customatext {
         font-size: small;
     }
@@ -760,10 +732,6 @@
         height: 100%;
         max-width: 200px;
         /* Đặt giá trị max-width phù hợp với yêu cầu của bạn */
-    }
-
-    .divmargin {
-        margin: 5px 0 0;
     }
 
     .customatext {

@@ -22,12 +22,12 @@ export default function Home({ setCartItems }) {
         { Name: 'Eternal Bloom', Price: '500000', Images: '/boHoa/14649_eternal-bloom.jpg' },
     ]
     const GioHoaTuoi = [
-        { Name: 'Hộp hoa hồng đỏ', Images: '/GioHoaTuoi/hop-hoa-hong-do_300x300.jpg' },
-        { Name: 'Sớm mai', Images: '/GioHoaTuoi/som-mai_300x300.jpg' },
-        { Name: 'Giỏ hoa quý phái', Images: '/GioHoaTuoi/gio-hoa-quy-phai_300x300.jpg' },
-        { Name: 'Vũ nữ hồng kem', Images: '/GioHoaTuoi/vu-nu-hong-kem_300x300.jpg' },
-        { Name: 'Nắng Mai', Images: '/GioHoaTuoi/nang-mai_300x300.jpg' },
-        { Name: 'Xuân Sang', Images: '/GioHoaTuoi/xuan-sang_300x300.jpg' },
+        { Name: 'Lux basket mini 5', Price: '300000', Images: '/GioHoaTuoi/14566_lux-basket-mini.jpg' },
+        { Name: 'Rạng rỡ', Price: '350000', Images: '/GioHoaTuoi/14710_rang-ro.jpg' },
+        { Name: 'Lux basket 4', Price: '400000', Images: '/GioHoaTuoi/14580_lux-basket.jpg' },
+        { Name: 'Lan tỏa yêu thương', Price: '550000', Images: '/GioHoaTuoi/14843_lan-toa-yeu-thuong.jpg' },
+        { Name: 'Sound of love', Price: '350000', Images: '/GioHoaTuoi/11610_sound-of-love.jpg' },
+        { Name: 'Bất ngờ nhỏ', Price: '450000', Images: '/GioHoaTuoi/14842_bat-ngo-nho.jpg' },
         { Name: 'Thanh tao 3', Images: '/GioHoaTuoi/thanh-tao-3_300x300.jpg' },
         { Name: 'Thơ mộng', Images: '/GioHoaTuoi/tho-mong_300x300.jpg' },
         { Name: 'Ươm nắng', Images: '/GioHoaTuoi/uom-nang_300x300.jpg' },

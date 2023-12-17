@@ -22,7 +22,8 @@ const WebHeader = () => {
         '/banner/banner2.png',
         '/banner/banner6.png',
         '/banner/banner3.png',
-        '/banner/banner5.png'
+        '/banner/banner5.png',
+        '/banner/banner8.png'
     ];
     const settings = {
         dots: true,
@@ -158,7 +159,7 @@ const WebHeader = () => {
                                 <Container>
                                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                     <Navbar.Collapse id="basic-navbar-nav">
-                                        <Nav style={{ fontWeight: 'bold', fontSize: '13.5px' }} className="me-auto">
+                                        <Nav style={{ fontWeight: 'bold', fontSize: '12.5px' }} className="me-auto">
                                             <Nav.Link as={Link} to="/">TRANG CHỦ</Nav.Link>
                                             <NavDropdown title="KIỂU DÁNG" id="basic-nav-dropdown">
                                                 <NavDropdown.Item as={Link} to="/bo-hoa/">
@@ -247,6 +248,7 @@ const WebHeader = () => {
                                             </NavDropdown>
                                             <Nav.Link as={Link} to="/hoa-cuoi/">HOA CƯỚI</Nav.Link>
                                             <Nav.Link as={Link} to="/hoa-de-ban/">HOA ĐỂ BÀN</Nav.Link>
+                                            <Nav.Link as={Link} to="/hoa-de-ban/">GIỎ QUÀ TẾT</Nav.Link>
                                         </Nav>
                                     </Navbar.Collapse>
                                 </Container>

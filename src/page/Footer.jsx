@@ -88,13 +88,13 @@ const WebFooter = () => {
                                                 <p className={style.pcustomtext}>
                                                     <span className={style.emailcus}>
                                                         <strong>Hotline:
-                                                            <a style={{ textDecoration: 'none', color: '#FFFFFF' }} href="tel:19003189"> 19003189</a>
+                                                            <a style={{ textDecoration: 'none', color: '#FFFFFF' }} href="tel:0979336771"> 0979336771</a>
                                                         </strong>
                                                     </span>
                                                 </p>
                                                 <p className={style.pcustomtext}>
                                                     <span className={style.emailcus}>
-                                                        Email:&nbsp;hoathuongyeu.com@gmail.com
+                                                        Email:&nbsp;hoadeptoanquoc88@gmail.com
                                                     </span>
                                                 </p>
                                                 <p className={style.pcustomtext}>
