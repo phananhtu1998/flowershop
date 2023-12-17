@@ -102,7 +102,6 @@ const flowerData =
         { Name: 'Only rose 12', Category: 'bohoa', Price: '1000000', PriceOld: '1250000', Images: '/BoHoa/8382_only-rose.jpg' },
         { Name: 'Hẹn hò 2', Category: 'bohoa', Price: '500000', PriceOld: '', Images: '/BoHoa/13284_hen-ho.jpg' },
         //GIỎ HOA
-
         { Name: 'Hộp hoa 925', Category: 'giohoa', Price: '390000', PriceOld: '490000', Images: '/GioHoaTuoi/hop-hoa-925_300x300.jpg' },
         { Name: 'Giỏ hoa quý phái', Category: 'giohoa', Price: '400000', PriceOld: '500000', Images: '/GioHoaTuoi/gio-hoa-quy-phai_300x300.jpg' },
         { Name: 'Giỏ hoa 02', Category: 'giohoa', Price: '400000', PriceOld: '500000', Images: '/GioHoaTuoi/gio-hoa-02_300x300.jpg' },
@@ -133,6 +132,7 @@ const flowerData =
         { Name: 'Giỏ hoa 11', Price: '790000', Category: 'giohoa', PriceOld: '', Images: '/SpLienQuanBoHoa/gio-hoa-11_300x300.jpg' },
         { Name: 'Giỏ hoa 10', Price: '700000', Category: 'giohoa', PriceOld: '', Images: '/SpLienQuanBoHoa/gio-hoa-10_300x300.jpg' },
         { Name: 'Giỏ hoa 09', Price: '680000', Category: 'giohoa', PriceOld: '', Images: '/SpLienQuanBoHoa/gio-hoa-09_300x300.jpg' },
+        { Name: 'Hộp hoa demo 1234', Price: '1680000', Category: 'hophoa', PriceOld: '', Images: '/SpLienQuanBoHoa/gio-hoa-09_300x300.jpg' },
         //CHẬU HOA
         { Name: 'Chậu cúc Nhật', Price: '350000', Category: 'chauhoa', PriceOld: '', Images: '/ChauHoa/chau-cuc-nhat_300x300.jpg' },
         { Name: 'Chậu cây hoa hồng 09', Price: '380000', Category: 'chauhoa', PriceOld: '', Images: '/ChauHoa/chau-cay-hoa-hong-09_300x300.jpg' },
