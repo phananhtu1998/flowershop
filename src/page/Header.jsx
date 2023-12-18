@@ -248,7 +248,7 @@ const WebHeader = () => {
                                             </NavDropdown>
                                             <Nav.Link as={Link} to="/hoa-cuoi/">HOA CƯỚI</Nav.Link>
                                             <Nav.Link as={Link} to="/hoa-de-ban/">HOA ĐỂ BÀN</Nav.Link>
-                                            <Nav.Link as={Link} to="/hoa-de-ban/">GIỎ QUÀ TẾT</Nav.Link>
+                                            <Nav.Link as={Link} to="/gio-qua-tet/">GIỎ QUÀ TẾT</Nav.Link>
                                         </Nav>
                                     </Navbar.Collapse>
                                 </Container>
