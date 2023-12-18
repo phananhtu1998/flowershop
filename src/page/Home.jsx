@@ -28,12 +28,12 @@ export default function Home({ setCartItems }) {
         { Name: 'Lan tỏa yêu thương', Price: '550000', Images: '/GioHoaTuoi/14843_lan-toa-yeu-thuong.jpg' },
         { Name: 'Sound of love', Price: '350000', Images: '/GioHoaTuoi/11610_sound-of-love.jpg' },
         { Name: 'Bất ngờ nhỏ', Price: '450000', Images: '/GioHoaTuoi/14842_bat-ngo-nho.jpg' },
-        { Name: 'Thanh tao 3', Images: '/GioHoaTuoi/thanh-tao-3_300x300.jpg' },
-        { Name: 'Thơ mộng', Images: '/GioHoaTuoi/tho-mong_300x300.jpg' },
-        { Name: 'Ươm nắng', Images: '/GioHoaTuoi/uom-nang_300x300.jpg' },
-        { Name: 'Điều kỳ diệu', Images: '/GioHoaTuoi/dieu-ky-dieu_300x300.jpg' },
-        { Name: 'Ngọc ngà', Images: '/GioHoaTuoi/ngoc-nga_300x300.jpg' },
-        { Name: 'Hộp hoa hồng tím dâu sang trọng', Images: '/GioHoaTuoi/hop-hoa-hong-tim-dau-sang-trong_300x300.jpg' },
+        { Name: 'Chiều hoàng hôn', Price: '600000', Images: '/GioHoaTuoi/11609_chieu-hoang-hon.jpg' },
+        { Name: 'Love is you', Price: '650000', Images: '/GioHoaTuoi/14399_love-is-you.jpg' },
+        { Name: 'Tuổi xanh', Price: '550000', Images: '/GioHoaTuoi/13219_tuoi-xanh.jpg' },
+        { Name: 'Nữ hoàng', Price: '600000', Images: '/GioHoaTuoi/13075_nu-hoang.jpg' },
+        { Name: 'Capuchino love', Price: '600000', Images: '/GioHoaTuoi/14833_capuchino-love.jpg' },
+        { Name: 'A little wish', Price: '700000', Images: '/GioHoaTuoi/8671_a-little-wish.jpg' },
     ]
     const HopHoaTuoi = [
         { Name: 'Hộp Hoa Chúc Mừng - Hướng Dương + Hồng Kem', Price: '600000', Images: '/HopHoaTuoi/hop-hoa-chuc-mung-huong-duong-hong-kem_300x300.jpg' },
@@ -257,8 +257,8 @@ export default function Home({ setCartItems }) {
                                             <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
                                         </h2>
                                         <div className={Styles.customtexthoa1}>
-                                            {/* <strong>{item.Price}</strong>
-                                            <span> VNĐ</span> */}
+                                            <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
+                                            <span> VNĐ</span>
                                         </div>
                                         <div className={Styles.customonclickblock}>
                                             <label style={{ cursor: 'pointer' }}>
