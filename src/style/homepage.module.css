@@ -64,10 +64,16 @@
 
 .customtextdebutton {
     padding: 8px 30px;
-    color: #fff;
-    background: #008CBA;
-    border-radius: 10px;
+    color: #008CBA;
+    background: white;
     text-decoration: none;
+    border: 1px solid #008CBA;
+    border-radius: 5px;
+}
+
+.customtextdebutton:hover {
+    color: #0aa9de;
+    border: 1px solid #0aa9de;
 }
 
 .customdivider {
@@ -131,7 +137,7 @@
     display: block;
     width: 290px;
     padding: 0;
-    background: #3498db;
+    background: linear-gradient(to right, #faab08, #d42611);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     color: #fff;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -166,10 +172,14 @@
 }
 
 .custombuttonflowew {
-    background: #E35454;
+    background: #ffb916;
     color: #FFF;
     padding: 5px 25px;
-    border-radius: 20px;
+    border-radius: 5px;
+}
+
+.custombuttonflowew:hover {
+    background: #E59B11;
 }
 
 .customcontainerflower {

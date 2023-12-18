@@ -129,10 +129,14 @@
 }
 
 .custombutton {
-    background: #E35454;
+    background: #ffb916;
     color: #FFF;
     padding: 5px 25px;
-    border-radius: 20px;
+    border-radius: 5px;
+}
+
+.custombutton:hover {
+    background: #E59B11;
 }
 
 .paginaioncustomcontainer {
