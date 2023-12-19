@@ -101,7 +101,7 @@ const flowerData =
         { Name: 'Giản dị', Category: 'bohoa', Price: '300000', PriceOld: '350000', Images: '/BoHoa/9444_gian-di.jpg' },
         { Name: 'Only rose 12', Category: 'bohoa', Price: '1000000', PriceOld: '1250000', Images: '/BoHoa/8382_only-rose.jpg' },
         { Name: 'Hẹn hò 2', Category: 'bohoa', Price: '500000', PriceOld: '', Images: '/BoHoa/13284_hen-ho.jpg' },
-        //GIỎ HOA
+        //GIỎ HOA-HỘP HOA
         { Name: 'Hộp hoa 925', Category: 'giohoa', Price: '390000', PriceOld: '490000', Images: '/GioHoaTuoi/hop-hoa-925_300x300.jpg' },
         { Name: 'Giỏ hoa quý phái', Category: 'giohoa', Price: '400000', PriceOld: '500000', Images: '/GioHoaTuoi/gio-hoa-quy-phai_300x300.jpg' },
         { Name: 'Giỏ hoa 02', Category: 'giohoa', Price: '400000', PriceOld: '500000', Images: '/GioHoaTuoi/gio-hoa-02_300x300.jpg' },
