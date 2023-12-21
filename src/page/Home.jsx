@@ -134,18 +134,18 @@ export default function Home({ setCartItems }) {
         { Name: 'Cây Lan Tuyết', Price: '500000', Images: '/CayXanhVp/13432_cay-lan-tuyet.jpg' },
     ]
     const HoaDeBan = [
-        { Name: 'Hoa để bàn 36', Price: '550000', Images: '/HoaDeBan/hoa-de-ban-36_300x300.jpg' },
-        { Name: 'Hoa để bàn 35', Price: '500000', Images: '/HoaDeBan/hoa-de-ban-35_300x300.jpg' },
-        { Name: 'Hoa để bàn 20', Price: '750000', Images: '/HoaDeBan/hoa-de-ban-20_300x300.jpg' },
-        { Name: 'Hoa để bàn 08', Price: '550000', Images: '/HoaDeBan/hoa-de-ban-08_300x300.jpg' },
-        { Name: 'Hoa để bàn 15', Price: '700000', Images: '/HoaDeBan/hoa-de-ban-15_300x300.jpg' },
-        { Name: 'Hoa để bàn 05', Price: '1200000', Images: '/HoaDeBan/hoa-de-ban-05_300x300.jpg' },
-        { Name: 'Hoa để bàn 03', Price: '1200000', Images: '/HoaDeBan/hoa-de-ban-03_300x300.jpg' },
-        { Name: 'Hoa để bàn 43', Price: '600000', Images: '/HoaDeBan/hoa-de-ban-43_300x300.jpg' },
-        { Name: 'Hoa để bàn 01', Price: '800000', Images: '/HoaDeBan/hoa-de-ban-01_300x300.jpg' },
-        { Name: 'Hoa để bàn 42', Price: '700000', Images: '/HoaDeBan/hoa-de-ban-42_300x300.jpg' },
-        { Name: 'Hoa để bàn 02', Price: '1200000', Images: '/HoaDeBan/hoa-de-ban-02_300x300.jpg' },
-        { Name: 'Hoa để bàn 11', Price: '750000', Images: '/HoaDeBan/hoa-de-ban-11_300x300.jpg' },
+        { Name: 'Hoa để bàn 36', Price: '550000', Images: '/HoaDeBan/hoa-de-ban-36_300x300.png' },
+        { Name: 'Hoa để bàn 35', Price: '500000', Images: '/HoaDeBan/hoa-de-ban-35_300x300.png' },
+        { Name: 'Hoa để bàn 20', Price: '750000', Images: '/HoaDeBan/hoa-de-ban-20_300x300.png' },
+        { Name: 'Hoa để bàn 08', Price: '550000', Images: '/HoaDeBan/hoa-de-ban-08_300x300.png' },
+        { Name: 'Hoa để bàn 15', Price: '700000', Images: '/HoaDeBan/hoa-de-ban-15_300x300.png' },
+        { Name: 'Hoa để bàn 05', Price: '1200000', Images: '/HoaDeBan/hoa-de-ban-05_300x300.png' },
+        { Name: 'Hoa để bàn 03', Price: '1200000', Images: '/HoaDeBan/hoa-de-ban-03_300x300.png' },
+        { Name: 'Hoa để bàn 43', Price: '600000', Images: '/HoaDeBan/hoa-de-ban-43_300x300.png' },
+        { Name: 'Hoa để bàn 01', Price: '800000', Images: '/HoaDeBan/hoa-de-ban-01_300x300.png' },
+        { Name: 'Hoa để bàn 42', Price: '700000', Images: '/HoaDeBan/hoa-de-ban-42_300x300.png' },
+        { Name: 'Hoa để bàn 02', Price: '1200000', Images: '/HoaDeBan/hoa-de-ban-02_300x300.png' },
+        { Name: 'Hoa để bàn 11', Price: '750000', Images: '/HoaDeBan/hoa-de-ban-11_300x300.png' },
     ]
     const navigate = useNavigate();
     const handleAddToCartAndNavigate = (item) => {
