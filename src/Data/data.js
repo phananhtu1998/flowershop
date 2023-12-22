@@ -702,6 +702,12 @@ const flowerData =
         { Name: 'Tiếp bước', Price: '2000000', Category: 'bohoacamchuong', PriceOld: '1700000', Images: '/HopHoaTuoi/11567_tiep-buoc.jpg' },
         { Name: 'Celebrate', Price: '750000', Category: 'bohoacamchuong', PriceOld: '850000', Images: '/HopHoaTuoi/8444_celebrate.jpg' },
         { Name: 'Gửi Người Tôi Yêu', Price: '850000', Category: 'bohoacamchuong', PriceOld: '1150000', Images: '/HopHoaTuoi/3197_gui-nguoi-toi-yeu.jpg' },
+        { Name: 'Hoàng hôn ngọt ngào', Price: '850000', Category: 'bohoacamchuong', PriceOld: '', Images: '/HopHoaTuoi/10905_hoang-hon-ngot-ngao.jpg' },
+        { Name: 'Hương gió', Price: '500000', Category: 'bohoacamchuong', PriceOld: '', Images: '/HopHoaTuoi/8443_huong-gio.jpg' },
+        { Name: 'Hương gió', Price: '500000', Category: 'bohoacamchuong', PriceOld: '', Images: '/HopHoaTuoi/8443_huong-gio.jpg' },
+        { Name: 'Home sweet home', Price: '880000', Category: 'bohoacamchuong', PriceOld: '1200000', Images: '/HopHoaTuoi/8367_home-sweet-home.jpg' },
+        { Name: 'Thanh âm', Price: '800000', Category: 'bohoacamchuong', PriceOld: '985000', Images: '/GioHoaTuoi/10709_thanh-am.jpg' },
+        { Name: 'Nắng Sớm Mai', Price: '900000', Category: 'bohoacamchuong', PriceOld: '', Images: '/HopHoaTuoi/5282_nang-som-mai.jpg' },
         //Bó hoa cát tường
         { Name: 'Bó hoa cát tường hồng', Price: '300000', Category: 'bohoacattuong', PriceOld: '', Images: '/BoHoaCatTuong/bo-hoa-cat-tuong-hong_300x300.jpg' },
         { Name: 'Em yêu của anh', Price: '590000', Category: 'bohoacattuong', PriceOld: '', Images: '/BoHoaCatTuong/em-yeu-cua-anh_300x300.jpg' },
