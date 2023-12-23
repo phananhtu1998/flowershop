@@ -59,6 +59,7 @@
 
 .searchItem:hover {
     background-color: rgba(228, 224, 224, 0.438);
+    color: red;
     list-style: none;
     margin-bottom: 5px;
     cursor: pointer
@@ -200,7 +201,7 @@
     text-align: left;
     border: 1px dotted #333;
     background: #fff;
-    min-width: 400px;
+    min-width: 290px;
     max-height: 500px;
     overflow-y: scroll;
 }
