@@ -282,7 +282,7 @@ const WebHeader = () => {
                                         </p>
                                         <p>
                                             <span className={styles.danhmuc}>✿
-                                                <Link to="/gio-hoa/" style={{ cursor: 'pointer' }}> Hộp HOA TƯƠI</Link>
+                                                <Link to="/hop-hoa/" style={{ cursor: 'pointer' }}> Hộp HOA TƯƠI</Link>
                                             </span>
                                         </p>
                                         <p>

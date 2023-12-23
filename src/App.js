@@ -39,6 +39,7 @@ import CacLoaiHoa from './page/CacLoaiHoa';
 import CayXanhVanPhong from './page/CayXanhVanPhong';
 import GioHoaTuoi from './page/GioHoaTuoi';
 import GioQuaTet from './page/GioQuaTet';
+import HopHoa from './page/HopHoa';
 function AppFlower() {
   // Load cartItems from localStorage on component mount
   const [cartItems, setCartItems] = useState(() => {
@@ -91,6 +92,7 @@ function AppFlower() {
           <Route path="/cay-xanh-van-phong/" element={<CayXanhVanPhong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/gio-hoa-tuoi/" element={<GioHoaTuoi onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/gio-qua-tet/" element={<GioQuaTet onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/hop-hoa/" element={<HopHoa onAddToCart={setCartItems} setCartItems={setCartItems} />} />
         </Routes>
         <WebFooter />
       </div>

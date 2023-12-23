@@ -742,6 +742,7 @@ const flowerData =
         { Name: 'Điều Mong Ước', Price: '1500000', Category: 'bohoacattuong', PriceOld: '1700000', Images: '/HopHoaTuoi/6024_dieu-mong-uoc.png' },
         { Name: 'Hoa tặng sự kiện 2(+20 bó)', Price: '2500000', Category: 'bohoacattuong', PriceOld: '', Images: '/BoHoaCatTuong/10898_hoa-tang-su-kien--bo.jpg' },
         { Name: 'Tươi vui', Category: 'bohoacattuong', Price: '500000', PriceOld: '', Images: '/BoHoa/11867_tuoi-vui.jpg' },
+        { Name: 'Love box 3', Price: '400000', Category: 'bohoacattuong', PriceOld: '', Images: '/HopHoaTuoi/3699_love-box.jpg' },
         // Lan hồ điệp
         { Name: 'Chậu lan trắng 1 cành 01', Price: '300000', Category: 'lanhodiep', PriceOld: '400000', Images: '/LanHoDiep/11124_chau-lan-trang--canh.png' },
         { Name: 'Hồ điệp vàng chậu sứ 05', Price: '550000', Category: 'lanhodiep', PriceOld: '700000', Images: '/LanHoDiep/14065_ho-diep-vang-chau-su.jpg' },

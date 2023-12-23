@@ -4,13 +4,13 @@ import { Pagination } from 'antd';
 import Container from 'react-bootstrap/Container';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import Detail from './Detail';
-import lstdatahoa from '../Data/data';
+import lstGioHoa from '../Data/data';
 import style from '../style/danhmuchoa.module.css';
-let sortedData = lstdatahoa.filter(item => item.Category === "giohoa");
+let sortedData = lstGioHoa.filter(item => item.Category === "hophoa");
 
-const GioHoaTuoi = ({ setCartItems }) => {
+const HopHoa = ({ setCartItems }) => {
     useEffect(() => {
-        document.title = "Giỏ Hoa";
+        document.title = "Hộp Hoa";
     });
     const itemsPerPage = 16;
     const [currentPage, setCurrentPage] = useState(1);
@@ -44,7 +44,7 @@ const GioHoaTuoi = ({ setCartItems }) => {
         setCurrentPage(pageNumber);
     };
 
-    const handleAddToCartAndNavigate = (item) => {
+    const handleAddToCartAndNavigate = (item, orderIndex) => {
         // Tìm kiếm xem mục đã tồn tại trong localStorage hay chưa
         const storedCartItems = localStorage.getItem('cartItems');
         const cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
@@ -76,7 +76,7 @@ const GioHoaTuoi = ({ setCartItems }) => {
         <div className={style.customstyles}>
             <Container>
                 <h1 className={style.h1customtext}>
-                    <span className={style.spantextcenter}>Giỏ hoa</span>
+                    <span className={style.spantextcenter}>Hộp hoa</span>
                 </h1>
                 <div className={style.custombox}>
                     <div className={style.customcontainer}>
@@ -142,7 +142,7 @@ const GioHoaTuoi = ({ setCartItems }) => {
                 {currentItems.map((index) => (
                     <Route
                         key={index}
-                        path={`/gio-hoa-tuoi/${index + 1}`}
+                        path={`/hop-hoa/${index + 1}`}
                         element={<Detail index={index} />}
                     />
                 ))}
@@ -152,4 +152,4 @@ const GioHoaTuoi = ({ setCartItems }) => {
     );
 };
 
-export default GioHoaTuoi;
+export default HopHoa;
