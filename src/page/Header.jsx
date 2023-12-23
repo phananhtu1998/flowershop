@@ -53,19 +53,23 @@ const WebHeader = () => {
     const navigate = useNavigate();
     const [datanew, setdatanew] = useState([]);
     const HandleSearch = (e) => {
-        console.log(e)
-        let filterData = lstData.filter(item => {
+        console.log(e);
+        let filterData = lstData.filter((item, index, self) => {
             const itemNameLowerCase = item.Name.toLowerCase();
-            // Check if the Unicode characters in the Name field include the search term
-            return itemNameLowerCase.includes(e.toLowerCase());
-        })
+            return (
+                itemNameLowerCase.includes(e.toLowerCase()) &&
+                self.findIndex((i) => i.Name.toLowerCase() === itemNameLowerCase) === index
+            );
+        });
+
         if (filterData.length > 0) {
-            setdatanew([...filterData])
+            setdatanew([...filterData]);
         }
-        if (e == "") {
-            setdatanew([])
+
+        if (e === "") {
+            setdatanew([]);
         }
-    }
+    };
     return (
         <>
             <div className={styles.divheader}>
