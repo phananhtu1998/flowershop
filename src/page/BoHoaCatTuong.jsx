@@ -10,7 +10,7 @@ let sortedData = lstdatahoa.filter(item => item.Category === "bohoacattuong");
 
 const BoHoaCatTuong = ({ setCartItems }) => {
     useEffect(() => {
-        document.title = "Bó Hoa Cát Tường";
+        document.title = "Hoa Cát Tường";
     });
     const itemsPerPage = 16;
     const [currentPage, setCurrentPage] = useState(1);
@@ -75,7 +75,7 @@ const BoHoaCatTuong = ({ setCartItems }) => {
         <div className={style.customstyles}>
             <Container>
                 <h1 className={style.h1customtext}>
-                    <span className={style.spantextcenter}>Bó hoa cát tường</span>
+                    <span className={style.spantextcenter}>Hoa cát tường</span>
                 </h1>
                 <div className={style.custombox}>
                     <div className={style.customcontainer}>

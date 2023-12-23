@@ -6,11 +6,11 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import Detail from './Detail';
 import lstdatahoa from '../Data/data';
 import style from '../style/danhmuchoa.module.css';
-let sortedData = lstdatahoa.filter(item => item.Category === "bohoacuc");
+let sortedData = lstdatahoa.filter(item => item.Category === "hoacuc");
 
 const BoHoaCuc = ({ setCartItems }) => {
     useEffect(() => {
-        document.title = "Bó Hoa Cúc";
+        document.title = "Hoa Cúc";
     });
     const itemsPerPage = 16;
     const [currentPage, setCurrentPage] = useState(1);
@@ -73,7 +73,7 @@ const BoHoaCuc = ({ setCartItems }) => {
         <div className={style.customstyles}>
             <Container>
                 <h1 className={style.h1customtext}>
-                    <span className={style.spantextcenter}>Bó hoa cúc</span>
+                    <span className={style.spantextcenter}>Hoa cúc</span>
                 </h1>
                 <div className={style.custombox}>
                     <div className={style.customcontainer}>
@@ -139,7 +139,7 @@ const BoHoaCuc = ({ setCartItems }) => {
                 {currentItems.map((index) => (
                     <Route
                         key={index}
-                        path={`/bo-hoa-cuc/${index + 1}`}
+                        path={`/hoa-cuc/${index + 1}`}
                         element={<Detail index={index} />}
                     />
                 ))}

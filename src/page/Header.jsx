@@ -202,14 +202,14 @@ const WebHeader = () => {
                                                 <NavDropdown.Item as={Link} to="/bo-hoa-bi/">
                                                     Bó hoa bi
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/bo-hoa-cam-chuong/">
-                                                    Bó hoa cẩm chướng
+                                                <NavDropdown.Item as={Link} to="/hoa-cam-chuong/">
+                                                    Hoa cẩm chướng
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/bo-hoa-cat-tuong/">
-                                                    Bó hoa cát tường
+                                                <NavDropdown.Item as={Link} to="/hoa-cat-tuong/">
+                                                    Hoa cát tường
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/bo-hoa-cuc/">
-                                                    Bó hoa cúc
+                                                <NavDropdown.Item as={Link} to="/hoa-cuc/">
+                                                    Hoa cúc
                                                 </NavDropdown.Item>
                                                 <NavDropdown.Item as={Link} to="/bo-hoa-hong/">
                                                     Bó hoa hồng
