@@ -115,7 +115,7 @@ const Detail = ({ setCartItems }) => {
                                             <div className={style.htcustomcontainer}>
                                                 <div className={style.customtexts}>
                                                     <span className={style.colorfortext}>
-                                                        <strong className={style.fontweghttext}>Hệ thống cửa hàng của Hoa Thương Yêu gồm 3139 cửa hàng trên toàn quốc. Nhận đặt và giao hoa tại tất các xã, phường, thị trấn của các quận huyện trên toàn quốc.</strong>
+                                                        <strong className={style.fontweghttext}>Hệ thống cửa hàng của Hoa đẹp toàn quốc gồm nhìu cửa hàng trên toàn quốc. Nhận đặt và giao hoa tại tất các xã, phường, thị trấn của các quận huyện trên toàn quốc.</strong>
                                                     </span>
                                                 </div>
                                                 <div className={style.customtexts}>
@@ -161,7 +161,7 @@ const Detail = ({ setCartItems }) => {
                                                     </a>
                                                 </div>
                                                 <div style={{ display: 'block', fontWeight: 'bold', marginTop: '5px' }}>
-                                                    <a className={style.redNoDecoration} href='https://www.facebook.com/messages/t/61554591125337' target="_blank">
+                                                    <a className={style.redNoDecoration} href='https://www.facebook.com/profile.php?id=61554591125337' target="_blank">
                                                         <img src="/fb.png" alt="" className={style.iconStyle} />
                                                         &nbsp; CHAT ĐỂ ĐƯỢC TƯ VẤN
                                                     </a>
