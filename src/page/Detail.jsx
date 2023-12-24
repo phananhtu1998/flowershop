@@ -84,7 +84,7 @@ const Detail = ({ setCartItems }) => {
         return <div style={{ textAlign: "center" }}>Không có sản phẩm !</div>; // You might want to add a loading state or handle not found case
     }
     return (
-        <div className={style.customelement}>
+        <div className={style.customelement} id='detail'>
             <div className={style.customcontainer}>
                 <div className={style.stylediv}>
                     <div className={style.customelement}>

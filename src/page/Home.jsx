@@ -1,6 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Styles from '../style/homepage.module.css';
 import React, { useEffect } from 'react';
 export default function Home({ setCartItems }) {
@@ -204,7 +204,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
+                                            <Link
+                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                                className={Styles.customtexthoa}
+                                                title={item.Name}
+                                            >
+                                                {item.Name}
+                                            </Link>
                                         </h2>
                                         <div className={Styles.customtexthoa1}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
@@ -254,7 +260,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
+                                            <Link
+                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                                className={Styles.customtexthoa}
+                                                title={item.Name}
+                                            >
+                                                {item.Name}
+                                            </Link>
                                         </h2>
                                         <div className={Styles.customtexthoa1}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
@@ -304,7 +316,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
+                                            <Link
+                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                                className={Styles.customtexthoa}
+                                                title={item.Name}
+                                            >
+                                                {item.Name}
+                                            </Link>
                                         </h2>
                                         <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
@@ -354,7 +372,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
+                                            <Link
+                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                                className={Styles.customtexthoa}
+                                                title={item.Name}
+                                            >
+                                                {item.Name}
+                                            </Link>
                                         </h2>
                                         <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
@@ -404,7 +428,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
+                                            <Link
+                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                                className={Styles.customtexthoa}
+                                                title={item.Name}
+                                            >
+                                                {item.Name}
+                                            </Link>
                                         </h2>
                                         <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
@@ -454,7 +484,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
+                                            <Link
+                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                                className={Styles.customtexthoa}
+                                                title={item.Name}
+                                            >
+                                                {item.Name}
+                                            </Link>
                                         </h2>
                                         <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
@@ -504,7 +540,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
+                                            <Link
+                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                                className={Styles.customtexthoa}
+                                                title={item.Name}
+                                            >
+                                                {item.Name}
+                                            </Link>
                                         </h2>
                                         <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
@@ -554,7 +596,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
+                                            <Link
+                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                                className={Styles.customtexthoa}
+                                                title={item.Name}
+                                            >
+                                                {item.Name}
+                                            </Link>
                                         </h2>
                                         <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
@@ -604,7 +652,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
+                                            <Link
+                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                                className={Styles.customtexthoa}
+                                                title={item.Name}
+                                            >
+                                                {item.Name}
+                                            </Link>
                                         </h2>
                                         <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
@@ -654,7 +708,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <a className={Styles.customtexthoa} title={item.Name}>{item.Name}</a>
+                                            <Link
+                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                                className={Styles.customtexthoa}
+                                                title={item.Name}
+                                            >
+                                                {item.Name}
+                                            </Link>
                                         </h2>
                                         <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>

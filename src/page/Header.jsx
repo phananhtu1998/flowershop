@@ -211,11 +211,11 @@ const WebHeader = () => {
                                                 <NavDropdown.Item as={Link} to="/hoa-cuc/">
                                                     Hoa cúc
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/bo-hoa-hong/">
-                                                    Bó hoa hồng
+                                                <NavDropdown.Item as={Link} to="/hoa-hong/">
+                                                    Hoa hồng
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/bo-hoa-huong-duong/">
-                                                    Bó hoa hướng dương
+                                                <NavDropdown.Item as={Link} to="/hoa-huong-duong/">
+                                                    Hoa hướng dương
                                                 </NavDropdown.Item>
                                                 <NavDropdown.Item as={Link} to="/hoa-lavender/">
                                                     Hoa Lavender
