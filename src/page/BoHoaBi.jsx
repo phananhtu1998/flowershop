@@ -7,11 +7,11 @@ import Detail from './Detail';
 import lstDataHoa from '../Data/data';
 import style from '../style/danhmuchoa.module.css';
 
-let sortedData = lstDataHoa.filter(item => item.Category === "bohoabi");
+let sortedData = lstDataHoa.filter(item => item.Category === "hoabi");
 
 const BoHoaBi = ({ setCartItems }) => {
     useEffect(() => {
-        document.title = "Bó Hoa Bi";
+        document.title = "Hoa Bi";
     });
     const itemsPerPage = 16;
     const [currentPage, setCurrentPage] = useState(1);
@@ -77,7 +77,7 @@ const BoHoaBi = ({ setCartItems }) => {
         <div className={style.customstyles}>
             <Container>
                 <h1 className={style.h1customtext}>
-                    <span className={style.spantextcenter}>Bó hoa bi</span>
+                    <span className={style.spantextcenter}>Hoa bi</span>
                 </h1>
                 <div className={style.custombox}>
                     <div className={style.customcontainer}>
@@ -143,7 +143,7 @@ const BoHoaBi = ({ setCartItems }) => {
                 {currentItems.map((index) => (
                     <Route
                         key={index}
-                        path={`/bo-hoa-bi/${index + 1}`}
+                        path={`/hoa-bi/${index + 1}`}
                         element={<Detail index={index} />}
                     />
                 ))}

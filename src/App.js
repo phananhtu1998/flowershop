@@ -64,7 +64,7 @@ function AppFlower() {
           <Route path="/chi-tiet/:Name" element={<Detail onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/hoa-sap/" element={<HoaSap onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/hoa-chuc-mung/" element={<HoaChucMung onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/bo-hoa-bi/" element={<BoHoaBi onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/hoa-bi/" element={<BoHoaBi onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/hoa-chia-buon/" element={<HoaChiaBuon onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/trai-cay-kho/" element={<TraiCayKho onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/trai-cay-van-phong/" element={<TraiCayVanPhong onAddToCart={setCartItems} setCartItems={setCartItems} />} />

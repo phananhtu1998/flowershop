@@ -199,8 +199,8 @@ const WebHeader = () => {
                                             </NavDropdown>
                                             <Nav.Link as={Link} to="/lan-ho-diep/">LAN HỒ ĐIỆP</Nav.Link>
                                             <NavDropdown title="LOẠI HOA" id="basic-nav-dropdown">
-                                                <NavDropdown.Item as={Link} to="/bo-hoa-bi/">
-                                                    Bó hoa bi
+                                                <NavDropdown.Item as={Link} to="/hoa-bi/">
+                                                    Hoa bi
                                                 </NavDropdown.Item>
                                                 <NavDropdown.Item as={Link} to="/hoa-cam-chuong/">
                                                     Hoa cẩm chướng
