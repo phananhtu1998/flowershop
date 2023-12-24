@@ -15,21 +15,22 @@ const GioQuaTet = ({ setCartItems }) => {
     const [sortBy, setSortBy] = useState("1"); // Default sorting option
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const initialData = [...sortedData];
     const sortData = () => {
+        let clonedData = [...sortedData];
         switch (sortBy) {
             case "1":
-                sortedData.sort(() => Math.random() - 0.5);
-                break;
+                return clonedData; // Return the original order
             case "2":
-                sortedData.sort((a, b) => parseFloat(a.Price) - parseFloat(b.Price));
+                clonedData.sort((a, b) => parseFloat(a.Price) - parseFloat(b.Price));
                 break;
             case "3":
-                sortedData.sort((a, b) => parseFloat(b.Price) - parseFloat(a.Price));
+                clonedData.sort((a, b) => parseFloat(b.Price) - parseFloat(a.Price));
                 break;
             default:
                 break;
         }
-        return sortedData;
+        return clonedData;
     };
     const currentItems = sortData().slice(indexOfFirstItem, indexOfLastItem);
     const navigate = useNavigate();

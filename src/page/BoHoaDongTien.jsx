@@ -6,32 +6,33 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import Detail from './Detail';
 import lstdatahoa from '../Data/data';
 import style from '../style/danhmuchoa.module.css';
-let sortedData = lstdatahoa.filter(item => item.Category === "bohoadongtien");
+let sortedData = lstdatahoa.filter(item => item.Category === "hoadongtien");
 
 const BoHoaDongTien = ({ setCartItems }) => {
     useEffect(() => {
-        document.title = "Bó Hoa Đồng Tiền";
+        document.title = "Hoa Đồng Tiền";
     });
     const itemsPerPage = 16;
     const [currentPage, setCurrentPage] = useState(1);
     const [sortBy, setSortBy] = useState("1"); // Default sorting option
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const initialData = [...sortedData];
     const sortData = () => {
+        let clonedData = [...sortedData];
         switch (sortBy) {
             case "1":
-                sortedData.sort(() => Math.random() - 0.5);
-                break;
+                return clonedData; // Return the original order
             case "2":
-                sortedData.sort((a, b) => parseFloat(a.Price) - parseFloat(b.Price));
+                clonedData.sort((a, b) => parseFloat(a.Price) - parseFloat(b.Price));
                 break;
             case "3":
-                sortedData.sort((a, b) => parseFloat(b.Price) - parseFloat(a.Price));
+                clonedData.sort((a, b) => parseFloat(b.Price) - parseFloat(a.Price));
                 break;
             default:
                 break;
         }
-        return sortedData;
+        return clonedData;
     };
     const currentItems = sortData().slice(indexOfFirstItem, indexOfLastItem);
     const navigate = useNavigate();
@@ -72,7 +73,7 @@ const BoHoaDongTien = ({ setCartItems }) => {
         <div className={style.customstyles}>
             <Container>
                 <h1 className={style.h1customtext}>
-                    <span className={style.spantextcenter}>Bó hoa đồng tiền</span>
+                    <span className={style.spantextcenter}>Hoa đồng tiền</span>
                 </h1>
                 <div className={style.custombox}>
                     <div className={style.customcontainer}>
@@ -138,7 +139,7 @@ const BoHoaDongTien = ({ setCartItems }) => {
                 {currentItems.map((index) => (
                     <Route
                         key={index}
-                        path={`/bo-hoa-dong-tien/${index + 1}`}
+                        path={`/hoa-dong-tien/${index + 1}`}
                         element={<Detail index={index} />}
                     />
                 ))}
