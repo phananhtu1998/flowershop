@@ -83,9 +83,9 @@ function AppFlower() {
           <Route path="/hoa-hong/" element={<BoHoaHong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/hoa-huong-duong/" element={<BoHoaHuongDuong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/hoa-lavender/" element={<HoaLanvender onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/bo-hoa-lan" element={<BoHoaLan onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/hoa-lan" element={<BoHoaLan onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/bo-hoa-lan-ho-diep/" element={<BoHoaLanHoDiep onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/bo-hoa-ly/" element={<BoHoaLy onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/hoa-ly/" element={<BoHoaLy onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/BoHoaDongTien/" element={<BoHoaDongTien onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/hoa-tu-lip/" element={<HoaTulip onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/cac-loai-hoa/" element={<CacLoaiHoa onAddToCart={setCartItems} setCartItems={setCartItems} />} />
