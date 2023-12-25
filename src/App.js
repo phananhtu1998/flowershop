@@ -40,6 +40,7 @@ import CayXanhVanPhong from './page/CayXanhVanPhong';
 import GioHoaTuoi from './page/GioHoaTuoi';
 import GioQuaTet from './page/GioQuaTet';
 import HopHoa from './page/HopHoa';
+import GauBong from './page/GauBong';
 function AppFlower() {
   // Load cartItems from localStorage on component mount
   const [cartItems, setCartItems] = useState(() => {
@@ -88,11 +89,11 @@ function AppFlower() {
           <Route path="/hoa-ly/" element={<BoHoaLy onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/hoa-dong-tien/" element={<BoHoaDongTien onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/hoa-tu-lip/" element={<HoaTulip onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/cac-loai-hoa/" element={<CacLoaiHoa onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/cay-xanh-van-phong/" element={<CayXanhVanPhong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/gio-hoa-tuoi/" element={<GioHoaTuoi onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/gio-qua-tet/" element={<GioQuaTet onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/hop-hoa/" element={<HopHoa onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/gau-bong/" element={<GauBong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
         </Routes>
         <WebFooter />
       </div>

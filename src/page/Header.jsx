@@ -180,23 +180,6 @@ const WebHeader = () => {
                                             <Nav.Link as={Link} to="/hoa-sap/">HOA SÁP</Nav.Link>
                                             <Nav.Link as={Link} to="/hoa-chuc-mung/">HOA CHÚC MỪNG</Nav.Link>
                                             <Nav.Link as={Link} to="/hoa-chia-buon/">HOA CHIA BUỒN</Nav.Link>
-                                            <NavDropdown title="TRÁI CÂY" id="basic-nav-dropdown">
-                                                <NavDropdown.Item as={Link} to="/trai-cay-kho/">
-                                                    Trái cây khô
-                                                </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/trai-cay-van-phong/">
-                                                    Trái cây văn phòng
-                                                </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/gio-qua-trai-cay/">
-                                                    Giỏ quà trái cây
-                                                </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/trai-cay-ban-le/">
-                                                    Trái cây bán lẻ
-                                                </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/trai-cay-ban-si/">
-                                                    trái cây bán sỉ
-                                                </NavDropdown.Item>
-                                            </NavDropdown>
                                             <Nav.Link as={Link} to="/lan-ho-diep/">LAN HỒ ĐIỆP</Nav.Link>
                                             <NavDropdown title="LOẠI HOA" id="basic-nav-dropdown">
                                                 <NavDropdown.Item as={Link} to="/hoa-bi/">
@@ -223,9 +206,6 @@ const WebHeader = () => {
                                                 <NavDropdown.Item as={Link} to="/hoa-lan/">
                                                     Hoa lan
                                                 </NavDropdown.Item>
-                                                {/* <NavDropdown.Item as={Link} to="/bo-hoa-lan-ho-diep/">
-                                                    Bó hoa lan hồ điệp
-                                                </NavDropdown.Item> */}
                                                 <NavDropdown.Item as={Link} to="/hoa-ly/">
                                                     Hoa ly
                                                 </NavDropdown.Item>
@@ -234,9 +214,6 @@ const WebHeader = () => {
                                                 </NavDropdown.Item>
                                                 <NavDropdown.Item as={Link} to="/hoa-tu-lip/">
                                                     Hoa tulip
-                                                </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/cac-loai-hoa/">
-                                                    Các loài hoa
                                                 </NavDropdown.Item>
                                             </NavDropdown>
                                             <NavDropdown title="CÂY VĂN PHÒNG" id="basic-nav-dropdown">
@@ -253,6 +230,14 @@ const WebHeader = () => {
                                             <Nav.Link as={Link} to="/hoa-cuoi/">HOA CƯỚI</Nav.Link>
                                             <Nav.Link as={Link} to="/hoa-de-ban/">HOA ĐỂ BÀN</Nav.Link>
                                             <Nav.Link as={Link} to="/gio-qua-tet/">GIỎ QUÀ TẾT</Nav.Link>
+                                            <NavDropdown title="KHÁC" id="basic-nav-dropdown">
+                                                <NavDropdown.Item as={Link} to="/gau-bong/">
+                                                    Gấu bông
+                                                </NavDropdown.Item>
+                                                <NavDropdown.Item as={Link} to="/gio-qua-trai-cay/">
+                                                    Giỏ quà trái cây
+                                                </NavDropdown.Item>
+                                            </NavDropdown>
                                         </Nav>
                                     </Navbar.Collapse>
                                 </Container>
