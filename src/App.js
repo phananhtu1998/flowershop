@@ -21,7 +21,7 @@ import TraiCayBanSi from './page/TraiCayBanSi';
 import LanHoDiep from './page/LanHoDiep';
 import CayDeBan from './page/CayDeBan';
 import CayChoPhongKhach from './page/CayChoPhongKhach';
-import CayKhaiTruong from './page/CayKhaiTruong';
+import HoaKhaiTruong from './page/HoaKhaiTruong';
 import HoaCuoi from './page/HoaCuoi';
 import HoaDeBan from './page/HoaDeBan';
 import BoHoaCamChuong from './page/BoHoaCamChuong';
@@ -75,7 +75,7 @@ function AppFlower() {
           <Route path="/lan-ho-diep/" element={<LanHoDiep onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/cay-de-ban/" element={<CayDeBan onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/cay-cho-phong-khach/" element={<CayChoPhongKhach onAddToCart={setCartItems} setCartItems={setCartItems} />} />
-          <Route path="/cay-khai-truong/" element={<CayKhaiTruong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
+          <Route path="/hoa-khai-truong/" element={<HoaKhaiTruong onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/hoa-cuoi/" element={<HoaCuoi onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/hoa-de-ban/" element={<HoaDeBan onAddToCart={setCartItems} setCartItems={setCartItems} />} />
           <Route path="/hoa-cam-chuong/" element={<BoHoaCamChuong onAddToCart={setCartItems} setCartItems={setCartItems} />} />

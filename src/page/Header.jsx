@@ -223,7 +223,7 @@ const WebHeader = () => {
                                                 <NavDropdown.Item as={Link} to="/cay-cho-phong-khach/">
                                                     Cây cho phòng khách
                                                 </NavDropdown.Item>
-                                                <NavDropdown.Item as={Link} to="/cay-khai-truong/">
+                                                <NavDropdown.Item as={Link} to="/hoa-khai-truong/">
                                                     Cây khai trương
                                                 </NavDropdown.Item>
                                             </NavDropdown>
