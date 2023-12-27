@@ -585,7 +585,7 @@ const flowerData =
         { Name: 'Ước Nguyện', Price: '1500000', Category: 'hoachiabuon', PriceOld: '', Images: '/HoaChiaBuon/12501_uoc-nguyen.jpg' },
         { Name: 'Kệ Chia Buồn 01', Price: '600000', Category: 'hoachiabuon', PriceOld: '', Images: '/HoaChiaBuon/13143_ke-chia-buon.jpg' },
         { Name: 'Thênh Thang', Price: '1200000', Category: 'hoachiabuon', PriceOld: '', Images: '/HoaChiaBuon/12488_thenh-thang.jpg' },
-        { Name: 'Rest in peace', Price: '1350000', Category: 'hoachiabuon', PriceOld: '', Images: '/HoaChiaBuon/8388_rest-in-peace.jpg' },
+        { Name: 'Rest in peace', Price: '1350000', Category: 'hoachiabuon', PriceOld: '', Images: '/HoaChiaBuon/8388_rest-in-peace.png' },
         { Name: 'Condolence 2', Price: '1500000', Category: 'hoachiabuon', PriceOld: '', Images: '/HoaChiaBuon/13322_condolence.jpg' },
         { Name: 'Condolence 4', Price: '1400000', Category: 'hoachiabuon', PriceOld: '', Images: '/HoaChiaBuon/13316_condolence.jpg' },
         { Name: 'Kí ức xưa', Price: '1000000', Category: 'hoachiabuon', PriceOld: '1100000', Images: '/HoaChiaBuon/8390_ki-uc-xua.png' },
@@ -1759,5 +1759,26 @@ const flowerData =
         { Name: 'Chiếc lá', Price: '280000', Category: 'caydeban', PriceOld: '295000', Images: '/CayDeBan/8253_chiec-la.jpg' },
         { Name: 'Thử thách', Price: '250000', Category: 'caydeban', PriceOld: '275000', Images: '/CayDeBan/8248_thu-thach.jpg' },
         { Name: 'Will be okay', Price: '240000', Category: 'caydeban', PriceOld: '294000', Images: '/CayDeBan/8246_will-be-okay.jpg' },
+        // Xong
+        // Hoa cưới
+        { Name: 'Bên nhau mãi mãi', Category: "hoacuoi", Price: '1100000', PriceOld: "", Images: '/HoaCuoi/ben-nhau-mai-mai.jpg' },
+        { Name: 'Bên nhau trọn đời', Category: "hoacuoi", Price: '880000', PriceOld: "", Images: '/HoaCuoi/ben-nhau-tron-doi.jpg' },
+        { Name: 'Cherish day', Category: "hoacuoi", Price: '650000', PriceOld: "", Images: '/HoaCuoi/cherish-day.png' },
+        { Name: 'Chung bước', Category: "hoacuoi", Price: '700000', PriceOld: "", Images: '/HoaCuoi/chung-buoc.png' },
+        { Name: 'Chuyện trăm năm', Category: "hoacuoi", Price: '800000', PriceOld: "", Images: '/HoaCuoi/chuyen-tram-nam.png' },
+        { Name: 'Đôi cánh tình yêu', Category: "hoacuoi", Price: '3362000', PriceOld: "", Images: '/HoaCuoi/doi-canh-tinh-yeu.jpg' },
+        { Name: 'Giây phút êm đềm', Category: "hoacuoi", Price: '900000', PriceOld: "", Images: '/HoaCuoi/giay-phut-em-dem.png' },
+        { Name: 'Happy ending', Category: "hoacuoi", Price: '1320000', PriceOld: "", Images: '/HoaCuoi/happy-ending.jpg' },
+        { Name: 'Một nhà', Category: "hoacuoi", Price: '850000', PriceOld: "", Images: '/HoaCuoi/mot-nha.png' },
+        { Name: 'Hoa rum tinh khôi', Category: "hoacuoi", Price: '1100000', PriceOld: "", Images: '/HoaCuoi/hoa-rum-tinh-khoi.jpg' },
+        { Name: 'My baby', Category: "hoacuoi", Price: '616000', PriceOld: "", Images: '/HoaCuoi/my-baby.jpg' },
+        { Name: 'Ngày chung đôi', Category: "hoacuoi", Price: '750000', PriceOld: "", Images: '/HoaCuoi/ngay-chung-doi.png' },
+        // 
+        { Name: 'Giây phút êm đềm', Category: "hoacuoi", Price: '900000', PriceOld: "", Images: '/HoaCuoi/giay-phut-em-dem.png' },
+        { Name: 'Happy ending', Category: "hoacuoi", Price: '1320000', PriceOld: "", Images: '/HoaCuoi/happy-ending.jpg' },
+        { Name: 'Một nhà', Category: "hoacuoi", Price: '850000', PriceOld: "", Images: '/HoaCuoi/mot-nha.png' },
+        { Name: 'Hoa rum tinh khôi', Category: "hoacuoi", Price: '1100000', PriceOld: "", Images: '/HoaCuoi/hoa-rum-tinh-khoi.jpg' },
+        { Name: 'My baby', Category: "hoacuoi", Price: '616000', PriceOld: "", Images: '/HoaCuoi/my-baby.jpg' },
+        { Name: 'Ngày chung đôi', Category: "hoacuoi", Price: '750000', PriceOld: "", Images: '/HoaCuoi/ngay-chung-doi.png' },
     ]
 export default flowerData

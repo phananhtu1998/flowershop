@@ -120,18 +120,18 @@ export default function Home({ setCartItems }) {
         { Name: 'Ngày chung đôi', Price: '750000', Images: '/HoaCuoi/ngay-chung-doi.png' },
     ]
     const CayXanhVP = [
-        { Name: 'Chậu cọ Nhật 1m5', Price: '980000', Images: '/CayXanhVp/14507_chau-co-nhat-m.jpg' },
-        { Name: 'Cây Cọ Nhật', Price: '690000', Images: '/CayXanhVp/14494_cay-co-nhat.jpg' },
-        { Name: 'Bạch mã chậu gốm', Price: '660000', Images: '/CayXanhVp/12701_bach-ma-chau-gom.jpg' },
-        { Name: 'Kim tiền MSTO', Price: '950000', Images: '/CayXanhVp/9464_kim-tien-msto.jpg' },
-        { Name: 'Đế vương xanh MSTO', Price: '1160000', Images: '/CayXanhVp/8784_de-vuong-xanh-msto.jpg' },
-        { Name: 'Chậu cây văn phòng mix 1', Price: '1350000', Images: '/CayXanhVp/9544_chau-cay-van-phong-mix.jpg' },
-        { Name: 'Vạn lộc mix ngọc ngân 1', Price: '650000', Images: '/CayXanhVp/7992_van-loc-mix-ngoc-ngan.jpg' },
-        { Name: 'Dương xỉ răng cưa Size S', Price: '770000', Images: '/CayXanhVp/13566_duong-xi-rang-cua-size-s.jpg' },
-        { Name: 'Kim ngân đại chậu gân', Price: '1170000', Images: '/CayXanhVp/10192_kim-ngan-dai-chau-gan.jpg' },
-        { Name: 'Chậu cây văn phòng mix 2', Price: '1300000', Images: '/CayXanhVp/11085_chau-cay-van-phong-mix.jpg' },
-        { Name: 'Chậu cây văn phòng mix 3', Price: '950000', Images: '/CayXanhVp/9948_chau-cay-van-phong-mix.jpg' },
-        { Name: 'Cây Lan Tuyết', Price: '500000', Images: '/CayXanhVp/13432_cay-lan-tuyet.jpg' },
+        { Name: 'Chậu cọ Nhật 1m5', Price: '980000', Images: '/CayChoPhongKhach/14507_chau-co-nhat-m.jpg' },
+        { Name: 'Cây Cọ Nhật', Price: '690000', Images: '/CayChoPhongKhach/14494_cay-co-nhat.jpg' },
+        { Name: 'Bạch mã chậu gốm', Price: '660000', Images: '/CayChoPhongKhach/12701_bach-ma-chau-gom.jpg' },
+        { Name: 'Kim tiền MSTO', Price: '950000', Images: '/CayChoPhongKhach/9464_kim-tien-msto.jpg' },
+        { Name: 'Đế vương xanh MSTO', Price: '1160000', Images: '/CayChoPhongKhach/8784_de-vuong-xanh-msto.jpg' },
+        { Name: 'Chậu cây văn phòng mix 1', Price: '1350000', Images: '/CayChoPhongKhach/9544_chau-cay-van-phong-mix.jpg' },
+        { Name: 'Vạn lộc mix ngọc ngân 1', Price: '650000', Images: '/CayChoPhongKhach/7992_van-loc-mix-ngoc-ngan.jpg' },
+        { Name: 'Dương xỉ răng cưa Size S', Price: '770000', Images: '/CayChoPhongKhach/13566_duong-xi-rang-cua-size-s.jpg' },
+        { Name: 'Kim ngân đại chậu gân', Price: '1170000', Images: '/CayChoPhongKhach/10192_kim-ngan-dai-chau-gan.jpg' },
+        { Name: 'Chậu cây văn phòng mix 2', Price: '1300000', Images: '/CayChoPhongKhach/11085_chau-cay-van-phong-mix.jpg' },
+        { Name: 'Chậu cây văn phòng mix 3', Price: '950000', Images: '/CayChoPhongKhach/9948_chau-cay-van-phong-mix.jpg' },
+        { Name: 'Cây Lan Tuyết', Price: '500000', Images: '/CayChoPhongKhach/13432_cay-lan-tuyet.jpg' },
     ]
     const HoaDeBan = [
         { Name: 'Hoa để bàn 36', Price: '550000', Images: '/HoaDeBan/hoa-de-ban-36_300x300.png' },
@@ -674,7 +674,7 @@ export default function Home({ setCartItems }) {
                             ))}
                         </ul>
                         <div className={Styles.customcontainerflower}>
-                            <a href='/cay-xanh-van-phong/' className={Styles.customtextdebutton}>
+                            <a href='/cay-cho-phong-khach/' className={Styles.customtextdebutton}>
                                 Xem thêm nhiều mẫu hơn
                             </a>
                         </div>

@@ -8,7 +8,7 @@ const WebFooter = () => {
     const formattedDate = format(currentDate, 'MM-yyyy');
     return (
         <div>
-            <div className={style.customelement}>
+            {/* <div className={style.customelement}>
                 <div className={style.customcontainer}>
                     <div className={style.divpadding}>
                         <div className={style.customelementdiv}>
@@ -58,7 +58,7 @@ const WebFooter = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className={style.divcustomfootercontainer}>
                 <div className={style.customwrapper}>
                     <div style={{
