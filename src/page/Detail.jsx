@@ -10,9 +10,6 @@ const Detail = ({ setCartItems }) => {
     const [item, setItem] = useState(null);
     const [LstSpLienQuan, setLstSpLienQuan] = useState([]);
     const [quantity, setQuantity] = useState(1);
-    window.onbeforeunload = function () {
-        window.scrollTo(0, 0);
-    }
     // Hàm để xử lý sự kiện tăng số lượng
     const handleIncrease = () => {
         setQuantity(prevQuantity => prevQuantity + 1);

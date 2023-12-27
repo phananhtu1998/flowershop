@@ -148,6 +148,10 @@ export default function Home({ setCartItems }) {
         { Name: 'Hoa để bàn 11', Price: '750000', Images: '/HoaDeBan/hoa-de-ban-11_300x300.png' },
     ]
     const navigate = useNavigate();
+    const handleClick = (item) => {
+        navigate(`/chi-tiet/${item.Name}`, { state: { item } });
+        window.scrollTo(0, 0); // Cuộn lên đầu trang
+    };
     const handleAddToCartAndNavigate = (item) => {
         // Tìm kiếm xem mục đã tồn tại trong localStorage hay chưa
         const storedCartItems = localStorage.getItem('cartItems');
@@ -196,7 +200,12 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlink}>
-                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img
+                                                    onClick={() => handleClick(item)}
+                                                    className={Styles.customimage} // Thay thế bằng className của bạn
+                                                    src={item.Images}
+                                                    alt={item.Name}
+                                                />
                                             </a>
                                             <a href="/" className={Styles.customlink}>
                                                 <i></i>
@@ -204,13 +213,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <Link
-                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                            <div
                                                 className={Styles.customtexthoa}
+                                                onClick={() => handleClick(item)}
                                                 title={item.Name}
                                             >
                                                 {item.Name}
-                                            </Link>
+                                            </div>
                                         </h2>
                                         <div className={Styles.customtexthoa1}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
@@ -252,7 +261,12 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlink}>
-                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img
+                                                    onClick={() => handleClick(item)}
+                                                    className={Styles.customimage} // Thay thế bằng className của bạn
+                                                    src={item.Images}
+                                                    alt={item.Name}
+                                                />
                                             </a>
                                             <a href="/" className={Styles.customlink}>
                                                 <i></i>
@@ -260,13 +274,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <Link
-                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                            <div
                                                 className={Styles.customtexthoa}
+                                                onClick={() => handleClick(item)}
                                                 title={item.Name}
                                             >
                                                 {item.Name}
-                                            </Link>
+                                            </div>
                                         </h2>
                                         <div className={Styles.customtexthoa1}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
@@ -308,7 +322,12 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlink}>
-                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img
+                                                    onClick={() => handleClick(item)}
+                                                    className={Styles.customimage} // Thay thế bằng className của bạn
+                                                    src={item.Images}
+                                                    alt={item.Name}
+                                                />
                                             </a>
                                             <a href="/" className={Styles.customlink}>
                                                 <i></i>
@@ -316,13 +335,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <Link
-                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                            <div
                                                 className={Styles.customtexthoa}
+                                                onClick={() => handleClick(item)}
                                                 title={item.Name}
                                             >
                                                 {item.Name}
-                                            </Link>
+                                            </div>
                                         </h2>
                                         <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
@@ -364,7 +383,12 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlink}>
-                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img
+                                                    onClick={() => handleClick(item)}
+                                                    className={Styles.customimage} // Thay thế bằng className của bạn
+                                                    src={item.Images}
+                                                    alt={item.Name}
+                                                />
                                             </a>
                                             <a href="/" className={Styles.customlink}>
                                                 <i></i>
@@ -372,13 +396,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <Link
-                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                            <div
                                                 className={Styles.customtexthoa}
+                                                onClick={() => handleClick(item)}
                                                 title={item.Name}
                                             >
                                                 {item.Name}
-                                            </Link>
+                                            </div>
                                         </h2>
                                         <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
@@ -420,7 +444,12 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlinkflowers}>
-                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img
+                                                    onClick={() => handleClick(item)}
+                                                    className={Styles.customimage} // Thay thế bằng className của bạn
+                                                    src={item.Images}
+                                                    alt={item.Name}
+                                                />
                                             </a>
                                             <a href="/" className={Styles.customlinkflowers}>
                                                 <i></i>
@@ -428,13 +457,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <Link
-                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                            <div
                                                 className={Styles.customtexthoa}
+                                                onClick={() => handleClick(item)}
                                                 title={item.Name}
                                             >
                                                 {item.Name}
-                                            </Link>
+                                            </div>
                                         </h2>
                                         <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
@@ -476,7 +505,12 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlinkflowers}>
-                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img
+                                                    onClick={() => handleClick(item)}
+                                                    className={Styles.customimage} // Thay thế bằng className của bạn
+                                                    src={item.Images}
+                                                    alt={item.Name}
+                                                />
                                             </a>
                                             <a href="/" className={Styles.customlinkflowers}>
                                                 <i></i>
@@ -484,13 +518,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <Link
-                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                            <div
                                                 className={Styles.customtexthoa}
+                                                onClick={() => handleClick(item)}
                                                 title={item.Name}
                                             >
                                                 {item.Name}
-                                            </Link>
+                                            </div>
                                         </h2>
                                         <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
@@ -532,7 +566,12 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlinkflowers}>
-                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img
+                                                    onClick={() => handleClick(item)}
+                                                    className={Styles.customimage} // Thay thế bằng className của bạn
+                                                    src={item.Images}
+                                                    alt={item.Name}
+                                                />
                                             </a>
                                             <a href="/" className={Styles.customlinkflowers}>
                                                 <i></i>
@@ -540,13 +579,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <Link
-                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                            <div
                                                 className={Styles.customtexthoa}
+                                                onClick={() => handleClick(item)}
                                                 title={item.Name}
                                             >
                                                 {item.Name}
-                                            </Link>
+                                            </div>
                                         </h2>
                                         <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
@@ -588,7 +627,12 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlinkflowers}>
-                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img
+                                                    onClick={() => handleClick(item)}
+                                                    className={Styles.customimage} // Thay thế bằng className của bạn
+                                                    src={item.Images}
+                                                    alt={item.Name}
+                                                />
                                             </a>
                                             <a href="/" className={Styles.customlinkflowers}>
                                                 <i></i>
@@ -596,13 +640,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <Link
-                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                            <div
                                                 className={Styles.customtexthoa}
+                                                onClick={() => handleClick(item)}
                                                 title={item.Name}
                                             >
                                                 {item.Name}
-                                            </Link>
+                                            </div>
                                         </h2>
                                         <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
@@ -644,7 +688,12 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlinkflowers}>
-                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img
+                                                    onClick={() => handleClick(item)}
+                                                    className={Styles.customimage} // Thay thế bằng className của bạn
+                                                    src={item.Images}
+                                                    alt={item.Name}
+                                                />
                                             </a>
                                             <a href="/" className={Styles.customlinkflowers}>
                                                 <i></i>
@@ -652,13 +701,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <Link
-                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                            <div
                                                 className={Styles.customtexthoa}
+                                                onClick={() => handleClick(item)}
                                                 title={item.Name}
                                             >
                                                 {item.Name}
-                                            </Link>
+                                            </div>
                                         </h2>
                                         <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
@@ -700,7 +749,12 @@ export default function Home({ setCartItems }) {
                                         </div>
                                         <div className={Styles.customhoaelement}>
                                             <a className={Styles.customlinkflowers}>
-                                                <img onClick={() => navigate(`/chi-tiet/${item.Name}`, { state: { item } })} className={Styles.customimage} src={item.Images} alt={item.Name}></img>
+                                                <img
+                                                    onClick={() => handleClick(item)}
+                                                    className={Styles.customimage} // Thay thế bằng className của bạn
+                                                    src={item.Images}
+                                                    alt={item.Name}
+                                                />
                                             </a>
                                             <a href="/" className={Styles.customlinkflowers}>
                                                 <i></i>
@@ -708,13 +762,13 @@ export default function Home({ setCartItems }) {
                                             </a>
                                         </div>
                                         <h2 className={Styles.divmargin}>
-                                            <Link
-                                                to={`/chi-tiet/${item.Name}`} // Sử dụng thuộc tính "to" thay vì "href"
+                                            <div
                                                 className={Styles.customtexthoa}
+                                                onClick={() => handleClick(item)}
                                                 title={item.Name}
                                             >
                                                 {item.Name}
-                                            </Link>
+                                            </div>
                                         </h2>
                                         <div className={Styles.customtextflower}>
                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
