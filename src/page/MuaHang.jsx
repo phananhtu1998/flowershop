@@ -161,10 +161,10 @@ const Orders = ({ cartItems, setCartItems }) => {
                                             </div>
                                             <div className={style.customdivInlineBlock}>
                                                 <a className={style.customTextStyle}>{number}. {item.Name} </a>
-                                                <p className={style.customBlock}>
+                                                {/* <p className={style.customBlock}>
                                                     <span className={style.spanstyle}>Ghi chú</span>
                                                     <input className={style.customWidth} type="text" />
-                                                </p>
+                                                </p> */}
                                                 <div className={style.displayblock}></div>
                                             </div>
                                             <div className={style.divcustomInlineBlock}>
