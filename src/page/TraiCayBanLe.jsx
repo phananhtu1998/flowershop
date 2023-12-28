@@ -11,6 +11,11 @@ let sortedData = lstdatahoa.filter(item => item.Category === "traicaybanle");
 const TraiCayBanLe = ({ setCartItems }) => {
     useEffect(() => {
         document.title = "Trái Cây Bán Lẻ";
+        window.scrollTo({
+            top: 760,
+            left: 0,
+            behavior: 'smooth' // để có hiệu ứng cuộn mượt mà (tuỳ chọn)
+        });
     });
     const itemsPerPage = 16;
     const [currentPage, setCurrentPage] = useState(1);

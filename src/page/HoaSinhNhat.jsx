@@ -11,6 +11,11 @@ let sortedData = lstDataHoa.filter(item => item.Category === "bohoa" || item.Cat
 const HoaSinhNhat = ({ setCartItems }) => {
     useEffect(() => {
         document.title = "Hoa Sinh Nhật";
+        window.scrollTo({
+            top: 760,
+            left: 0,
+            behavior: 'smooth' // để có hiệu ứng cuộn mượt mà (tuỳ chọn)
+        });
     });
     const itemsPerPage = 16;
     const [currentPage, setCurrentPage] = useState(1);

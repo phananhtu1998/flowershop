@@ -11,6 +11,11 @@ let sortedData = lstGioHoa.filter(item => item.Category === "hophoa");
 const HopHoa = ({ setCartItems }) => {
     useEffect(() => {
         document.title = "Hộp Hoa";
+        window.scrollTo({
+            top: 760,
+            left: 0,
+            behavior: 'smooth' // để có hiệu ứng cuộn mượt mà (tuỳ chọn)
+        });
     });
     const itemsPerPage = 16;
     const [currentPage, setCurrentPage] = useState(1);

@@ -11,6 +11,11 @@ let sortedData = lstdatahoa.filter(item => item.Category === "bohoalanhodiep");
 const BoHoaLanHoDiep = ({ setCartItems }) => {
     useEffect(() => {
         document.title = "Bó Hoa Lan Hồ Điệp";
+        window.scrollTo({
+            top: 760,
+            left: 0,
+            behavior: 'smooth' // để có hiệu ứng cuộn mượt mà (tuỳ chọn)
+        });
     });
     const itemsPerPage = 16;
     const [currentPage, setCurrentPage] = useState(1);

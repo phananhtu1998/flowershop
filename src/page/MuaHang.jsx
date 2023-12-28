@@ -10,6 +10,11 @@ import 'react-toastify/dist/ReactToastify.css';
 const Orders = ({ cartItems, setCartItems }) => {
     useEffect(() => {
         document.title = "Giỏ Hàng";
+        window.scrollTo({
+            top: 800,
+            left: 0,
+            behavior: 'smooth' // để có hiệu ứng cuộn mượt mà (tuỳ chọn)
+        });
     });
     // lấy giá trị để gửi lên api
     const [Name, setCustomerName] = useState('');
