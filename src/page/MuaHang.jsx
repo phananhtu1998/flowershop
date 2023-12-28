@@ -249,7 +249,7 @@ const Orders = ({ cartItems, setCartItems }) => {
                     <p className={style.customBlock}>
                         <label style={{ verticalAlign: 'top', width: '25%', paddingRight: '10px', display: 'inline-block', textAlign: 'right' }}>
                         </label>
-                        <button className={style.customButtonStyle}> « Quay lại chọn hàng </button>
+                        <button onClick={() => window.location.href = '/'} className={style.customButtonStyle}> « Quay lại chọn hàng </button>
                         <button className={style.customButtonnextStyle} onClick={handleContinue}>
                             Mua ngay
                         </button>

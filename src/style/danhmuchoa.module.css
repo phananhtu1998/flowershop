@@ -184,11 +184,6 @@
         /* Căn giữa nội dung trên màn hình nhỏ */
     }
 
-    .onchangcustomcontainer {
-        width: 100%;
-        /* Làm cho select box chiếm toàn bộ chiều rộng */
-    }
-
     .customcontainer {
         text-align: left;
     }
@@ -196,6 +191,60 @@
     .onchangcustomcontainer {
         max-width: 30%;
         font-size: 12px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 393px) {
+    .licustombox {
+        flex: 0 0 50%;
+        /* Hiển thị 2 cột trên màn hình nhỏ */
+    }
+
+    .customcontainer {
+        text-align: center;
+        /* Căn giữa nội dung trên màn hình nhỏ */
+    }
+
+    .custombutton {
+        font-size: 10px;
+    }
+
+    .customcontainer {
+        text-align: left;
+    }
+
+    .onchangcustomcontainer {
+        width: 100%;
+        max-width: 34%;
+        font-size: 12px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .licustombox {
+        flex: 0 0 50%;
+        /* Hiển thị 2 cột trên màn hình nhỏ */
+    }
+
+    .customcontainer {
+        text-align: center;
+        /* Căn giữa nội dung trên màn hình nhỏ */
+    }
+
+    .custombutton {
+        font-size: 10px;
+    }
+
+    .customcontainer {
+        text-align: left;
+    }
+
+    .onchangcustomcontainer {
+        max-width: 34%;
+        font-size: 12px;
+        width: 100%;
     }
 }
 
@@ -210,11 +259,6 @@
         /* Căn giữa nội dung trên màn hình nhỏ */
     }
 
-    .onchangcustomcontainer {
-        width: 100%;
-        /* Làm cho select box chiếm toàn bộ chiều rộng */
-    }
-
     .custombutton {
         font-size: 10px;
     }
@@ -224,8 +268,9 @@
     }
 
     .onchangcustomcontainer {
-        max-width: 30%;
+        max-width: 34%;
         font-size: 12px;
+        width: 100%;
     }
 }
 
@@ -240,11 +285,6 @@
         /* Căn giữa nội dung trên màn hình nhỏ */
     }
 
-    .onchangcustomcontainer {
-        width: 100%;
-        /* Làm cho select box chiếm toàn bộ chiều rộng */
-    }
-
     .custombutton {
         font-size: 7px;
     }
@@ -257,36 +297,7 @@
     .onchangcustomcontainer {
         max-width: 30%;
         font-size: 10px;
-    }
-}
-
-@media (max-width: 360px) {
-    .licustombox {
-        flex: 0 0 50%;
-        /* Hiển thị 2 cột trên màn hình nhỏ */
-    }
-
-    .customcontainer {
-        text-align: center;
-        /* Căn giữa nội dung trên màn hình nhỏ */
-    }
-
-    .onchangcustomcontainer {
         width: 100%;
-        /* Làm cho select box chiếm toàn bộ chiều rộng */
-    }
-
-    .custombutton {
-        font-size: 10px;
-    }
-
-    .customcontainer {
-        text-align: left;
-    }
-
-    .onchangcustomcontainer {
-        max-width: 30%;
-        font-size: 12px;
     }
 }
 
@@ -312,11 +323,11 @@
 
     .customcontainer {
         text-align: left;
-        font-size: 11px;
+        font-size: 14px;
     }
 
     .onchangcustomcontainer {
-        max-width: 30%;
+        max-width: 61%;
         font-size: 10px;
     }
 }

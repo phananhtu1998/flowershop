@@ -5,6 +5,11 @@ import style from '../style/Detail.module.css'
 const Detail = ({ setCartItems }) => {
     useEffect(() => {
         document.title = Name;
+        window.scrollTo({
+            top: 800,
+            left: 0,
+            behavior: 'smooth' // để có hiệu ứng cuộn mượt mà (tuỳ chọn)
+        });
     });
     const { Name } = useParams();
     const [item, setItem] = useState(null);

@@ -259,7 +259,6 @@
     vertical-align: top;
     height: 88px;
     width: 600px;
-    padding: 10px;
     font-family: monospace;
     text-rendering: auto;
     color: fieldtext;
@@ -275,6 +274,7 @@
     cursor: text;
     resize: auto;
     margin: 0em;
+    font-size: 14px;
 }
 
 .customButtonStyle {
@@ -486,6 +486,7 @@
 
     .customTextAreaStyle {
         width: 520px;
+        font-size: 13px;
     }
 }
 
@@ -548,6 +549,7 @@
     .customTextAreaStyle {
         width: 347px;
         font-size: 12px;
+        font-size: 8px;
     }
 
     .borderLeftContainer {
@@ -621,7 +623,7 @@
 
     .customTextAreaStyle {
         width: 327px;
-        font-size: 12px;
+        font-size: 8px;
     }
 
     .borderLeftContainer {
@@ -695,7 +697,7 @@
 
     .customTextAreaStyle {
         width: 312px;
-        font-size: 12px;
+        font-size: 8px;
     }
 
     .borderLeftContainer {
@@ -769,7 +771,7 @@
 
     .customTextAreaStyle {
         width: 299px;
-        font-size: 12px;
+        font-size: 8px;
     }
 
     .borderLeftContainer {
@@ -843,7 +845,7 @@
 
     .customTextAreaStyle {
         width: 299px;
-        font-size: 12px;
+        font-size: 8px;
     }
 
     .borderLeftContainer {
