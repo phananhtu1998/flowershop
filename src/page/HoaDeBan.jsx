@@ -6,7 +6,7 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import lstDataHoa from '../Data/data';
 import Detail from './Detail';
 import style from '../style/danhmuchoa.module.css';
-let sortedData = lstDataHoa.filter(item => item.Category === "hoadeban");
+let sortedData = lstDataHoa.filter(item => item.Category === "hoa-de-ban");
 const HoaDeBan = ({ setCartItems }) => {
     useEffect(() => {
         document.title = "Hoa Để Bàn";

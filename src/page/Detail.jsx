@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import lstHoa from '../Data/data';
 import style from '../style/Detail.module.css'
 const Detail = ({ setCartItems }) => {
@@ -258,16 +258,19 @@ const Detail = ({ setCartItems }) => {
                                                             <span>NEW</span>
                                                         </div>
                                                         <div className={style.relativeContainer}>
-                                                            <a className={style.noDecoration} href={`/chi-tiet/${item.Name}`}>
-                                                                <img className={style.absoluteCover} src={item.Images} alt={item.Name}></img>
-                                                            </a>
+                                                            <Link className={style.noDecoration} to={`/chi-tiet/${item.Name}`}>
+                                                                <img className={style.absoluteCover} src={item.Images} alt={item.Name} />
+                                                            </Link>
+
                                                             <a href="/" className={style.noDecoration}>
                                                                 <i></i>
                                                                 <span></span>
                                                             </a>
                                                         </div>
                                                         <h2 className={style.h2marginstyle}>
-                                                            <a className={style.inheritFont} title={item.Name}>{item.Name}</a>
+                                                            <Link className={style.inheritFont} to={`/chi-tiet/${item.Name}`} title={item.Name}>
+                                                                {item.Name}
+                                                            </Link>
                                                         </h2>
                                                         <div className={style.mediumText}>
                                                             <strong>{(parseInt(item.Price, 10)).toLocaleString('vi-VN')}</strong>
@@ -284,9 +287,9 @@ const Detail = ({ setCartItems }) => {
                                         </ul>
                                     </div>
                                     <div className={style.centerblocktext}>
-                                        <a href={'/' + item.Category + '/'} className={style.buttonStylecusor}>
+                                        <Link to={`/${item.Category}/`} className={style.buttonStylecusor}>
                                             Xem thêm nhiều mẫu hơn
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

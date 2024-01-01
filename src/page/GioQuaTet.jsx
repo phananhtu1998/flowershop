@@ -5,7 +5,7 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import lstBoHoa from '../Data/data';
 import Detail from './Detail';
 import style from '../style/danhmuchoa.module.css';
-let sortedData = lstBoHoa.filter(item => item.Category === "gioquatet");
+let sortedData = lstBoHoa.filter(item => item.Category === "gio-qua-tet");
 const GioQuaTet = ({ setCartItems }) => {
     useEffect(() => {
         document.title = "Giỏ quà tết";
@@ -140,7 +140,7 @@ const GioQuaTet = ({ setCartItems }) => {
                 {currentItems.map((index) => (
                     <Route
                         key={index}
-                        path={`/bo-hoa/${index + 1}`}
+                        path={`/gio-qua-tet/${index + 1}`}
                         element={<Detail index={index} />}
                     />
                 ))}

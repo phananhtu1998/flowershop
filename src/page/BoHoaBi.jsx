@@ -7,7 +7,7 @@ import Detail from './Detail';
 import lstDataHoa from '../Data/data';
 import style from '../style/danhmuchoa.module.css';
 
-let sortedData = lstDataHoa.filter(item => item.Category === "hoabi");
+let sortedData = lstDataHoa.filter(item => item.Category === "hoa-bi");
 
 const BoHoaBi = ({ setCartItems }) => {
     useEffect(() => {

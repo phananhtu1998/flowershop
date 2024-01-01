@@ -7,7 +7,7 @@ import Detail from './Detail';
 import lstdatahoa from '../Data/data';
 import style from '../style/danhmuchoa.module.css';
 
-let sortedData = lstdatahoa.filter(item => item.Category === "bohoacamchuong");
+let sortedData = lstdatahoa.filter(item => item.Category === "bo-hoa-cam-chuong");
 
 const BoHoaCamChuong = ({ setCartItems }) => {
     useEffect(() => {

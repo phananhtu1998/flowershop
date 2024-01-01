@@ -6,7 +6,7 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import Detail from './Detail';
 import lstdatahoa from '../Data/data';
 import style from '../style/danhmuchoa.module.css';
-let sortedData = lstdatahoa.filter(item => item.Category === "hoatulip");
+let sortedData = lstdatahoa.filter(item => item.Category === "hoa-tu-lip");
 
 const HoaTuLip = ({ setCartItems }) => {
     useEffect(() => {
@@ -148,7 +148,7 @@ const HoaTuLip = ({ setCartItems }) => {
                 {currentItems.map((index) => (
                     <Route
                         key={index}
-                        path={`/hoa-tulip/${index + 1}`}
+                        path={`/hoa-tu-lip/${index + 1}`}
                         element={<Detail index={index} />}
                     />
                 ))}

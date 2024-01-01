@@ -6,7 +6,7 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import Detail from './Detail';
 import lstdatahoa from '../Data/data';
 import style from '../style/danhmuchoa.module.css';
-let sortedData = lstdatahoa.filter(item => item.Category === "gioquatraicay");
+let sortedData = lstdatahoa.filter(item => item.Category === "gio-qua-trai-cay");
 
 const GioQuaTraiCay = ({ setCartItems }) => {
     useEffect(() => {
