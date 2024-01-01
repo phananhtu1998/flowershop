@@ -159,7 +159,7 @@ const Detail = ({ setCartItems }) => {
                                                     &nbsp;
                                                 </div>
                                                 <div className={style.boldBlock}>
-                                                    <a className={style.redNoDecoration} href="https://zalo.me/0328975111">
+                                                    <a className={style.redNoDecoration} href="https://zalo.me/0328975111" target="_blank">
                                                         <img src="/zalo.png" alt="" className={style.iconStyle} />
                                                         &nbsp; CHAT ĐỂ ĐƯỢC TƯ VẤN
                                                     </a>
