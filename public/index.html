@@ -65,7 +65,8 @@
       -ms-transform-origin: 50% 50%;
       transform-origin: 50% 50%;
       -webkit-animuiion: zoom 1.3s infinite;
-      animation: zoom 1.3s infinite
+      animation: zoom 1.3s infinite;
+      z-index: 1;
     }
 
     .phone-vr-img-circle {
@@ -81,7 +82,8 @@
       display: flex;
       justify-content: center;
       -webkit-animation: phonering-alo-circle-img-anim 1s infinite ease-in-out;
-      animation: phone-vr-circle-fill 1s infinite ease-in-out
+      animation: phone-vr-circle-fill 1s infinite ease-in-out;
+      z-index: 1;
     }
 
     .phone-vr-img-circle a {
@@ -199,7 +201,8 @@
       -ms-transform-origin: 50% 50%;
       transform-origin: 50% 50%;
       -webkit-animuiion: zoom 1.3s infinite;
-      animation: zoom 1.3s infinite
+      animation: zoom 1.3s infinite;
+      z-index: 1;
     }
 
     .phone-vr-img-circle-phone {
@@ -215,7 +218,8 @@
       display: flex;
       justify-content: center;
       -webkit-animation: phonering-alo-circle-img-anim-phone 1s infinite ease-in-out;
-      animation: phone-vr-circle-fill-phone 1s infinite ease-in-out
+      animation: phone-vr-circle-fill-phone 1s infinite ease-in-out;
+      z-index: 1;
     }
 
     .phone-vr-img-circle-phone a {
@@ -305,21 +309,21 @@
 
   <!-- Image in the bottom left corner -->
   <div id="zalo-vr" class="button-contact">
-    <div class="phone-vr"> <!-- Thêm class "top" ở đây -->
+    <div class="phone-vr">
       <div class="phone-vr-circle-fill" title="0979336771"></div>
       <div class="phone-vr-img-circle">
-        <a class="alink" href="https://zalo.me/0979336771">
+        <a class="alink" href="https://zalo.me/0979336771" target="_blank">
           <img src="/zalohold.png" alt="zalo">
         </a>
       </div>
     </div>
   </div>
   <div id="phone-vr-id" class="button-contact-phone">
-    <div class="phone-vr-phone"> <!-- Thêm class "top" ở đây -->
+    <div class="phone-vr-phone">
       <div class="phone-vr-circle-fill-phone" title="0979336771"></div>
       <div class="phone-vr-img-circle-phone">
-        <a class="alink" href="https://zalo.me/0979336771">
-          <img src="/phone.png" alt="zalo">
+        <a class="alink" href="tel:0979336771">
+          <img src="/phone.png" alt="phone">
         </a>
       </div>
     </div>
