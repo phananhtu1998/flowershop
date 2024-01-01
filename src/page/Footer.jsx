@@ -117,7 +117,7 @@ const WebFooter = () => {
                                             </div>
                                             <div className={style.imgcustomelement}>
                                                 <div className={style.customlogotext}>
-                                                    <img className={style.divcustomimage} src="/qrzalo.png" alt="" />
+                                                    <img className={style.divcustomimage} src="/zaloqr.png" alt="" />
                                                 </div>
                                             </div>
                                         </div>
