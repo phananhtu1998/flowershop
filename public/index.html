@@ -26,7 +26,158 @@
       bottom: 10px;
       left: 20px;
       z-index: 1000;
+    }
 
+    /* css zalo */
+    /* Common styles for the button */
+    #button-contact-vr .button-contact {
+      position: relative;
+      margin-top: -5px;
+    }
+
+    #button-contact-vr .button-contact .phone-vr {
+      position: relative;
+      visibility: visible;
+      background-color: transparent;
+      width: 90px;
+      height: 90px;
+      cursor: pointer;
+      -webkit-backface-visibility: hidden;
+      -webkit-transform: translateZ(0);
+      transition: visibility .5s;
+      display: block;
+    }
+
+    .phone-vr-circle-fill {
+      width: 65px;
+      height: 65px;
+      top: 575px;
+      left: 25px;
+      position: fixed;
+      box-shadow: 0 0 0 0 #2c9fd8;
+      background-color: rgb(44 159 216 / 74%);
+      border-radius: 50%;
+      border: 2px solid transparent;
+      -webkit-animation: phone-vr-circle-fill 2.3s infinite ease-in-out;
+      animation: phone-vr-circle-fill 2.3s infinite ease-in-out;
+      transition: all .5s;
+      -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      -webkit-animuiion: zoom 1.3s infinite;
+      animation: zoom 1.3s infinite
+    }
+
+    .phone-vr-img-circle {
+      background-color: #2c9fd8;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      top: 588px;
+      left: 37px;
+      position: fixed;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      -webkit-animation: phonering-alo-circle-img-anim 1s infinite ease-in-out;
+      animation: phone-vr-circle-fill 1s infinite ease-in-out
+    }
+
+    .phone-vr-img-circle a {
+      display: block;
+      line-height: 37px
+    }
+
+    .phone-vr-img-circle img {
+      max-height: 25px;
+      max-width: 27px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%)
+    }
+
+    @-webkit-keyframes phone-vr-circle-fill {
+      0% {
+        -webkit-transform: rotate(0) scale(1) skew(1deg)
+      }
+
+      10% {
+        -webkit-transform: rotate(-25deg) scale(1) skew(1deg)
+      }
+
+      20% {
+        -webkit-transform: rotate(25deg) scale(1) skew(1deg)
+      }
+
+      30% {
+        -webkit-transform: rotate(-25deg) scale(1) skew(1deg)
+      }
+
+      40% {
+        -webkit-transform: rotate(25deg) scale(1) skew(1deg)
+      }
+
+      50% {
+        -webkit-transform: rotate(0) scale(1) skew(1deg)
+      }
+
+      100% {
+        -webkit-transform: rotate(0) scale(1) skew(1deg)
+      }
+    }
+
+    @-webkit-keyframes zoom {
+      0% {
+        transform: scale(.9)
+      }
+
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 15px transparent
+      }
+
+      100% {
+        transform: scale(.9);
+        box-shadow: 0 0 0 0 transparent
+      }
+    }
+
+    @keyframes zoom {
+      0% {
+        transform: scale(.9)
+      }
+
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 15px transparent
+      }
+
+      100% {
+        transform: scale(.9);
+        box-shadow: 0 0 0 0 transparent
+      }
+    }
+
+    /* css cho phone */
+    .custom-phone .phone-vr-circle-fill {
+      background-color: #dd2323;
+      /* Change to your desired background color */
+      box-shadow: 0 0 0 0 #dd2323;
+      /* Change to your desired box-shadow color */
+    }
+
+    .custom-phone .phone-vr-img-circle {
+      background-color: #dd2323;
+      /* Change to your desired background color */
+    }
+
+    .custom-phone .phone-vr-img-circle img {
+      /* Add any additional styles specific to the custom phone button */
     }
   </style>
   <title>Hoa Đẹp Toàn Quốc</title>
@@ -36,11 +187,14 @@
   <noscript>You need to enable JavaScript to run this app.</noscript>
 
   <!-- Image in the bottom left corner -->
-  <div>
-    <div>
-      <a href="">
-        <img src="" alt="">
-      </a>
+  <div id="zalo-vr" class="button-contact">
+    <div class="phone-vr"> <!-- Thêm class "top" ở đây -->
+      <div class="phone-vr-circle-fill" title="0979336771"></div>
+      <div class="phone-vr-img-circle">
+        <a class="alink" href="https://zalo.me/0979336771">
+          <img src="/zalohold.png" alt="zalo">
+        </a>
+      </div>
     </div>
   </div>
   <a href='tel:0979336771'>
