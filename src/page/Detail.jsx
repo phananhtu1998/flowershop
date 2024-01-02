@@ -85,7 +85,7 @@ const Detail = ({ setCartItems }) => {
         }
     }, [Name]);
     if (!item) {
-        return <div style={{ textAlign: "center" }}>Không có sản phẩm !</div>; // You might want to add a loading state or handle not found case
+        return <div style={{ textAlign: "center" }}></div>; // You might want to add a loading state or handle not found case
     }
     return (
         <div className={style.customelement} id='detail'>
@@ -165,7 +165,7 @@ const Detail = ({ setCartItems }) => {
                                                     </a>
                                                 </div>
                                                 <div style={{ display: 'block', fontWeight: 'bold', marginTop: '5px' }}>
-                                                    <a className={style.redNoDecoration} href='https://www.facebook.com/profile.php?id=61554888335019' target="_blank">
+                                                    <a className={style.redNoDecoration} href='https://www.facebook.com/profile.php?id=61554837907445' target="_blank">
                                                         <img src="/fb.png" alt="" className={style.iconStyle} />
                                                         &nbsp; CHAT ĐỂ ĐƯỢC TƯ VẤN
                                                     </a>
