@@ -6,7 +6,7 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import Detail from './Detail';
 import lstdatahoa from '../Data/data';
 import style from '../style/danhmuchoa.module.css';
-let sortedData = lstdatahoa.filter(item => item.Category === "gio-hoa-tuoi");
+let sortedData = lstdatahoa.filter(item => item.Category === "gio-hoa");
 
 const GioHoaTuoi = ({ setCartItems }) => {
     useEffect(() => {
@@ -148,7 +148,7 @@ const GioHoaTuoi = ({ setCartItems }) => {
                 {currentItems.map((index) => (
                     <Route
                         key={index}
-                        path={`/gio-hoa-tuoi/${index + 1}`}
+                        path={`/gio-hoa/${index + 1}`}
                         element={<Detail index={index} />}
                     />
                 ))}
