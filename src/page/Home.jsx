@@ -612,7 +612,7 @@ export default function Home({ setCartItems }) {
                         <div className={Styles.customdividerflower}>
                             <span className={Styles.customstylecontainers}>
                                 <span>
-                                    <a href='/hoa-cuoi/' className={Styles.customdanhmuchoatext}>Hoa cưới</a>
+                                    <a href='/hoa-cuoi/' className={Styles.customdanhmuchoatext}>HOA CƯỚI</a>
                                 </span>
                             </span>
                         </div>
@@ -673,7 +673,7 @@ export default function Home({ setCartItems }) {
                         <div className={Styles.customdividerflower}>
                             <span className={Styles.customstylecontainers}>
                                 <span>
-                                    <a href='/cay-xanh-van-phong/' className={Styles.customdanhmuchoatext}>Cây xanh văn phòng</a>
+                                    <a href='/cay-xanh-van-phong/' className={Styles.customdanhmuchoatext}>CÂY XANH VĂN PHÒNG</a>
                                 </span>
                             </span>
                         </div>
@@ -734,7 +734,7 @@ export default function Home({ setCartItems }) {
                         <div className={Styles.customdividerflower}>
                             <span className={Styles.customstylecontainers}>
                                 <span>
-                                    <a href='/hoa-de-ban/' className={Styles.customdanhmuchoatext}>Hoa để bàn</a>
+                                    <a href='/hoa-de-ban/' className={Styles.customdanhmuchoatext}>HOA ĐỂ BÀN</a>
                                 </span>
                             </span>
                         </div>
