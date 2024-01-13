@@ -8,18 +8,18 @@ export default function Home({ setCartItems }) {
         document.title = "Hoa Đẹp Toàn Quốc";
     });
     const BoHoaTuoi = [
-        { Name: 'Everyday with you', Price: '200000', Images: '/boHoa/13111_everyday-with-you.jpg' },
-        { Name: 'Dating', Price: '250000', Images: '/boHoa/14270_dating.jpg' },
-        { Name: 'Nồng nàn', Price: '300000', Images: '/boHoa/14470_nong-nan.jpg' },
-        { Name: 'Điều thân thương', Price: '150000', Images: '/boHoa/13234_dieu-than-thuong.jpg' },
-        { Name: 'Say you do', Price: '300000', Images: '/boHoa/14339_say-you-do.jpg' },
-        { Name: 'Tana baby 2', Price: '350000', Images: '/boHoa/13291_my-tana.jpg' },
-        { Name: 'Bó Hoa Tú Cầu', Price: '400000', Images: '/boHoa/6041_bo-hoa-tu-cau.jpg' },
-        { Name: 'Đắm say 2', Price: '250000', Images: '/boHoa/14432_dam-say.jpg' },
-        { Name: 'Adore', Price: '400000', Images: '/boHoa/14645_adore.jpg' },
-        { Name: 'The greatest thing', Price: '450000', Images: '/boHoa/13293_the-greatest-thing.jpg' },
-        { Name: 'Mừng thành công', Price: '3000000', Images: '/boHoa/14474_mung-thanh-cong.jpg' },
-        { Name: 'Eternal Bloom', Price: '500000', Images: '/boHoa/14649_eternal-bloom.jpg' },
+        { Name: 'Everyday with you', Price: '200000', Images: '/BoHoa/13111_everyday-with-you.jpg' },
+        { Name: 'Dating', Price: '250000', Images: '/BoHoa/14270_dating.jpg' },
+        { Name: 'Nồng nàn', Price: '300000', Images: '/BoHoa/14470_nong-nan.jpg' },
+        { Name: 'Điều thân thương', Price: '150000', Images: '/BoHoa/13234_dieu-than-thuong.jpg' },
+        { Name: 'Say you do', Price: '300000', Images: '/BoHoa/14339_say-you-do.jpg' },
+        { Name: 'Tana baby 2', Price: '350000', Images: '/BoHoa/13291_my-tana.jpg' },
+        { Name: 'Bó Hoa Tú Cầu', Price: '400000', Images: '/BoHoa/6041_bo-hoa-tu-cau.jpg' },
+        { Name: 'Đắm say 2', Price: '250000', Images: '/BoHoa/14432_dam-say.jpg' },
+        { Name: 'Adore', Price: '400000', Images: '/BoHoa/14645_adore.jpg' },
+        { Name: 'The greatest thing', Price: '450000', Images: '/BoHoa/13293_the-greatest-thing.jpg' },
+        { Name: 'Mừng thành công', Price: '3000000', Images: '/BoHoa/14474_mung-thanh-cong.jpg' },
+        { Name: 'Eternal Bloom', Price: '500000', Images: '/BoHoa/14649_eternal-bloom.jpg' },
     ]
     const GioHoaTuoi = [
         { Name: 'Lux basket mini 5', Price: '300000', Images: '/GioHoaTuoi/14566_lux-basket-mini.jpg' },

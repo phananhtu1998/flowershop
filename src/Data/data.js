@@ -1,6 +1,7 @@
 const flowerData =
     [
         //Hoa Chúc mừng
+        { Name: 'Congrats mini size 3', Category: 'hoa-chuc-mung', Price: '950000', PriceOld: '', Images: '/HoaKhaiTruong/13370_congrats-mini-size.png' },
         { Name: 'Congrats', Price: '500000', Category: 'hoa-chuc-mung', PriceOld: '', Images: '/BoHoa/13237_congrats.jpg' },
         { Name: 'Điệu valse mùa xuân', Price: '550000', Category: 'hoa-chuc-mung', PriceOld: '', Images: '/HoaChucMung/13231_dieu-valse-mua-xuan.jpg' },
         { Name: 'Chuyện của nắng 1', Category: 'hoa-chuc-mung', Price: '750000', PriceOld: '800000', Images: '/BoHoa/13258_chuyen-cua-nang.jpg' },
