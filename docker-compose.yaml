@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  nginx:
+    depends_on:
+      - client
+    restart: always
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./nginx
+    ports:
+      - "3050:80"
+    network_mode: "host"
+
+  client:
+    build:
+      dockerfile: Dockerfile.dev
+      context: .
+    volumes:
+      - /home/node/app/node_modules
+      - ./client:/home/node/app
+    environment:
+      - WDS_SOCKET_PORT=0
